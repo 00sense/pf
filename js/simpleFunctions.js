@@ -10,7 +10,7 @@ function openProjectLibrary(fileNames) {
         for (let i = 0; i < fileNames.length; i++) {
             $('.swiper-wrapper').append(`
                 <div class="swiper-slide">
-                    <img src="/projects_gallery/${fileNames[i]}.webp" alt="Projects Image ${i + 1}">
+                    <img src="projects_gallery/${fileNames[i]}.webp" alt="Projects Image ${i + 1}">
                 </div>
             `);
         }
@@ -18,7 +18,7 @@ function openProjectLibrary(fileNames) {
         for (let i = 0; i < fileNames.length; i++) {
             $('.swiper-wrapper').append(`
                 <div class="swiper-slide">
-                    <img src="/projects_gallery/${fileNames[i]}.webp" style="width: 100%; height: 100%;" alt="Projects Image ${i + 1}">
+                    <img src="projects_gallery/${fileNames[i]}.webp" style="width: 100%; height: 100%;" alt="Projects Image ${i + 1}">
                 </div>
             `);
         }
@@ -26,7 +26,7 @@ function openProjectLibrary(fileNames) {
 
     $('.swiper-slide').each(function(index) {
         if (fileNames[index]) {
-            $(this).find('img').attr('src', `/projects_gallery/${fileNames[index]}.webp`);
+            $(this).find('img').attr('src', `projects_gallery/${fileNames[index]}.webp`);
         }
     });
 

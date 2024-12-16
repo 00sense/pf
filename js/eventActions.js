@@ -46,12 +46,17 @@ $(document).ready(function() {
     // --------------------
     $("#show-more").click(function() {
         if ($(".list").hasClass("hidden")) {
-            $("#projects-container").css('height', '1100px');
+            if (window.innerWidth > 700) {
+                $("#projects-container").css('height', '1100px');
+            } else {
+                $("#projects-container").css('height', '900px');
+            }
+
             $(".list").removeClass("hidden");
 
             $("#show-more").text(getTranslationWithoutLang("show-more-projects"));
         } else {
-            $("#projects-container").css('height', 'auto');
+            $("#projects-container").css('height', 'unset');
             $(".list").addClass("hidden");
 
             $("#show-more").text(getTranslationWithoutLang("collapse-projects"));
@@ -65,6 +70,8 @@ $(document).ready(function() {
 window.addEventListener('scroll', debounce(checkScrollValue, 10));
 window.addEventListener('scroll', debounce(checkScrollBeyondFeedback, 100));
 window.addEventListener('resize', debounce(checkNavbarSettings, 200));
+window.addEventListener('resize', debounce(checkProjectVisibility, 100));
+window.addEventListener('load', debounce(checkProjectVisibility, 100));
 
 
 

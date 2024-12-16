@@ -102,7 +102,7 @@
     width: 40px;
 }
 
-body #skills-card-footer {
+#skills-card-footer {
     text-align: center;
     transition: all 0.3s ease-in-out;
     margin-bottom: 25px;

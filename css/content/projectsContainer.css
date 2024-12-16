@@ -591,7 +591,7 @@ body #object-enter {
     height: 25px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/check.webp);
+    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273483867815996/check.webp?ex=6761b95a&is=676067da&hm=989477d2e2c109334fdb358b36112e3dc84112bee2bb7b3d11f8673e189dc7a6&);
     opacity: 0;
     transition: all 0.1s ease-in-out;
 }

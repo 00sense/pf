@@ -22,7 +22,7 @@
     background-color: var(--background-1);
     border: var(--border-2);
     border-radius: 10px;
-    background-image: url(/icons/swiper-btn.webp);
+    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273459117232199/swiper-btn.webp?ex=6761b954&is=676067d4&hm=d11654b3f4f585928059a10afe35760beda55fa30a1cb9cb3f86bebff8c25be4&);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -274,7 +274,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/discord.webp);
+    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273405694251028/discord.webp?ex=6761b948&is=676067c8&hm=2415ab3c61258eb6b80d27d9b73de67fac327484fb3b24ea2c8149844caa3e0a&);
 }
 
 #swiper-opinion-info-button-1:hover::before{
@@ -330,7 +330,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/copy.webp);
+    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318272714125086782/copy.webp?ex=6761b8a3&is=67606723&hm=60b8d5030369dc5b48a71eace5271784c76b7522989268d262ab8ff4af84178a&);
 }
 
 #swiper-opinion-info-button-2:hover::before{

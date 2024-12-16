@@ -142,7 +142,6 @@
     }
     #contact-button-main, .contact-button-copy {
         font-size: 14px;
-
         font-weight: 700;
     }
     #text-content-main p {
@@ -163,7 +162,7 @@
     #content-container, #skills-container, #projects-container, #aboutme-container, #feedback-container {
         width: 75%;
     }
-    body #skills-card-footer {
+    #skills-card-footer {
         font-size: 16px;
     }
     #content-container {
@@ -212,7 +211,7 @@
     #container-title {
         font-size: 40px;
     }
-    body #projects-trust-note, body #feedback-trust-note {
+    #projects-trust-note, #feedback-trust-note {
         margin-bottom: 20px;
         font-size: 16px;
     }
@@ -228,7 +227,6 @@
         font-size: 18px;
     }
     #feedback-opinion-author p p2 {
-
         font-size: 14px;
     }
     #feedback-opinion-author p p2 img {
@@ -239,10 +237,202 @@
     }
     #feedback-opinion-content p {
         font-size: 13px;
-    }
+    } 
 }
 
 @media screen and (max-width: 700px) {
+    #skills-skill a {
+        padding: 5px 0;
+        margin-bottom: 7px;
+        margin-top: 5px;
+    }
+    #skills-skill a img {
+        width: 35px;
+    }
+    #skills-skill-option {
+        height: 35px;
+    }
+    #skills-skill-option img {
+        height: 70%;
+    }
+    #skills-skill-option-knowledge {
+        border-width: 2px;
+        font-size: 11px;
+    }
+    #skills-skill-option-knowledge-percentage {
+        font-size: 14px;
+    }
+    #skills-skill f {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+    #skills-card-footer {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    #text-content {
+        gap: 15px;
+        padding: 15px 30px;
+    }
+    #header {
+        padding-bottom: 12px;
+    }
+    #text-content-main p {
+        margin-top: 0;
+        font-size: 12px;
+    }
+    #text-content-main img {
+        top: 15px;
+        height: 120px;
+        margin: 0 0 13px 13px;
+    }
+    #header main {
+        font-size: 32px;
+        padding-bottom: 0;
+    }
+    #header main-desc {
+        font-size: 15px;
+    }
+    #contact-me-content p y {
+        font-size: 21px;
+    }
+    #contact-me-content p h {
+        font-weight: 200;
+        font-size: 12px;
+    }
+    #contact-button-main, .contact-button-copy{
+        font-size: 12px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .contact-button-copy:hover, #contact-button-main:hover {
+        padding: 10px 20px;
+    }
+
+    #projects-trust-note {
+        padding: 12px;
+        font-size: 14px;
+    }
+    #projects-project {
+        padding: 0;
+    }
+    #projects-project-img {
+        margin-top: 15px;
+        width: 90%;
+    }
+    #description-for {
+        margin-bottom: 10px;
+    }
+    #projects-project-description {
+        width: 90%;
+        margin-bottom: 15PX;
+    }
+    #projects-project-description n {
+        font-size: 21px;
+    }
+    #projects-project-description f {
+        font-size: 14px;
+    }
+    #projects-project-description d {
+        font-size: 12px;
+    }
+    #description-details {
+        line-height: 16px;
+    }
+    #projects-project-description u {
+        font-size: 14px;
+    }
+    #projects-projects-li {
+        margin-bottom: 30px;
+    }
+    #show-more {
+        bottom: 27px;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    body #projects-container {
+        height: 900px;
+    }
+    #feedback-trust-note {
+        font-size: 14px;
+    }
+    #swiper-opinion-info p y {
+        font-size: 21px;
+    }
+    #swiper-opinion-info p h {
+        font-weight: 200;
+        font-size: 13px;
+    }
+    .swiper-opinion-button-next, .swiper-opinion-button-prev {
+        height: 35px;
+        width: 35px;
+    }
+    .social-icon__link {
+        font-size: 25px;
+    }
+    .social-icon, .menu {
+        margin-top: 0;
+    }
+    .footer p {
+        font-size: 12px;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #navbar-left {
+        padding: 20px;
+    }
+
+    #navbar-right {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #navbar-right .lg-en {
+        width: 17px;
+    }
+
+    #navbar-mid-mobile-menu {
+        font-size: 20px;
+    }
+
+    #navbar-mid-mobile-menu::before, #navbar-mid-mobile-menu::after {
+        width: 15px;
+        height: 15px;
+    }
+
+
+
+    #navbar {
+        padding: 0 10px;
+    }
     #content-card-buttons {
         width: 100%;
         flex-direction: column;
@@ -261,12 +451,14 @@
         justify-content: center;
         width: 100%;
         height: 40px;
+        font-size: 12px;
         align-items: center;
         text-align: center;
         display: flex;
         padding: 0;
     }
     #swiper-opinion-info-button-1:hover, #swiper-opinion-info-button-2:hover {
+        font-size: 12px;
         padding: 0;
     }
     #swiper-opinion-info-button-1::before, #swiper-opinion-info-button-2::before {
@@ -300,22 +492,16 @@
     #contact-me-content {
         text-align: center;
     }
-    .contact-button-copy {
-        text-align: center;
-    }
     #contact-bottom {
         flex-direction: column;
         width: 100%;
         gap: 8px;
     }
-    .contact-button-copy:hover {
-        padding: 15px 30px;
-    }
     .menu {
         width: 70%;
     }
     .menu__link {
-        font-size: 16px;
+        font-size: 13px;
     }
     .footer p {
         font-size: 12px;
@@ -329,19 +515,6 @@
     #feedback-opinion-author p p2 {
         align-items: start;
         font-size: 11px;
-    }
-    #contact-me-content {
-        font-size: 15px;
-    }
-
-    #text-content-main img {
-        height: 150px;
-    }
-    #header main {
-        font-size: 40px;
-    }
-    #header main-desc {
-        font-size: 16px;
     }
     body #img-layers, body #img-enter {
         width: 50px;
@@ -361,8 +534,13 @@
         white-space: wrap;
         font-size: 16px;
     }
+    #content-container, #skills-container, #projects-container, #aboutme-container, #feedback-container {
+        width: 85%;
+        padding: 0 20px;
+    }
     #content-container {
         gap: 30px;
+        padding: calc(10vh + 7%) 20px;
     }
     #content-card-image {
         width: 200px;

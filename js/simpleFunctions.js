@@ -217,6 +217,14 @@ function checkScrollValue() {
     }
 }
 
+function checkProjectVisibility() {
+    if (window.innerWidth < 700) {
+        $('[id^="projects-project"]').attr('data-aos', 'none');
+    } else {
+        return;
+    }
+}
+
 // --------------------
 // Change Visibility Of Color Grading In 3D Object View
 // --------------------

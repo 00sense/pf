@@ -726,9 +726,3 @@
     }
 
 }
-
-@media (pointer: coarse) {
-    *:hover {
-        all: unset;
-    }
-}

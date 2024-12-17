@@ -533,7 +533,13 @@
         top: unset;
         bottom: unset;
     }
-
+    section {
+        top: 95px;
+        gap: 50px;
+    }
+    #containers {
+        gap: 90px;
+    }
 
 
 
@@ -708,10 +714,10 @@
     }
     #content-container {
         gap: 30px;
-        padding: calc(10vh + 7%) 20px;
+        padding: calc(4vh + 2%) 20px;
     }
     #content-card-image {
-        width: 200px;
+        width: 150px;
         margin-bottom: 0px;
     }
     body #status {
@@ -719,4 +725,10 @@
         height: 80px;
     }
 
+}
+
+@media (pointer: coarse) {
+    *:hover {
+        all: unset;
+    }
 }

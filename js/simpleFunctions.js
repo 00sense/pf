@@ -212,7 +212,7 @@ function checkScrollValue() {
 // Change To Fix Buggdy AOS
 // --------------------
 function checkProjectVisibility() {
-    if (window.innerWidth < 700) {
+    if (window.innerWidth < 1500) {
         $('[id^="projects-project"]').attr('data-aos', 'none');
         $('#projects-container').attr('data-aos', 'none');
         $('#feedback-container').attr('data-aos', 'none');

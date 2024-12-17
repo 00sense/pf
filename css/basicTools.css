@@ -19,7 +19,6 @@ body,
         min-height: var(--content-height);
         font-family: "Inter";
         user-select: none;
-        /* transition: all 0.4s ease-in-out; */
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;

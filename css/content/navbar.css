@@ -146,12 +146,3 @@
     border-radius: 0 0 15px 15px;
     border-bottom: var(--border-2);
 }
-/* 
-#navbar-mid-mobile-menu-table-option-active {
-    transition: all 0.2s ease-in-out;
-    padding: 0.8px 40px;
-    border-radius: 50px;
-    animation: RGB-animation-1 3s linear infinite;
-    background: linear-gradient(90deg, rgba(255,132,15,1), rgba(255,189,127,1), rgba(244,194,75,1), rgba(255,132,15,1));
-    background-size: 200%;
-} */

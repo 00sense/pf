@@ -47,13 +47,6 @@ function openFilmProjectLibrary() {
 }
 
 // --------------------
-// Scroll To Top Button
-// --------------------
-function backToTop() {
-    $("html, body").scrollTop(0);
-}
-
-// --------------------
 // Show Notification
 // --------------------
 function showNotification(title, content, result) {
@@ -76,12 +69,12 @@ function showNotification(title, content, result) {
         }
 
         $('#notification').queue(function (show) {
-            $(this).css('transform', 'translateX(-50%) translateY(0px)')
+            $(this).css('transform', 'translateX(-50%)')
             show();
         })
 
         $('#notification').delay(7000).queue(function (hide) {
-            $(this).css('transform', 'translateX(-50%) translateY(300px)')
+            $(this).css('transform', 'translateX(300%)')
             $(this).fadeOut(500);
             hide();
         })
@@ -222,6 +215,11 @@ function checkProjectVisibility() {
     if (window.innerWidth < 700) {
         $('[id^="projects-project"]').attr('data-aos', 'none');
         $('#projects-container').attr('data-aos', 'none');
+        $('#feedback-container').attr('data-aos', 'none');
+        $('#swiper-opinion-navigation').attr('data-aos', 'none');
+        $('#swiper-opinion-info-buttons').attr('data-aos', 'none');
+        $('[id^="feedback-opinion"]').attr('data-aos', 'none');
+
     } else {
         return;
     }
@@ -366,8 +364,9 @@ function scrollToElement(element) {
     $('#navbar-mid-mobile-menu-table').delay(700).fadeOut(400);
     document.querySelector(element).scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
-    })
+        block: 'start'
+    });
+
 }
 
 // --------------------

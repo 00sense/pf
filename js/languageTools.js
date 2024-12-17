@@ -63,7 +63,7 @@ let translations = {
         "carousel-scaling-2-on": "Włączone",
         "carousel-scaling-2-off": "Wyłączone",
         "projects-main-text": "Projekty",
-        "description-usage": "Zastosowanie: ",
+        "description-usage": "Użyte technologie: ",
         "description-for": "Stworzone dla: ",
         "trust-note-1": "UWAGA! ",
         "trust-note-2": "Nie wszystkie projekty mogą zostać tutaj zaprezentowane. Wynika to z zasad poufności oraz indywidualnych preferencji klientów, którzy cenią sobie dyskrecję i ochronę swoich danych. Szanuję ich zaufanie oraz priorytetowo traktuję kwestie prywatności, dlatego zawsze dostosowuję się do ich wymagań",

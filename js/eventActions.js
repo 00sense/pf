@@ -73,10 +73,8 @@ window.addEventListener('resize', debounce(checkNavbarSettings, 200));
 window.addEventListener('resize', debounce(checkProjectVisibility, 100));
 window.addEventListener('load', debounce(checkProjectVisibility, 100));
 
-
-
-
-
-
-
-
+$(window).on('load', function () {
+    if (window.matchMedia('(hover: none)').matches) {
+      $('head').append('<style>*:hover { all: unset !important; }</style>');
+    }
+});

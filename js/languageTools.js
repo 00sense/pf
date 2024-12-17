@@ -184,7 +184,7 @@ let translations = {
         "carousel-scaling-2-on": "Enabled",
         "carousel-scaling-2-off": "Disabled",
         "projects-main-text": "Projects",
-        "description-usage": "Function: ",
+        "description-usage": "Used technologies: ",
         "description-for": "Created for: ",
         "trust-note-1": "NOTICE! ",
         "trust-note-2": "Not all projects can be showcased here. This is due to confidentiality agreements and the individual preferences of clients who value discretion and the protection of their data. I respect their trust and prioritize privacy, always adapting to their requirements",

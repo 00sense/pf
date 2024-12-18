@@ -80,6 +80,7 @@
         height: 60%;
     }
     #settings:hover {
+        background: var(--background-1);
         width: 140px;
         height: 70px;
         padding: 0;
@@ -132,9 +133,67 @@
         padding: 12px 25px;
     }
     #content-card-content-button-read-more:hover {
+        box-shadow: none;
         padding: 12px 25px;
     }
-    #content-card-content-button::before, #content-card-content-button-read-more::before, .contact-button-copy::before, #contact-button-main::before {
+    #content-card-content-button:hover {
+        box-shadow: none;
+        color: #161616;
+        background-color: rgb(235, 235, 235);
+    }
+    #contact-button-main:hover {
+        box-shadow: none;
+        padding: 15px 30px;
+        color: #161616;
+        background-color: rgb(235, 235, 235);
+    }
+    .contact-button-copy:hover {
+        box-shadow: none;
+        padding: 15px 30px;
+    }
+    #projects-project-img:hover {
+        #img-layers {
+            opacity: 1;
+        }
+        #img-enter {
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+            scale: 1;
+            filter: none;
+        }
+        #multiple-images::after {
+            opacity: 1;
+        }
+    }
+    #show-more:hover {
+        background: linear-gradient(-135deg, rgb(17, 17, 17, 0.0), rgba(43, 40, 38, 0.8));
+        box-shadow: none;
+    }
+    #swiper-opinion-info-button-1:hover {
+        padding: 12px 16px;
+        box-shadow: none;
+        color: #161616;
+        background-color: rgb(235, 235, 235);
+    }
+    .swiper-opinion-button-prev:hover, .swiper-opinion-button-next:hover {
+        transform: scale(1);
+        background-color: var(--background-1);
+    }
+    #swiper-opinion-info-button-2:hover {
+        padding: 12px 16px;
+        background: linear-gradient(-135deg, rgb(17, 17, 17, 0.0), rgba(58, 54, 50, 0.8));
+        box-shadow: none;
+    }
+    .menu__link:hover {
+        opacity: 0.75;
+    }
+    .social-icon__link:hover {
+        transform: none;
+    }
+    .navbar-left-img:hover {
+        filter: none;
+    }
+    #content-card-content-button::before, #content-card-content-button-read-more::before, .contact-button-copy::before, #contact-button-main::before, #swiper-opinion-info-button-2::before, #swiper-opinion-info-button-1::before {
         display: none;
     }
     .menu__link {
@@ -198,16 +257,6 @@
     #navbar-mid-mobile {
         display: flex;
     }
-    #navbar-pre {
-        top: 0px;
-    }
-    #navbar {
-        width: 100%;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        border-radius: 0;
-    }
     #container-title {
         font-size: 40px;
     }
@@ -221,7 +270,6 @@
     #feedback-opinion-author img {
         height: 40px;
     }
-    
     #feedback-opinion-author p {
         padding: 5px 0;
         font-size: 18px;
@@ -371,9 +419,11 @@
         padding: 0 5px;
     }
     #swiper-opinion-info p y {
+        text-align: center;
         font-size: 19px;
     }
     #swiper-opinion-info p h {
+        text-align: center;
         font-weight: 200;
         font-size: 12px;
     }
@@ -416,9 +466,6 @@
     #content-card-content o {
         text-align: center;
         font-size: 11px;
-    }
-    #feedback-opinion-author p {
-        font-size: 15px;
     }
     #feedback-swiper-view {
         padding-bottom: 0;
@@ -540,31 +587,6 @@
     #containers {
         gap: 90px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #navbar-left {
         padding: 20px;
     }
@@ -596,30 +618,9 @@
         text-align: left;
         font-size: 11px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #swiper-opinion-info y {
-        text-align: center;
-    }
-    #swiper-opinion-info h {
-        text-align: center;
+    #container-title {
+        padding: 10px 0;
+        font-size: 35px;
     }
     #swiper-opinion-info-button-1, #swiper-opinion-info-button-2 {
         justify-content: center;
@@ -648,16 +649,14 @@
     #swiper-opinion-info-buttons {
         width: 90%;
         padding: 10px 0;
+        gap: 9px;
+        align-items: center;
+        flex-direction: column;
     }
     #swiper-opinion-buttons {
         flex-direction: row;
     }
     #swiper-opinion-navigation {
-        flex-direction: column;
-    }
-    #swiper-opinion-info-buttons {
-        gap: 9px;
-        align-items: center;
         flex-direction: column;
     }
     #text-contact-me {
@@ -677,11 +676,8 @@
     .menu__link {
         font-size: 13px;
     }
-    .footer p {
-        font-size: 12px;
-        padding: 0;
-    }
     #feedback-opinion-author p {
+        font-size: 15px;
         gap: 2px;
         align-items: start;
         flex-direction: column;
@@ -692,9 +688,6 @@
     }
     body #img-layers, body #img-enter {
         width: 50px;
-    }
-    body #skills-card-title, #projects-card-content a {
-        font-size: 40px;
     }
     body #skills-card-title {
         margin-bottom: 30px;

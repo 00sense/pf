@@ -770,6 +770,7 @@ body #film-enter {
 }
 
 #film-view {
+    gap: -100%;
     border: var(--border-2);
     background: var(--background-1);
     padding: 20px 0;
@@ -780,6 +781,11 @@ body #film-enter {
 }
 
 iframe {
+    position: relative;
     height: 100%;
     width: 80%;
+}
+
+iframe .second-film {
+    left: 0%;
 }

@@ -77,26 +77,7 @@ $(document).ready(function() {
 // --------------------
 window.addEventListener('scroll', debounce(checkScrollValue, 10));
 window.addEventListener('scroll', debounce(checkScrollBeyondFeedback, 100));
-window.addEventListener('resize', debounce(checkNavbarSettings, 200));
+window.addEventListener('resize', debounce(checkNavbarSettings, 100));
+window.addEventListener('load', debounce(checkNavbarSettings, 10));
 window.addEventListener('resize', debounce(checkProjectVisibility, 100));
-window.addEventListener('load', debounce(checkProjectVisibility, 100));
-
-$(window).on('load', function () {
-    if (window.innerWidth < 700) {
-      $('a, div, button, span').each(function () {
-        const $this = $(this);
-        const styles = getComputedStyle(this);
-  
-        // Jeśli element ma przypisany efekt hover, usuń przejścia
-        if (styles.transition) {
-          $this.css('transition', 'none');
-        }
-  
-        // Przywróć interakcje z elementem (aby pozostały klikalne)
-        $this.css({
-          'pointer-events': 'auto',
-          'user-select': 'auto'
-        });
-      });
-    }
-});
+window.addEventListener('load', debounce(checkProjectVisibility, 10));

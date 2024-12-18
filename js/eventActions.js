@@ -74,7 +74,21 @@ window.addEventListener('resize', debounce(checkProjectVisibility, 100));
 window.addEventListener('load', debounce(checkProjectVisibility, 100));
 
 $(window).on('load', function () {
-    if (window.matchMedia('(hover: none)').matches) {
-      $('head').append('<style>*:hover { all: unset !important; }</style>');
+    if (window.innerWidth < 700) {
+      $('a, div, button, span').each(function () {
+        const $this = $(this);
+        const styles = getComputedStyle(this);
+  
+        // Jeśli element ma przypisany efekt hover, usuń przejścia
+        if (styles.transition) {
+          $this.css('transition', 'none');
+        }
+  
+        // Przywróć interakcje z elementem (aby pozostały klikalne)
+        $this.css({
+          'pointer-events': 'auto',
+          'user-select': 'auto'
+        });
+      });
     }
 });

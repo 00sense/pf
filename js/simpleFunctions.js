@@ -41,7 +41,10 @@ function open3dProjectLibrary(modelArray) {
     $("body").css("overflow", "hidden");
 }
 
-function openFilmProjectLibrary() {
+function openFilmProjectLibrary(filmArray) {
+    const filmFrame = $('#youtube-player');
+    const filmName = filmArray[0];
+    filmFrame.attr('src', `https://www.youtube.com/embed/${filmName}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`);
     $("#projects-project-view-film").fadeIn(300);
     $("body").css("overflow", "hidden");
 }
@@ -308,7 +311,7 @@ function hide3dProjectView() {
 function hideFilmProjectView() {
     $('#projects-project-view-film').fadeOut(300);
     $("body").css("overflow", "visible");
-    stopVideo();
+    $('#youtube-player').attr('src', '');
 }
 
 // --------------------
@@ -324,13 +327,13 @@ function manageAnimations() {
         $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
         $('#settings-icon').css('opacity', '1');
 
-        showNotification(getTranslationWithoutLang('manage-animations-on-title'), getTranslationWithoutLang('manage-animations-on-content'), 'success'); 
+        showNotification(getTranslationWithoutLang('notification-success'), getTranslationWithoutLang('manage-animations-on-content'), 'success'); 
     }
     else {
         $(animatedElements).css("animation-name", "animation-off");
         $('#settings-icon').css('opacity', '0.4');
 
-        showNotification(getTranslationWithoutLang('manage-animations-off-title'), getTranslationWithoutLang('manage-animations-off-content'), 'success');
+        showNotification(getTranslationWithoutLang('notification-success'), getTranslationWithoutLang('manage-animations-off-content'), 'success');
     }
 }
 
@@ -342,10 +345,10 @@ function copyDiscordId() {
 
     navigator.clipboard.writeText(discordID)
     .then(function() {
-        showNotification(getTranslationWithoutLang("copy-id-title-success"), getTranslationWithoutLang("copy-id-content-success"), "success");
+        showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("copy-id-content-success"), "success");
     })
     .catch(function(err) {
-        showNotification(getTranslationWithoutLang("copy-id-title-error"), getTranslationWithoutLang("copy-id-content-error") + err, "fail");
+        showNotification(getTranslationWithoutLang("notification-error"), getTranslationWithoutLang("copy-id-content-error") + err, "fail");
     })
 }
 
@@ -353,8 +356,13 @@ function copyDiscordId() {
 // Open External Discord Client
 // --------------------
 function openDiscordClient() {
-    window.open('discord:/users/744981493159559308', '_blank')
-    showNotification(getTranslationWithoutLang("open-client-title-success"), getTranslationWithoutLang("open-client-content-success"), "success");
+    if (window.innerWidth < 1000) {
+        showNotification(getTranslationWithoutLang("notification-error"), getTranslationWithoutLang("open-client-content-error"), "fail");
+        return;
+    } else {
+        window.open('discord:/users/744981493159559308', '_blank')
+        showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("open-client-content-success"), "success");
+    }
 }
 
 // --------------------
@@ -395,9 +403,9 @@ function openMail() {
 
     navigator.clipboard.writeText(mail)
     .then(function() {
-        showNotification(getTranslationWithoutLang("copy-mail-title-success"), getTranslationWithoutLang("copy-mail-content-success"), "success");
+        showNotification(getTranslationWithoutLang("notifation-success"), getTranslationWithoutLang("copy-mail-content-success"), "success");
     })
     .catch(function(err) {
-        showNotification(getTranslationWithoutLang("copy-mail-title-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
+        showNotification(getTranslationWithoutLang("notifation-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
     })
 }

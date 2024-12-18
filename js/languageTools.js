@@ -7,28 +7,19 @@ function setLanguageOnLoad() {
 }
 let translations = {
     "pl": {
+        "notification-success": "Sukces!",
+        "notification-error": "Wystąpił błąd!",
+
         "change-language-error": "Hej! Kilkutronie próbujesz zmienić język, na ten który masz aktualnie wybrany! Spróbuj wybrać inny, jeśli występują z tym problemy skontaktuj się na Discordzie ツ",
-        "copy-id-title-error": "Wystąpił błąd!",
         "copy-id-content-error": "Nie udało się skopiować tekstu, błąd który wystąpił: ",
-        "copy-id-title-success": "Sukces!",
         "copy-id-content-success": "Pomyślnie skopiowano ID profilu Discord do Twojego schowka! Teraz możesz wkleić je w miejscu przeznaczonym do dodania znajomego lub gdziekolwiek indziej chcesz!",
-
-        "copy-mail-title-error": "Wystąpił błąd!",
         "copy-mail-content-error": "Nie udało się skopiować tekstu, błąd który wystąpił: ",
-        "copy-mail-title-success": "Sukces!",
         "copy-mail-content-success": "Mój mail został pomyślnie skopiowany do Twojego schowka! Do usłyszenia!",
-
-        "instagram-error-title": "Wystąpił błąd",
         "instagram-error-content": "Konto Instagram będzie dostępne niedługo",
-        "open-client-title-success": "Informacja",
         "open-client-content-success": "Profil Discord został otwarty, jeśli nie została otwarta aplikacja Discord - skopiuj id i dodaj mnie manualnie!",
-
-        "manage-animations-off-title": "Sukces!",
+        "open-client-content-error": "Profil Discord nie mógł zostać otwarty dlatego, że prawdopodobnie używasz urządzenia mobilnego. Skopiuj id i dodaj mnie manualnie!",
         "manage-animations-off-content": "Pomyślnie wyłączono animacje! Jeśli jednak chcesz wrócić do widoczności animacji, kliknij tą ikonę jeszcze raz!",
-        "manage-animations-on-title": "Sukces!",
         "manage-animations-on-content": "Pomyślnie włączono animacje! W razie problemów z wydajnością lub zawieszaniem się strony wyłącz animacje!",
-
-
 
         "menu": "Menu",
         "home": "Strona główna",
@@ -37,7 +28,6 @@ let translations = {
         "about-me": "O mnie",
         "contact": "Kontakt & Opinie",
         "language": "Język",
-        "back-to-top": "Powrót na górę",
         "created-by-1": "Strona zaprojektowana i stworzona przez",
         "created-by-2": " 0sense",
         "copyright": " • © 2024 Sense - Wszelkie prawa zastrzeżone",
@@ -82,14 +72,11 @@ let translations = {
         "aboutme-contact-4": "gdzie możemy omówić szczegóły potencjalnej współpracy lub po prostu wymienić się pomysłami. Jestem otwarty na każdą rozmowę i nowe wyzwania",
         "aboutme-open-profile": "Otwórz profil",
         "aboutme-copy-id": "Skopiuj ID profilu",
-
         "feedback-main-text": "Kontakt & Opinie",
         "verified-opinion-1": "UWAGA! ",
         "verified-opinion-2": "Opinie poniżej są autentyczne i zweryfikowane. W razie wątpliwości zapraszam do kontaktu na Discordzie. Przypominam, że publikowanie fałszywych opinii zgodnie z art. 286 §1 Kodeksu karnego jest nielegalne",
-
         "3D-model-view-description-1": "UWAGA! ",
         "3D-model-view-description-2": "Aby wyłączyć efekty koloryzujące (niezalecane), skorzystaj z opcji obok",
-
         "swiper-opinion-info-1": "Poznaj odczucia klientów!",
         "swiper-opinion-info-2": "Możesz być jednym z nich, skontaktuj się na",
         "swiper-opinion-info-3": " Discordzie!",
@@ -107,16 +94,16 @@ let translations = {
         "2_description-name": '"Zaklęte piksele" - GUI',
         "2_description-details": 'W projekcie zostało zawarte o wiele więcej GUI, niż jest tutaj widoczne. Gui zostało stworzone w stylu prostym i zrozumiałym dla graczy, zgodnie z życzeniem klienta',
 
-        "3_description-name": '"Twoi przyjaciele" - KOLEKCJA 3D',
+        "3_description-name": '"Twoi przyjaciele" - KOSMETYKI 3D',
         "3_description-details": 'W projekcie zostało zawarte o wiele więcej modeli, niż jest tutaj widoczne (więcej modeli wraz z pełną garderobą można zobaczyć w projekcie "PIKSELOWY STYL"). Modele zostały wykonane w stylu przyjaznym dla młodych graczy oraz pełnią fukcję "czapek" w serwerowej garderobie',
 
-        "4_description-name": '"Magia kostek" - SKINY 3D',
+        "4_description-name": '"Magia kostek" - RENDERY 3D',
         "4_description-details": 'W projekcie zostały zawarte 3 rendery skinów Minecraft stworzone w programie Blender. Stworzone modele pozwoliły mi na realizację projektu "PIĘKNO ROBOTÓW". Zgodnie z oczekiwaniami klienta modele posiadają wypukłe punkty np. włosy, które przy dobrej grze światłem robią świetny efekt',
     
         "5_description-name": '"Piękno robotów" - BOT DISCORD',
         "5_description-details": 'W projekcie zostały zawarte 2 banery, jeden do profilowego baneru bota, drugi znalazł zastosowanie w wiadomościach wysyłanych przez bota jako "Embed Image". Zgodnie z wymaganiami klienta banery są animowane i zawierają kluczowe elementy, takie jak logo serwera lub rendery skinów właścicieli',
     
-        "6_description-name": '"STYL WIEDZY" - INFORMACJE',
+        "6_description-name": '"STYL WIEDZY" - INFOGRAFIKA',
         "6_description-details": 'W projekcie zostało zawarte o wiele więcej grafik, niż jest tutaj widoczne. Grafiki były tworzone w różnych stylach pasujących do treści ogłoszenia lub informacji, zgodnie z oczekiwaniami klienta',
 
         "7_description-name": '"ULOTNE WIZJE" - BANERY DISCORD',
@@ -127,26 +114,28 @@ let translations = {
 
         "9_description-name": '"KWADRATOWY FILM" - TRAILER',
         "9_description-details": 'W projekcie został pokazany serwer TabMC.pl od najlepszej możliwej strony, zgodnie z wymaganiami klienta zostały tam pokazane wszystkie aktualnie istniejące tryby',
+
+        "10_description-name": '"DAWKA DOPAMINY" - TIKTOK',
+        "10_description-details": 'W projekcie zostało zawarte o wiele więcej filmików niż jest tutaj widoczne. TikToki miały na celu zatrzymanie uwagi widza (szczególnie w pierwszych 3 sekundach) oraz były przygotowane zgodnie z wytycznymi klienta, co pokazuje prosty styl montażu oraz płynne ujęcia',
+
+        "11_description-name": '"MOCNA REKLAMA" - WSTAWKA',
+        "11_description-details": 'W projekcie zawarte zostały dwie wstawki na streamy (Cały serwer oraz GenCash). Wstawka jest schludna i animowana, nie zawiera zbędnych dodatków, zgodnie z wytycznymi klienta',
     },
 
-
     "en": {
+        "notification-success": "Success!",
+        "notifation-error": "An error occurred!",
+
         "change-language-error": "Hey! You've been trying to change the language to the one you currently have selected for a few times! Try choosing a different one, if you're having trouble with that contact us on Discord ツ",
-        "copy-id-title-error": "An error occurred!",
         "copy-id-content-error": "The text could not be copied, the error occurred: ",
-        "copy-id-title-success": "Success!",
         "copy-id-content-success": "Discord profile ID successfully copied to your clipboard! Now you can paste it in the space for adding a friend or anywhere else you want!",
-
-        "copy-mail-title-error": "An error occurred!",
         "copy-mail-content-error": "The text could not be copied, the error occurred: ",
-        "copy-mail-title-success": "Success!",
         "copy-mail-content-success": "My email has been successfully copied to your clipboard! Talk to you soon!",
-
-        "instagram-error-title": "An error occurred!",
         "instagram-error-content": "An Instagram account will be available soon",
-        "open-client-title-success": "Notification",
         "open-client-content-success": "The Discord profile has been opened. If the Discord app didn't launch, copy the ID and add me manually!",
-
+        "open-client-content-error": "The Discord profile could not be opened because you are likely using a mobile device. Please copy the ID and add me manually!",
+        "manage-animations-off-content": "Animations have been successfully turned off! However, if you'd like to return to viewing animations, click this icon again!",
+        "manage-animations-on-content": "Animations have been successfully turned on! If you experience performance issues or page freezes, please disable animations!",
 
         "menu": "Menu",
         "home": "Home",
@@ -155,15 +144,11 @@ let translations = {
         "about-me": "About me",
         "contact": "Contact & Feedback",
         "language": "Language",
-        "back-to-top": "Back to top",
-
         "created-by-1": "Website designed and created by",
         "created-by-2": " 0sense",
         "copyright": " • © 2024 Sense - All rights reserved",
-
         "read-more": "Read more",
         "contact-me": "Get in touch!",
-
         "content-main-text": "I'm Adrian ツ",
         "content-profession-1": "I'm ",
         "content-profession-2": "2D/3D Designer, Editor",
@@ -203,14 +188,11 @@ let translations = {
         "aboutme-contact-4": "where we can discuss the details of potential collaboration or simply exchange ideas. I am open to any conversation and new challenges",
         "aboutme-open-profile": "Open profile",
         "aboutme-copy-id": "Copy profile ID",
-
         "feedback-main-text": "Contact & Feedback",
         "verified-opinion-1": "NOTICE! ",
         "verified-opinion-2": "The opinions below are authentic and verified. If you have any doubts, feel free to contact me on Discord. Please note that posting fake reviews is illegal under Article 286 §1 of the Penal Code.",
-
         "3D-model-view-description-1": "NOTICE! ",
         "3D-model-view-description-2": "To disable color grading effects (not recommended), use the option provided next to this section",
-
         "swiper-opinion-info-1": "Discover clients' feedback!",
         "swiper-opinion-info-2": "You could be one of them, get in touch on",
         "swiper-opinion-info-3": " Discord!",
@@ -222,11 +204,38 @@ let translations = {
         "o-3-author-desc": "Client • Private",
         "o-3-content": "I highly recommend Adrian! He created Twitch panels for me that exceeded my expectations. The project was completed quickly, with great attention to detail and professionalism. It’s clear that Adrian has talent, a fantastic sense of aesthetics, and the ability to adapt to the client’s needs. The final result is perfect, and the cooperation was seamless 😊",
 
-
-
-        "1_description-name": '"Japanese Dreams" - BRANDING',
-        "1_description-details": "Wbrew powszechnemu przekonaniu, Lorem Ipsum nie jest losowym zbiorem słów. Ma swoje korzenie w literaturze klasycznej łacińskiej z 45 r. p.n.e., co czyni go tekstem o ponad 2000-letniej historii.",
-        "1_description-usage-2": "Twitch (informations)",
+        "1_description-name": '"Japanese Dreams" - BRAND',
+        "1_description-details": 'The project included a "Waiting Screen" and 4 Twitch banners, designed in a Japanese style and inspired by anime aesthetics, as per the client\'s request.',
+    
+        "2_description-name": '"Enchanted Pixels" - GUI',
+        "2_description-details": 'The project contained many more GUI elements than are visible here. The GUI was designed in a simple and user-friendly style for players, as per the client\'s request.',
+    
+        "3_description-name": '"Your Friends" - 3D COSMETICS',
+        "3_description-details": 'The project included many more models than are visible here (additional models and a full wardrobe can be found in the project "PIXEL STYLE"). The models were created in a style friendly for young players and serve as "hats" in the server\'s wardrobe.',
+    
+        "4_description-name": '"Magic Cubes" - 3D RENDERS',
+        "4_description-details": 'The project included 3 Minecraft skin renders created in Blender. These models enabled the realization of the project "THE BEAUTY OF ROBOTS". As per the client\'s expectations, the models feature raised details like hair, which create a stunning effect with proper lighting.',
+    
+        "5_description-name": '"The Beauty of Robots" - DISCORD BOT',
+        "5_description-details": 'The project included 2 banners: one as a profile banner for the bot, and another used in messages sent by the bot as an "Embed Image". As per the client\'s requirements, the banners are animated and include key elements such as the server logo or renders of the owners\' skins.',
+    
+        "6_description-name": '"THE STYLE OF KNOWLEDGE" - INFOGRAPHICS',
+        "6_description-details": 'The project included many more graphics than are visible here. The graphics were created in various styles matching the content of announcements or information, as per the client\'s expectations.',
+    
+        "7_description-name": '"FLEETING VISIONS" - DISCORD BANNERS',
+        "7_description-details": 'The project included more banners than are visible here. The graphics were used as "banners" for a Discord server. They were created in various versions while maintaining a similar style, as per the client\'s requirements.',
+    
+        "8_description-name": '"PIXEL STYLE" - WARDROBE',
+        "8_description-details": 'The project included 3 GUI elements and a large number of cosmetics for the server\'s wardrobe, powered by the CosmeticsCore plugin. The wardrobe interface is predefined by the plugin, but the graphic style was freely designed. All cosmetics inside (except the defaults) were created by me using Blockbench and the client\'s initial ideas.',
+    
+        "9_description-name": '"SQUARE MOVIE" - TRAILER',
+        "9_description-details": 'The project showcased the TabMC.pl server in the best possible way. As per the client\'s requirements, all currently available game modes were presented.',
+    
+        "10_description-name": '"DOSE OF DOPAMINE" - TIKTOK',
+        "10_description-details": 'The project included many more videos than are visible here. The TikToks aimed to capture the viewer\'s attention (especially in the first 3 seconds) and were prepared according to the client\'s guidelines, featuring a simple editing style and smooth shots.',
+    
+        "11_description-name": '"STRONG PROMOTION" - STREAM INSERT',
+        "11_description-details": 'The project included two inserts for streams (the entire server and GenCash). The insert is neat and animated, without unnecessary elements, as per the client\'s instructions.'
     }
 };
 

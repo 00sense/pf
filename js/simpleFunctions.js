@@ -52,10 +52,15 @@ function openFilmProjectLibrary(filmArray) {
 // --------------------
 // Show Notification
 // --------------------
-function showNotification(title, content, result) {
-    if ($('#notification').css('display') === 'none') {
-        $('#notification').fadeIn(100);
+let notificationTimer;
 
+function showNotification(title, content, result) {
+    let visible = $('#notification').css('display') !== 'none';
+
+    if (!visible) {
+        // Pokaż powiadomienie
+        $('#notification').fadeIn(100);
+        $("#notification-title").text(getTranslationWithoutLang("notification-error"));
         $("#notification-title").text(title);
         $("#notification-content").text(content);
 
@@ -71,16 +76,59 @@ function showNotification(title, content, result) {
             $("#notification-content").css('color', 'rgb(187, 95, 95)');
         }
 
-        $('#notification').queue(function (show) {
-            $(this).css('transform', 'translateX(-50%)')
-            show();
-        })
+        $('#notification').queue(function(next) {
+            $(this).css('transform', 'translateX(-50%)');
+            next();
+        });
 
-        $('#notification').delay(7000).queue(function (hide) {
-            $(this).css('transform', 'translateX(300%)')
-            $(this).fadeOut(500);
-            hide();
-        })
+        if (notificationTimer) {
+            clearTimeout(notificationTimer);
+        }
+
+        notificationTimer = setTimeout(function() {
+            $('#notification').css('transform', 'translateX(300%)');
+            $('#notification').delay(1000).queue(function(next) {
+                $(this).css('display', 'none');
+                next();
+            });
+        }, 5000);
+
+    } else {
+        $('#notification').css('transform', 'translateX(300%)');
+
+        $('#notification').delay(500).fadeIn(500);
+        $("#notification-title").delay(500).text(getTranslationWithoutLang("notification-error"));
+        $("#notification-title").delay(500).text(title);
+        $("#notification-content").delay(500).text(content);
+
+        if (result === "success") {
+            // Success
+            $("#notification").css('box-shadow', '0 0 10px rgba(51, 85, 47, 0.5)');
+            $("#notification").css('border', 'rgb(133, 255, 129, 0.5) solid 1px');
+            $("#notification-content").css('color', 'rgb(102, 187, 95)');
+        } else {
+            // Fail
+            $("#notification").css('box-shadow', '0 0 10px rgba(85, 47, 47, 0.5)');
+            $("#notification").css('border', 'rgb(255, 129, 129, 0.5) solid 1px');
+            $("#notification-content").css('color', 'rgb(187, 95, 95)');
+        }
+
+        $('#notification').queue(function(next) {
+            $(this).css('transform', 'translateX(-50%)');
+            next();
+        });
+
+        if (notificationTimer) {
+            clearTimeout(notificationTimer);
+        }
+
+        notificationTimer = setTimeout(function() {
+            $('#notification').css('transform', 'translateX(300%)');
+            $('#notification').delay(1000).queue(function(next) {
+                $(this).css('display', 'none');
+                next();
+            });
+        }, 5000);
     }
 }
 
@@ -358,7 +406,6 @@ function copyDiscordId() {
 function openDiscordClient() {
     if (window.innerWidth < 1000) {
         showNotification(getTranslationWithoutLang("notification-error"), getTranslationWithoutLang("open-client-content-error"), "fail");
-        return;
     } else {
         window.open('discord:/users/744981493159559308', '_blank')
         showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("open-client-content-success"), "success");
@@ -396,7 +443,7 @@ function checkScrollBeyondFeedback() {
 // Open Mail:to
 // --------------------
 function openMail() {
-    let mail = "redsekk0@gmail.com";
+    let mail = "";
 
     const mailtoLink = `mailto:${mail}?subject=Order&body=`;
     window.location.href = mailtoLink;

@@ -22,6 +22,14 @@ $(document).ready(function() {
         }
     });
 
+    $(document).mousedown(function(event) {
+        if ($("#projects-project-view-film").css('display') === 'flex') {
+            if (!$(event.target).closest('#project-view-film-tools, #film-view').length) {
+                hideFilmProjectView();
+            }
+        }
+    });
+
     // --------------------
     // Hide Swiper/3D/Film When Click On Close Button
     // --------------------

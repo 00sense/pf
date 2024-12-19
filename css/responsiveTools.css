@@ -613,7 +613,12 @@
         gap: 90px;
     }
     #navbar-left {
+        left: 0;
         padding: 20px;
+    }
+    .navbar-left-img {
+        max-width: 35px;
+        max-height: 35px;
     }
     #navbar-right {
         align-items: center;

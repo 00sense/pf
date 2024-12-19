@@ -35,6 +35,25 @@
     align-items: start;
 }
 
+#projects-container::after {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
+    height: 40%;
+    z-index: 10;
+}
+
+#projects-container.hidden::after {
+    opacity: 0;
+    z-index: -1;
+}
+
 #container-title {
     transition: all 0.3s ease-in-out;
     padding: 20px 0;

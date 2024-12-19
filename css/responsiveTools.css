@@ -430,13 +430,14 @@
         margin-bottom: 30px;
     }
     #show-more {
+        display: flex;
+        justify-content: center;
         bottom: 27px;
         font-size: 15px;
         padding: 10px 0;
     }
     body #projects-container {
-        height: 900px;
-        overflow: hidden;
+        max-height: 900px;
     }
     #feedback-trust-note {
         font-size: 12px;

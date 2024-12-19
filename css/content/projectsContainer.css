@@ -584,7 +584,7 @@ body #object-enter {
     height: 25px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(sensee.github.io/icons/webp/check.webp) !important;
+    background-image: url(https://i.postimg.cc/t4s4wsmb/check.webp);
     transition: all 0.1s ease-in-out;
     opacity: 0;
 }

@@ -397,6 +397,7 @@
         font-size: 12px;
     }
     #projects-project {
+        flex-grow: 0;
         padding: 15px;
         align-items: center;
     }
@@ -426,14 +427,14 @@
         font-weight: 300;
     }
     #projects-projects-li {
+        gap: 20px;
         margin-bottom: 30px;
     }
     #show-more {
-        display: flex;
-        justify-content: center;
+        z-index: 15;
         bottom: 27px;
         font-size: 15px;
-        padding: 10px 0;
+        padding: 12px 0;
     }
     body #projects-container {
         height: 900px;

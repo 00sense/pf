@@ -158,7 +158,7 @@ body #last-p {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318272714125086782/copy.webp?ex=6761b8a3&is=67606723&hm=60b8d5030369dc5b48a71eace5271784c76b7522989268d262ab8ff4af84178a&);
+    background-image: url(/icons/webp/copy.webp);
 }
 
 .contact-button-copy:hover::before{
@@ -214,7 +214,7 @@ body #last-p {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273405694251028/discord.webp?ex=6761b948&is=676067c8&hm=2415ab3c61258eb6b80d27d9b73de67fac327484fb3b24ea2c8149844caa3e0a&);
+    background-image: url(/icons/webp/discord.webp);
 }
 
 #contact-button-main:hover::before{

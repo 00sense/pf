@@ -89,7 +89,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273395124605038/hello.webp?ex=6761b945&is=676067c5&hm=4605578d1ca4a932e727ebde55261d9f4e778fe53ee683516b5f8855ae4acac9&);
+    background-image: url(/icons/webp/hello.webp);
 }
 
 #content-card-content-button:hover::before{
@@ -130,7 +130,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273441350287370/down-arrow.webp?ex=6761b950&is=676067d0&hm=49207d8e2ac2821dec0b1c3d51721c77dac0c885391f9fbacd8d043728fec95e&);
+    background-image: url(/icons/webp/down-arrow.webp);
 }
 
 #content-card-content-button-read-more:hover::before{

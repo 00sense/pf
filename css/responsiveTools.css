@@ -164,6 +164,31 @@
         #multiple-images::after {
             opacity: 1;
         }
+        #film-image::after {
+            opacity: 1;
+        }
+        #film-layers {
+            opacity: 1;
+        }
+        #object-layers {
+            opacity: 1;
+        }
+        #object-image::after {
+            opacity: 1;
+        }
+        #object-image #object-image-model {
+            filter: blur(6px);
+        }
+    }
+
+    #close-icon, #close-icon-film, #close-icon-3D {
+        border: #ff8d8d7c solid 1px;
+        transform: rotate(-45deg);
+        background-color: #1f000056;
+        box-shadow: 0 0 30px #6d00005e;
+    }
+    #close-icon span, #close-icon-film span, #close-icon-3D span {
+        background: #ff9d9d;
     }
     #show-more:hover {
         background: linear-gradient(-135deg, rgb(17, 17, 17, 0.0), rgba(43, 40, 38, 0.8));
@@ -542,7 +567,7 @@
         background-color: var(--background-1);
         border: var(--border-2);
         border-radius: 10px;
-        background-image: url(https://cdn.discordapp.com/attachments/1180440086664450048/1318273459117232199/swiper-btn.webp?ex=6761b954&is=676067d4&hm=d11654b3f4f585928059a10afe35760beda55fa30a1cb9cb3f86bebff8c25be4&);
+        background-image: url(/icons/webp/swiper-btn.webp);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -687,7 +712,7 @@
         align-items: start;
         font-size: 11px;
     }
-    body #img-layers, body #img-enter {
+    body #img-layers, body #img-enter, body #film-layers, body #object-layers {
         width: 50px;
     }
     body #skills-card-title {

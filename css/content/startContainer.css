@@ -130,7 +130,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/down-arrow.webp);
+    background-image: url(https://i.postimg.cc/B6YvhcQ3/down-arrow.webp);
 }
 
 #content-card-content-button-read-more:hover::before{

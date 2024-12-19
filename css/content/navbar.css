@@ -29,11 +29,14 @@
 }
 
 #navbar-left {
+    align-items: center;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 
 .navbar-left-img {
+    max-width: 45px;
+    max-height: 45px;
     transition: all 0.5s ease-in-out;
     animation: logo-rotate-1 2.5s ease-in-out infinite;
 }

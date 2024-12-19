@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     #skills-skill a {
         font-size: 21px;
     }
@@ -313,7 +313,7 @@
     } 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     #skills-skill {
         gap: 7px;
     }
@@ -436,6 +436,7 @@
     }
     body #projects-container {
         height: 900px;
+        overflow: hidden;
     }
     #feedback-trust-note {
         font-size: 12px;

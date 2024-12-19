@@ -1,5 +1,5 @@
 // --------------------
-// Open Swiper For Choosed Images
+// Open Images Project Library
 // --------------------
 function openProjectLibrary(fileNames) {
     $('.swiper-slide').remove();
@@ -32,6 +32,9 @@ function openProjectLibrary(fileNames) {
     $("body").css("overflow", "hidden");
 }
 
+// --------------------
+// Open 3D Project Library
+// --------------------
 function open3dProjectLibrary(modelArray) {
         const modelViewer = $('#model-viewer-view');
         const modelName = modelArray[0];
@@ -41,6 +44,9 @@ function open3dProjectLibrary(modelArray) {
     $("body").css("overflow", "hidden");
 }
 
+// --------------------
+// Open Film Project Library
+// --------------------
 function openFilmProjectLibrary(filmArray) {
     const filmFrame = $('#youtube-player');
     const filmName = filmArray[0];
@@ -58,7 +64,6 @@ function showNotification(title, content, result) {
     let visible = $('#notification').css('display') !== 'none';
 
     if (!visible) {
-        // Pokaż powiadomienie
         $('#notification').fadeIn(100);
         $("#notification-title").text(getTranslationWithoutLang("notification-error"));
         $("#notification-title").text(title);
@@ -86,7 +91,7 @@ function showNotification(title, content, result) {
         }
 
         notificationTimer = setTimeout(function() {
-            $('#notification').css('transform', 'translateX(300%)');
+            $('#notification').css('transform', 'translateX(900%)');
             $('#notification').delay(1000).queue(function(next) {
                 $(this).css('display', 'none');
                 next();
@@ -94,7 +99,7 @@ function showNotification(title, content, result) {
         }, 5000);
 
     } else {
-        $('#notification').css('transform', 'translateX(300%)');
+        $('#notification').css('transform', 'translateX(900%)');
 
         $('#notification').delay(500).fadeIn(500);
         $("#notification-title").delay(500).text(getTranslationWithoutLang("notification-error"));
@@ -123,7 +128,7 @@ function showNotification(title, content, result) {
         }
 
         notificationTimer = setTimeout(function() {
-            $('#notification').css('transform', 'translateX(300%)');
+            $('#notification').css('transform', 'translateX(900%)');
             $('#notification').delay(1000).queue(function(next) {
                 $(this).css('display', 'none');
                 next();
@@ -366,12 +371,11 @@ function hideFilmProjectView() {
 // On/Off Animations
 // --------------------
 function manageAnimations() {
-    let animatedElements = "#multiple-images-bgimage, k, det, .navbar-left-img, .navbar-mid-option-underline, #navbar-mid-mobile-menu-table-option-active, #content-card-image::after, #content-card-image::before, #content-card-content-button::after, #content-card-content-button::before,  #skills-skill::after, #skills-skill::before, #skills-skill-option-knowledge::after, #skills-skill-option-knowledge::before,  #footer-bottom-mid::after, #footer-bottom-mid::before, #footer-mobile-bottom-mid::before, #footer-mobile-bottom-mid::after, #projects-project::after, #projects-project::before, #text-content-top-img::before, #text-content-top-img::after";
+    let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline";
 
     if ($(animatedElements).css("animation-name") === "animation-off") {
         $(".navbar-left-img").css("animation-name", "logo-rotate-1");
         $("k, det").css("animation-name", "gradient-animation");
-        $("#multiple-images-bgimage").css("animation-name", "img-bg-1");
         $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
         $('#settings-icon').css('opacity', '1');
 

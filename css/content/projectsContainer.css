@@ -1,6 +1,5 @@
 #projects-card-content {
     padding-bottom: 60px;
-    color: var(--text-color-1);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,7 @@
     position: relative;
     gap: 30px;
     justify-content: center;
-
+    height: 100%;
     width: 90%;
     display: flex;
     margin-bottom: 80px;
@@ -56,25 +55,13 @@
     gap: 25px;
     padding: 25px;
     border-radius: 20px;
-
     backdrop-filter: blur(20px);
     background: linear-gradient(-135deg, transparent, rgba(170, 133, 91, 0.2));
-
-    /* width: 90%; */
-
     display: flex;
-    align-items: start;
-    justify-content: start;
 }
 
-
-
 #projects-project-img {  
-
-
     display: flex;
-    justify-content: center;
-    align-items: start;
     cursor: pointer;
     width: 100%;
     overflow: hidden;
@@ -117,28 +104,6 @@
 
 #multiple-images-main {
     z-index: 2;
-}
-
-body #multiple-images-bgimage {
-    transform: scale(0.995);
-    display: flex;
-    position: absolute;
-    box-shadow: none;
-    opacity: 0.5;
-    z-index: 0;
-    animation: img-bg-1 5s ease-in-out infinite;
-}
-
-#multiple-images-bgimage::after {
-    z-index: 1;
-    border-radius: 18px;
-    top: 0;
-    left: 0;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 body #img-layers, body #img-enter {
@@ -207,14 +172,13 @@ body #img-enter {
     position: relative;
     background-color: rgba(0, 0, 0, 0.7);
     width: 85%;
-    border: #ffffff7c solid 1px;
+    border: var(--border-2);
     padding: 15px 30px;
     border-radius: 30px;
 }
 
 #carousel-info {
     padding: 0 20px;
-    align-items: start;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -253,7 +217,7 @@ body #img-enter {
     height: 60px;
     transition: .3s ease-in-out;
     cursor: pointer;
-    border: #ffffff7c solid 1px;
+    border: var(--border-2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,7 +267,7 @@ body #img-enter {
     height: 100%;
     top: 0;
     left: 0;
-    border: #ffffff7c solid 1px;
+    border: var(--border-2);
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
@@ -321,10 +285,9 @@ body #img-enter {
     align-items: center;
     justify-content: center;
 }
+
 .swiper-slide img {
     border-radius: 1px;
-    /* width: 100%;
-    height: 100%; */
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -385,7 +348,7 @@ body #img-enter {
     margin-bottom: 20px;
     padding: 20px 20px;
     text-align: center;
-    border-bottom: #ffffff7c solid 1px;
+    border-bottom: var(--border-2);
     font-weight: 200;
     font-size: 18px;
 }
@@ -393,15 +356,6 @@ body #img-enter {
 body #projects-trust-note k {
     font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
 
 #projects-project-view-3D {
     margin-bottom: 100px;
@@ -451,13 +405,10 @@ body #projects-trust-note k {
 }
 
 body #object-layers, body #object-enter {
-    border: none;
     background-repeat: no-repeat;
     position: absolute;
     width: 70px;
     z-index: 4;
-    box-shadow: none;
-    transform: translateY(-3px);
     transition: all 0.2s ease-in-out;
 }
 
@@ -499,7 +450,7 @@ body #object-enter {
     height: 60px;
     transition: .3s ease-in-out;
     cursor: pointer;
-    border: #ffffff7c solid 1px;
+    border: var(--border-2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -558,9 +509,6 @@ body #object-enter {
     font-weight: 500;
 }
 
-
-
-
 #colorgrading, #scaling {
     appearance: none;
     padding: 5px;
@@ -599,38 +547,6 @@ body #object-enter {
     gap: 7px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #projects-project-view-film {
     margin-bottom: 100px;
     gap: 30px;
@@ -647,8 +563,6 @@ body #object-enter {
     left: 0;
 }
 
-
-
 #projects-project-img:hover {
     #film-image::after {
         opacity: 0.8;
@@ -656,13 +570,10 @@ body #object-enter {
 }
 
 body #film-layers, body #film-enter {
-    border: none;
     background-repeat: no-repeat;
     position: absolute;
     width: 70px;
     z-index: 4;
-    box-shadow: none;
-    transform: translateY(-3px);
     transition: all 0.2s ease-in-out;
 }
 
@@ -694,7 +605,7 @@ body #film-enter {
     height: 60px;
     transition: .3s ease-in-out;
     cursor: pointer;
-    border: #ffffff7c solid 1px;
+    border: var(--border-2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -737,7 +648,6 @@ body #film-enter {
 }
 
 #film-view {
-    gap: -100%;
     border: var(--border-2);
     background: var(--background-1);
     padding: 20px 0;
@@ -751,8 +661,5 @@ iframe {
     position: relative;
     height: 100%;
     width: 80%;
-}
-
-iframe .second-film {
-    left: 0%;
+    border-radius: 20px;
 }

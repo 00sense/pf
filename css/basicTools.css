@@ -167,7 +167,7 @@ body,
 #notification {
     transition: all 0.5s ease-in-out;
     box-shadow: 0 0 10px rgba(51, 85, 47, 0.5);
-    transform: translateX(300%);
+    transform: translateX(900%);
     bottom: 40px;
     left: 50%;
     width: 450px;

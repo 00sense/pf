@@ -87,7 +87,6 @@
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: start;
     flex-direction: column;
 }
 
@@ -112,7 +111,6 @@
 
 #feedback-opinion-content {
     height: 100%;
-    justify-content: start;
     display: flex;
 }
 
@@ -146,7 +144,6 @@
 
 #feedback-opinion-content-decoration {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     flex-shrink: 0;
     margin-right: 10px;
@@ -155,7 +152,6 @@
 }
 
 #feedback-opinion-content-decoration-shape {
-    top: 0;
     width: 5px;
     height: 90%;
     background-color: #e6ad62;
@@ -163,7 +159,6 @@
 }
 
 #feedback-opinion-author p p2 img {
-    border-radius: 0;
     height: auto;
     width: 35px;
     padding: 5px 0;
@@ -189,7 +184,6 @@
     justify-content: center;
     gap: 10px;
     padding: 5px 25px;
-    right: 0;
     position: relative;
     flex-direction: column;
     align-items: center;
@@ -224,12 +218,8 @@
     position: relative;
     padding: 5px 25px;
     display: flex;
-    align-items: start;
     gap: 15px;
 }
-
-
-
 
 #swiper-opinion-info {
     gap: 10px;
@@ -241,10 +231,8 @@
 
 #swiper-opinion-info-button-1 {
     white-space: nowrap;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     color: #161616;
-    text-decoration: none;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
@@ -267,7 +255,6 @@
     position: absolute;
     left: 33px;
     transition: all 0.3s ease-in-out;
-    text-shadow: none;
     color: transparent;
     content: 'ss';
     opacity: 0;
@@ -283,25 +270,10 @@
     transform: scale(1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #swiper-opinion-info-button-2 {
     white-space: nowrap;
     border-radius: 20px;
     color: #d8d8d8;
-    text-decoration: none;
     cursor: pointer;
     position: relative;
     font-size: 17px;
@@ -323,7 +295,6 @@
     position: absolute;
     left: 7px;
     transition: all 0.3s ease-in-out;
-    text-shadow: none;
     color: transparent;
     content: 'ss';
     opacity: 0;
@@ -338,19 +309,6 @@
     opacity: 0.85;
     transform: scale(1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 body #default-author {
     width: 30px !important;

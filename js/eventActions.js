@@ -22,6 +22,9 @@ $(document).ready(function() {
         }
     });
 
+    // --------------------
+    // Hide Film When Click Outside (not move, only click)
+    // --------------------
     $(document).mousedown(function(event) {
         if ($("#projects-project-view-film").css('display') === 'flex') {
             if (!$(event.target).closest('#project-view-film-tools, #film-view').length) {
@@ -53,19 +56,19 @@ $(document).ready(function() {
     // Expand/Collapse Projects List
     // --------------------
     $("#show-more").click(function() {
-        if ($(".list").hasClass("hidden")) {
+        if ($("#projects-container").hasClass("hidden")) {
             if (window.innerWidth > 700) {
                 $("#projects-container").css('height', '1100px');
             } else {
                 $("#projects-container").css('height', '900px');
             }
 
-            $(".list").removeClass("hidden");
+            $("#projects-container").removeClass("hidden");
 
             $("#show-more").text(getTranslationWithoutLang("show-more-projects"));
         } else {
             $("#projects-container").css('height', 'unset');
-            $(".list").addClass("hidden");
+            $("#projects-container").addClass("hidden");
 
             $("#show-more").text(getTranslationWithoutLang("collapse-projects"));
         }
@@ -75,9 +78,17 @@ $(document).ready(function() {
 // --------------------
 // Debounces
 // --------------------
-window.addEventListener('scroll', debounce(checkScrollValue, 10));
-window.addEventListener('scroll', debounce(checkScrollBeyondFeedback, 100));
-window.addEventListener('resize', debounce(checkNavbarSettings, 100));
-window.addEventListener('load', debounce(checkNavbarSettings, 10));
-window.addEventListener('resize', debounce(checkProjectVisibility, 100));
-window.addEventListener('load', debounce(checkProjectVisibility, 10));
+window.addEventListener('load', () => {
+    debounce(checkNavbarSettings, 10)();
+    debounce(checkProjectVisibility, 10)();
+});
+
+window.addEventListener('scroll', () => {
+    debounce(checkScrollValue, 10)();
+    debounce(checkScrollBeyondFeedback, 100)();
+});
+
+window.addEventListener('resize', () => {
+    debounce(checkNavbarSettings, 100)();
+    debounce(checkProjectVisibility, 100)();
+});

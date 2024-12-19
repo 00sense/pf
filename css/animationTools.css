@@ -8,18 +8,6 @@
     }
 }
 
-@keyframes img-bg-1 {
-    30% {
-        rotate: 0deg;
-    }
-    50% {
-        rotate: -3deg;
-    }
-    70% {
-        rotate: 0deg;
-    }
-}
-
 @keyframes RGB-animation-1 {
     100%  {background-position: 400%;}
 }

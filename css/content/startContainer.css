@@ -5,17 +5,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     width: 450px;
+    overflow: hidden;
 }
 
 #content-card-image img {
-    border-radius: 50%;
     width: 100%;
 }
 
 #content-card-content {
-    align-items: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,13 +24,11 @@
 #content-card-content a {
     transition: all 0.2s ease-in-out;
     line-height: 160px;
-    color: var(--text-color-1);
     font-weight: 700;
     font-size: 130px;
 }
 
 #content-card-content p {
-    color: var(--text-color-1);
     font-weight: 200;
     font-size: 28px;
     margin-top: 5px;
@@ -53,14 +49,12 @@
 }
 
 #content-card-content-button {
+    position: relative;
     white-space: nowrap;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     gap: 9px;
     border-radius: 20px;
     color: #161616;
-    text-decoration: none;
     cursor: pointer;
-    position: relative;
     font-size: 20px;
     font-weight: 500;
     padding: 15px 30px;
@@ -74,15 +68,14 @@
     padding: 15px 30px 15px 60px;
     background-color: rgb(206, 139, 38);
     box-shadow: 0px 10px 20px rgba(229, 150, 46, 0.4);
-    color: #fff;
+    color: var(--color-1);
 }
 
-#content-card-content-button::before{
+#content-card-content-button::before {
     transform: scale(0) translateX(-5px);
     position: absolute;
     left: 20px;
     transition: all 0.3s ease-in-out;
-    text-shadow: none;
     color: transparent;
     content: 'ss';
     opacity: 0;
@@ -101,7 +94,6 @@
     white-space: nowrap;
     border-radius: 20px;
     color: #d8d8d8;
-    text-decoration: none;
     cursor: pointer;
     position: relative;
     font-size: 20px;
@@ -123,7 +115,6 @@
     position: absolute;
     left: 20px;
     transition: all 0.3s ease-in-out;
-    text-shadow: none;
     color: transparent;
     content: 'ss';
     opacity: 0;

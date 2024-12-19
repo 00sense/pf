@@ -192,15 +192,13 @@ $(document).ready(function() {
     const observer = new IntersectionObserver(handleVisibility, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7 // Procent widoczności elementu
+        threshold: 0.7 // Opacity
     });
 
     $('#content-container, #skills-container, #aboutme-container, #projects-container, #feedback-container').each(function() {
         observer.observe(this);
     });
 });
-
-
 
 // --------------------
 // Hide Loading Animation

@@ -5,6 +5,7 @@ function setLanguageOnLoad() {
     setButtonStyles(currentLanguage);
     console.log("Loaded language: " + currentLanguage);
 }
+
 let translations = {
     "pl": {
         "notification-success": "Sukces!",

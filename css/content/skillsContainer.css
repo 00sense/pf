@@ -1,5 +1,4 @@
 #skills-card-content {
-    color: var(--text-color-1);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,6 @@
 
 #skills-skill {
     text-align: center;
-    /* transition: all 0.3s ease-in-out; */
     gap: 10px;
     border-radius: 20px;
     position: relative;
@@ -62,11 +60,10 @@
 #skills-skill-option-knowledge span {
     top: 0;
     z-index: -1;
-    display: flex;
     left: 0;
     position: absolute;
     height: 100%;
-    background: #644c29;
+    background: #644f2e;
 }
 
 #skills-skill-option-knowledge-percentage {

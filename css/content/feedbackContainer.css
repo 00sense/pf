@@ -22,7 +22,7 @@
     background-color: var(--background-1);
     border: var(--border-2);
     border-radius: 10px;
-    background-image: url(/icons/webp/swiper-btn.webp);
+    background-image: url(https://i.postimg.cc/Zq1BV8TX/swiper-btn.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -274,7 +274,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/discord.webp);
+    background-image: url(https://i.postimg.cc/3xfDDMz8/discord.webp);
 }
 
 #swiper-opinion-info-button-1:hover::before{
@@ -330,7 +330,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/copy.webp);
+    background-image: url(https://i.postimg.cc/bvGSxCjQ/copy.webp);
 }
 
 #swiper-opinion-info-button-2:hover::before{

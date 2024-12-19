@@ -10,6 +10,9 @@
     --background-1: rgba(0, 0, 0, 0.5);
     --border-1: 3px solid #e6ad62;
     --border-2: #ffffff7c solid 1px;
+
+    --copy-icon: url();
+    --down-arrow-icon: url(https://i.postimg.cc/B6YvhcQ3/down-arrow.webp);
 }
 
 body,

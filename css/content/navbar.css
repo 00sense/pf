@@ -119,7 +119,7 @@
 
 #navbar-mid-mobile-menu::before, #navbar-mid-mobile-menu::after {
     content: '';
-    background-image: url(/icons/webp/down-arrow.webp);
+    background-image: url(https://i.postimg.cc/B6YvhcQ3/down-arrow.webp);
     background-size: cover;
     width: 20px;
     height: 20px;

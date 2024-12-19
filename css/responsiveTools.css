@@ -400,16 +400,8 @@
         padding: 15px;
         align-items: center;
     }
-    #projects-project-img {
-        margin-top: 15px;
-        width: 100%;
-    }
     #description-for {
         margin-bottom: 10px;
-    }
-    #projects-project-description {
-        width: 100%;
-        margin-bottom: 15px;
     }
     #projects-project-description n {
         font-size: 20px;
@@ -576,7 +568,7 @@
         background-color: var(--background-1);
         border: var(--border-2);
         border-radius: 10px;
-        background-image: url(/icons/webp/swiper-btn.webp);
+        background-image: url(https://i.postimg.cc/Zq1BV8TX/swiper-btn.webp);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;

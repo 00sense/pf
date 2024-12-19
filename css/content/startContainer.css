@@ -89,7 +89,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/hello.webp);
+    background-image: url(https://i.postimg.cc/Rhm3zvJR/hello.webp);
 }
 
 #content-card-content-button:hover::before{

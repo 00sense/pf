@@ -158,7 +158,7 @@ body #last-p {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/copy.webp);
+    background-image: url(https://i.postimg.cc/bvGSxCjQ/copy.webp);
 }
 
 .contact-button-copy:hover::before{
@@ -214,7 +214,7 @@ body #last-p {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/icons/webp/discord.webp);
+    background-image: url(https://i.postimg.cc/3xfDDMz8/discord.webp);
 }
 
 #contact-button-main:hover::before{

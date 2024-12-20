@@ -6,18 +6,9 @@
     <meta name="author" content="Sensee - dc: 0sensu">
     <meta name="description" content="Sensee - Portfolio">
     <link rel="icon" type="image/x-icon" href="assets/main-logo.svg">
-
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.1/dist/es-module-shims.js"></script>
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js"
-            }
-        }
-    </script>
     
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -35,26 +26,27 @@
     <link rel="stylesheet" href="css/responsiveTools.css">
 </head>
 <body>
-    <scripts>
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
-
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-        <script src="js/loadingTools.js"></script>
-        <script src="js/smoothScroll.js"></script>
-        <script src="js/languageTools.js"></script>
-        <script src="js/simpleFunctions.js"></script>
-        <script src="js/eventActions.js"></script>
-        <!-- <script src="js/dev-blocker.js"></script> -->
-    </scripts>
+<scripts>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/loadingTools.js"></script>
+    <script src="js/smoothScroll.js"></script>
+    <script src="js/languageTools.js"></script>
+    <script src="js/simpleFunctions.js"></script>
+    <script src="js/eventActions.js"></script>
+    <!-- <script src="js/dev-blocker.js"></script> -->
+</scripts>
 <bg>
     <div id="background">
         <img src="assets/bg.webp" alt="bgg">
         <div id="background-effects"></div>
     </div>
 </bg>
+
+<fix>
+    <div id="scroll-fix"></div>
+</fix>
 
 <section>
     <div id="containers">
@@ -67,7 +59,6 @@
                     <div id="content-card-content-button" class="button" onclick="openDiscordClient(); copyDiscordId();" data-translate="contact-me">.</div>
                     <div id="content-card-content-button-read-more" class="button" onclick="scrollToElement('#aboutme-container')" data-translate="read-more">.</div>
                 </div>
-                
             </div>
             <div id="content-card-image" data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="800">
                 <img src="assets/img-1.webp"/>
@@ -78,7 +69,8 @@
                 <a id="container-title" data-translate="skills-main-text"> </a>
                 <div id="skills-skill-container">
                     <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
-                        <a><div data-translate="skills-skill-category-1">.</div>
+                        <a>
+                            <div data-translate="skills-skill-category-1">.</div>
                             <img src="icons/webp/3d-object.webp"/>
                         </a>
                         <div id="skills-skill-option" class="blockbench">
@@ -99,7 +91,7 @@
                         <f data-translate="skills-skill-since-1">.</f>
                     </div>
 
-                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800" data-aos-delay="100">
+                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <a><div data-translate="skills-skill-category-2">.</div>
                             <img src="icons/webp/2d-object.webp"/>
                         </a>
@@ -120,7 +112,7 @@
                         <f data-translate="skills-skill-since-2">.</f>
                     </div>
 
-                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800" data-aos-delay="200">
+                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <a><div data-translate="skills-skill-category-3">.</div>
                             <img src="icons/webp/edit-1.webp"/>
                         </a>
@@ -141,7 +133,7 @@
                         <f data-translate="skills-skill-since-3">.</f>
                     </div>
 
-                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800" data-aos-delay="300">
+                    <div id="skills-skill" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <a><div data-translate="skills-skill-category-4">.</div>
                             <img src="icons/webp/programming-1.webp"/>
                         </a>
@@ -181,7 +173,6 @@
                         <p data-translate="aboutme-content-3"> </p>
                         <p data-translate="aboutme-content-4" id="last-p"> </p>
                     </div>
-
                     <div id="text-contact-me" data-aos="fade-in" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="contact-me-content"> 
                             <p><y data-translate="aboutme-contact-1">Dziękuję za Twoją uwagę!</y><h data-translate="aboutme-contact-2">Zachęcam Cię do kontaktu na <det data-translate="aboutme-contact-3" onclick="scrollToElement('#feedback-container')"> </det><pypy data-translate="aboutme-contact-4">>gdzie możemy omówić szczegóły potencjalnej współpracy lub po prostu wymienić się pomysłami. Jestem otwarty na każdą rozmowę i nowe wyzwania</pypy</h></p>
@@ -197,17 +188,15 @@
             </div>
         </div>
 
-
         <div id="projects-container" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
             <div id="projects-card-content">
                 <a id="container-title" data-translate="projects-main-text"> </a>
                 <p id="projects-trust-note"><k data-translate="trust-note-1"> </k><yyyyy data-translate="trust-note-2"> </yyyyy></p>
                 <div id="projects-projects-li">
-
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['garderoba_1', 'garderoba_4', 'garderoba_2', 'garderoba_5', 'garderoba_3'])">
-                                <img src="projects_gallery/garderoba_4.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/garderoba_4.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -241,7 +230,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['render_1', 'render_2', 'render_3'])">
-                                <img src="projects_gallery/render_1.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/render_1.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -303,7 +292,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['gui_1', 'gui_2', 'gui_3', 'gui_4', 'gui_5'])">
-                                <img src="projects_gallery/gui_5.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/gui_5.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -334,7 +323,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['bot_2', 'bot_1'])">
-                                <img src="projects_gallery/bot_img_2.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/bot_img_2.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -365,7 +354,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['discord_1', 'discord_2', 'discord_3', 'discord_4', 'discord_5'])">
-                                <img src="projects_gallery/discord_1.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/discord_1.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -396,7 +385,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['wstawka_1', 'wstawka_2'])">
-                                <img src="projects_gallery/wstawka_img.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/wstawka_img.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -424,11 +413,10 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
-                            <div id="object-image" onclick="open3dProjectLibrary(['snowman_hat'])">
-                                <img id="object-image-model" src="projects_gallery/snowman_hat.webp" loading="lazy">
+                            <div id="object-image" onclick="open3dProjectLibrary(['3D_GALLERY'])">
+                                <img id="object-image-model" src="projects_gallery/3d_gallery.webp" loading="lazy">
                                 <img src="icons/3d-model.svg" loading="lazy" id="object-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -459,7 +447,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['embed_2', 'embed_3', 'embed_1'])">
-                                <img src="projects_gallery/embed_2.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/embed_2.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -490,7 +478,7 @@
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
                             <div id="multiple-images" onclick="openProjectLibrary(['twitch_5', 'twitch_1', 'twitch_2', 'twitch_3', 'twitch_4'])">
-                                <img src="projects_gallery/twitch_1.webp" loading="lazy" id="multiple-images-main">
+                                <img src="projects_gallery/twitch_1.webp" loading="lazy">
                                 <img src="icons/layers.svg" loading="lazy" id="img-layers">
                                 <img src="icons/enter.svg" loading="lazy" id="img-enter">
                             </div>
@@ -549,14 +537,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>   
             </div>
             <div id="show-more">.</div>
         </div>
-
-
-
 
         <div id="feedback-container" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
             <div id="feedback-card-content">
@@ -572,7 +556,6 @@
                                     <div id="swiper-opinion-info-button-2" class="button" onclick="copyDiscordId()" data-translate="aboutme-copy-id">.</div>
                                 </div>
                             </div>
-
                             <div id="swiper-opinion-tools">
                                 <div id="swiper-opinion-buttons">
                                     <div class="swiper-opinion-button-prev"></div>
@@ -581,7 +564,6 @@
                                 <div class="swiper-opinion-pagination" style="width: unset;"></div>
                             </div>
                         </div>
-
                         <div class="swiper-opinion-wrapper">
                             <div class="swiper-opinion-slide">
                                 <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
@@ -599,7 +581,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="swiper-opinion-slide">
                                 <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                                     <div id="feedback-opinion-author">
@@ -616,12 +597,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="swiper-opinion-slide">
                                 <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                                     <div id="feedback-opinion-author">
                                         <img src="assets/yoixv.webp">
-                                        <p>Yoixv/Kiyuch
+                                        <p>Kiyuch
                                             <p2 data-translate="o-3-author-desc"> 
                                                 <img src="icons/webp/person.webp" id="default-author"></p2>
                                         </p>
@@ -635,7 +615,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -758,7 +737,7 @@
         <div id="project-view-3D-tools">
             <div id="object-settings-3D">
                 <a><k data-translate="3D-model-view-description-1"> </k> <xxxx data-translate="3D-model-view-description-2"> </xxxx></a>
-                <input type="checkbox" id="colorgrading" onclick="changeColorGrading()" checked>
+                <input type="checkbox" id="colorgrading" onclick="changeCameraControls()" checked>
             </div>
             <div id="close-icon-3D">
                 <span></span>
@@ -767,9 +746,6 @@
 
         </div>
         <model-viewer id="model-viewer-view" camera-controls touch-action="pan-y" alt="3D model" shadow-intensity="1" auto-rotate>
-            <effect-composer render-mode="quality" msaa="8">
-                <color-grade-effect blend-mode="DEFAULT" opacity="1" brightness="-0.05" contrast="0" saturation="0.1" hue="0">
-            </effect-composer>
         </model-viewer>
     </div>
 

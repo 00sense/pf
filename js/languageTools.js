@@ -3,7 +3,6 @@ let currentLanguage = localStorage.getItem('language') || 'en';
 function setLanguageOnLoad() {
     updateTranslations(currentLanguage);
     setButtonStyles(currentLanguage);
-    console.log("Loaded language: " + currentLanguage);
 }
 
 let translations = {
@@ -77,7 +76,7 @@ let translations = {
         "verified-opinion-1": "UWAGA! ",
         "verified-opinion-2": "Opinie poniżej są autentyczne i zweryfikowane. W razie wątpliwości zapraszam do kontaktu na Discordzie. Przypominam, że publikowanie fałszywych opinii zgodnie z art. 286 §1 Kodeksu karnego jest nielegalne",
         "3D-model-view-description-1": "UWAGA! ",
-        "3D-model-view-description-2": "Aby wyłączyć efekty koloryzujące (niezalecane), skorzystaj z opcji obok",
+        "3D-model-view-description-2": "Aby wyłączyć automatyczne obracanie modelu, kliknij ikonę obok",
         "swiper-opinion-info-1": "Poznaj odczucia klientów!",
         "swiper-opinion-info-2": "Możesz być jednym z nich, skontaktuj się na",
         "swiper-opinion-info-3": " Discordzie!",
@@ -125,7 +124,7 @@ let translations = {
 
     "en": {
         "notification-success": "Success!",
-        "notifation-error": "An error occurred!",
+        "notification-error": "An error occurred!",
 
         "change-language-error": "Hey! You've been trying to change the language to the one you currently have selected for a few times! Try choosing a different one, if you're having trouble with that contact us on Discord ツ",
         "copy-id-content-error": "The text could not be copied, the error occurred: ",
@@ -193,7 +192,7 @@ let translations = {
         "verified-opinion-1": "NOTICE! ",
         "verified-opinion-2": "The opinions below are authentic and verified. If you have any doubts, feel free to contact me on Discord. Please note that posting fake reviews is illegal under Article 286 §1 of the Penal Code.",
         "3D-model-view-description-1": "NOTICE! ",
-        "3D-model-view-description-2": "To disable color grading effects (not recommended), use the option provided next to this section",
+        "3D-model-view-description-2": "To disable automatic model rotation, click the icon next to it",
         "swiper-opinion-info-1": "Discover clients' feedback!",
         "swiper-opinion-info-2": "You could be one of them, get in touch on",
         "swiper-opinion-info-3": " Discord!",
@@ -322,7 +321,7 @@ function updateTranslations(language) {
         $('#scaling-info').text(getTranslationWithoutLang('carousel-scaling-2-on'));
     }
 
-    if ($(".list").hasClass("hidden")) {
+    if ($("#projects-container").hasClass("hidden")) {
         $("#show-more").text(getTranslationWithoutLang("collapse-projects"));
     } else {
         $("#show-more").text(getTranslationWithoutLang("show-more-projects"));
@@ -369,19 +368,12 @@ function updateDateTranslations() {
     translations["en"]["skills-skill-since-4"] = "Since 2023 (" + resultDate4EN + ")";
 }
 
-function getTranslationWithLang(lang, key) {
-    if (translations[lang] && translations[lang][key]) {
-        return translations[lang][key];
-    } else {
-        console.warn(`Translation for "${key}" not found in language "${lang}"`);
-        return key;
-    }
-}
-
 function getTranslationWithoutLang(key) {
     if (currentLanguage === 'en') {
         return translations['en'][key];
-    } else {
+    } else if (currentLanguage === 'pl') {
         return translations['pl'][key];
+    } else {
+        return 'Translation for ' + key + ' not found!';
     }
 }

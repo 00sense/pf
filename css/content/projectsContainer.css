@@ -102,10 +102,6 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 
-#multiple-images-main {
-    z-index: 2;
-}
-
 body #img-layers, body #img-enter {
     border: none;
     background-repeat: no-repeat;

@@ -30,6 +30,7 @@ function openProjectLibrary(fileNames) {
 
     $("#projects-project-view").fadeIn(300);
     $("body").css("overflow", "hidden");
+    manageEffectVisibility('hide');
 }
 
 // --------------------
@@ -42,6 +43,7 @@ function open3dProjectLibrary(modelArray) {
 
     $("#projects-project-view-3D").fadeIn(300);
     $("body").css("overflow", "hidden");
+    manageEffectVisibility('hide');
 }
 
 // --------------------
@@ -53,6 +55,7 @@ function openFilmProjectLibrary(filmArray) {
     filmFrame.attr('src', `https://www.youtube.com/embed/${filmName}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`);
     $("#projects-project-view-film").fadeIn(300);
     $("body").css("overflow", "hidden");
+    manageEffectVisibility('hide');
 }
 
 // --------------------
@@ -275,38 +278,21 @@ function checkProjectVisibility() {
         $('#swiper-opinion-navigation').attr('data-aos', 'none');
         $('#swiper-opinion-info-buttons').attr('data-aos', 'none');
         $('[id^="feedback-opinion"]').attr('data-aos', 'none');
-
     } else {
         return;
     }
 }
 
 // --------------------
-// Change Visibility Of Color Grading In 3D Object View
+// Change Camera Controls
 // --------------------
-function changeColorGrading() {
+function changeCameraControls() {
     const modelViewer = document.querySelector('model-viewer#model-viewer-view');
-    
-    const existingEffectComposer = modelViewer.querySelector('effect-composer');
-    
-    if (existingEffectComposer) {
-        modelViewer.removeChild(existingEffectComposer);
+
+    if (modelViewer.hasAttribute('auto-rotate')) {
+        modelViewer.removeAttribute('auto-rotate');
     } else {
-        const effectComposer = document.createElement('effect-composer');
-        effectComposer.setAttribute('render-mode', 'quality');
-        effectComposer.setAttribute('msaa', '8');
-        
-        const colorGradeEffect = document.createElement('color-grade-effect');
-        colorGradeEffect.setAttribute('blend-mode', 'DEFAULT');
-        colorGradeEffect.setAttribute('opacity', '1');
-        // colorGradeEffect.setAttribute('tonemapping', 'ACES_FILMIC');
-        colorGradeEffect.setAttribute('brightness', '-0.05');
-        colorGradeEffect.setAttribute('contrast', '0');
-        colorGradeEffect.setAttribute('saturation', '0.1');
-        colorGradeEffect.setAttribute('hue', '0');
-        
-        effectComposer.appendChild(colorGradeEffect);
-        modelViewer.appendChild(effectComposer);
+        modelViewer.setAttribute('auto-rotate', '');
     }
 }
 
@@ -348,6 +334,7 @@ function checkNavbarSettings() {
 function hideProjectView() {
     $('#projects-project-view').fadeOut(300);
     $("body").css("overflow", "visible");
+    manageEffectVisibility('show');
 }
 
 // --------------------
@@ -356,6 +343,7 @@ function hideProjectView() {
 function hide3dProjectView() {
     $('#projects-project-view-3D').fadeOut(300);
     $("body").css("overflow", "visible");
+    manageEffectVisibility('show');
 }
 
 // --------------------
@@ -365,6 +353,7 @@ function hideFilmProjectView() {
     $('#projects-project-view-film').fadeOut(300);
     $("body").css("overflow", "visible");
     $('#youtube-player').attr('src', '');
+    manageEffectVisibility('show');
 }
 
 // --------------------
@@ -459,4 +448,15 @@ function openMail() {
     .catch(function(err) {
         showNotification(getTranslationWithoutLang("notifation-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
     })
+}
+
+function manageEffectVisibility(action) {
+    element = $('#settings');
+
+    if (action == 'show') {
+        element.fadeIn(300);
+    } 
+    else if (action == 'hide') {
+        element.fadeOut(300);
+    }
 }

@@ -33,10 +33,10 @@
     height: 1100px;
     overflow: hidden;
     align-items: start;
+    position: relative;
 }
 
 #projects-container::after {
-    position: relative;
     transition: all 0.5s ease-in-out;
     content: '';
     position: absolute;

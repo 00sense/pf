@@ -68,27 +68,28 @@
         font-size: 21px;
     }
     #settings {
+        border-right: 0; border-top: 0;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
-        border-radius: 20px;
-        bottom: 5%;
-        transform: translateX(-50%);
-        left: 0;
-        width: 140px;
-        height: 70px;
+        border-radius: 0 0 0 15px;
+        top: 80px;
+        transform: none;
+        right: 0;
+        width: 45px;
+        height: 45px;
     }
     #settings-icon {
         padding: 10px;
         top: unset;
         left: unset;
-        width: 30%;
-        height: 60%;
+        width: 50%;
+        height: 50%;
     }
     #settings:hover {
         background: var(--background-1);
-        width: 140px;
-        height: 70px;
+        width: 45px;
+        height: 45px;
         padding: 0;
     }
     #swiper-opinion-info {

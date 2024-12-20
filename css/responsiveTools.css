@@ -320,6 +320,13 @@
 }
 
 @media screen and (max-width: 800px) {
+    #projects-project-img {  
+        height: 150px;
+    }
+    
+    #projects-project-img img:first-child {
+        min-height: 150px;
+    }
     #skills-skill {
         gap: 7px;
     }
@@ -405,7 +412,7 @@
         margin-bottom: 10px;
     }
     #projects-project-description n {
-        font-size: 20px;
+        font-size: 18px;
     }
     #projects-project-description f {
         font-size: 12px;

@@ -436,17 +436,14 @@ function checkScrollBeyondFeedback() {
 // Open Mail:to
 // --------------------
 function openMail() {
-    let mail = "";
-
-    const mailtoLink = `mailto:${mail}?subject=Order&body=`;
-    window.location.href = mailtoLink;
+    window.location.href = 'mailto:sensee.kontakt@gmail.com';
 
     navigator.clipboard.writeText(mail)
     .then(function() {
-        showNotification(getTranslationWithoutLang("notifation-success"), getTranslationWithoutLang("copy-mail-content-success"), "success");
+        showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("copy-mail-content-success"), "success");
     })
     .catch(function(err) {
-        showNotification(getTranslationWithoutLang("notifation-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
+        showNotification(getTranslationWithoutLang("notification-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
     })
 }
 

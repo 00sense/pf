@@ -35,6 +35,7 @@
 }
 
 .navbar-left-img {
+    border-radius: 50%;
     max-width: 45px;
     max-height: 45px;
     transition: all 0.5s ease-in-out;

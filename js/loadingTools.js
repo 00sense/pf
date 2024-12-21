@@ -181,11 +181,7 @@ $(document).ready(function() {
                     case 'feedback-container':
                         $('.navbar-mid-option-underline').removeAttr('id');
                         $(`[value="feedback-container"]`).first().attr("id", "active");
-                        break;
-                    case 'show-more':
-                        $('.navbar-mid-option-underline').removeAttr('id');
-                        $(`[value="projects-container"]`).first().attr("id", "active");
-                        break;    
+                        break;   
                     default:
                         break;
                 }
@@ -199,7 +195,7 @@ $(document).ready(function() {
         threshold: 0.6 // Opacity
     });
 
-    $('#content-container, #skills-container, #aboutme-container, #projects-project, #feedback-container, #show-more').each(function() {
+    $('#content-container, #skills-container, #aboutme-container, #projects-project, #feedback-container').each(function() {
         observer.observe(this);
     });
 });

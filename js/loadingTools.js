@@ -182,6 +182,10 @@ $(document).ready(function() {
                         $('.navbar-mid-option-underline').removeAttr('id');
                         $(`[value="feedback-container"]`).first().attr("id", "active");
                         break;
+                    case 'show-more':
+                        $('.navbar-mid-option-underline').removeAttr('id');
+                        $(`[value="projects-container"]`).first().attr("id", "active");
+                        break;    
                     default:
                         break;
                 }
@@ -192,10 +196,10 @@ $(document).ready(function() {
     const observer = new IntersectionObserver(handleVisibility, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7 // Opacity
+        threshold: 0.6 // Opacity
     });
 
-    $('#content-container, #skills-container, #aboutme-container, #projects-project, #feedback-container').each(function() {
+    $('#content-container, #skills-container, #aboutme-container, #projects-project, #feedback-container, #show-more').each(function() {
         observer.observe(this);
     });
 });

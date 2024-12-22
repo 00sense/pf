@@ -55,7 +55,6 @@
     gap: 25px;
     padding: 25px;
     border-radius: 20px;
-    backdrop-filter: blur(20px);
     background: linear-gradient(-135deg, transparent, rgba(170, 133, 91, 0.2));
     display: flex;
 }
@@ -68,7 +67,6 @@
     height: 300px;
     border-radius: 20px;
     flex-grow: 1;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
 }
 
 #projects-project-img img:first-child {
@@ -109,7 +107,6 @@ body #img-layers, body #img-enter {
     width: 70px;
     z-index: 4;
     box-shadow: none;
-    transform: translateY(-3px);
     transition: all 0.2s ease-in-out;
 }
 
@@ -124,8 +121,7 @@ body #img-enter {
 #projects-project-img:hover #img-enter {
     transition: all 0.4s ease-in-out;
     opacity: 1;
-    scale: 1.1;
-    filter: drop-shadow(0 0 10px #ffffff83);
+    scale: 1;
 }
 
 #projects-project-img:hover #multiple-images::after {

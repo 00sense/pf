@@ -10,14 +10,11 @@
     --background-1: rgba(0, 0, 0, 0.5);
     --border-1: 3px solid #e6ad62;
     --border-2: #ffffff7c solid 1px;
-
-    --changed-color-1: hue-rotate(210deg);
 }
 
 body,
     html {
         color: var(--text-color-1);
-        min-height: var(--content-height);
         font-family: "Inter";
         user-select: none;
         scroll-behavior: smooth;
@@ -131,7 +128,6 @@ body,
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, rgba(255,132,15,1), rgba(255,189,127,1), rgba(244,194,75,1), rgba(255,132,15,1));
     border-radius: 5px;
-    filter: var(--changed-color-1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -143,7 +139,6 @@ body,
 }
 
 .preloader-text-line {
-    filter: var(--changed-color-1);
     position: relative;
     transition: all 1s ease;
     padding: 2px 250px;

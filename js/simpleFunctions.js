@@ -228,7 +228,7 @@ function manageProjectScaling() {
 // --------------------
 function checkScrollValue() {
     if (window.scrollY < 10) {
-        if (window.innerWidth > 1100) {
+        if (window.innerWidth > 1200) {
             $('#navbar-pre').css({
                 'top': '20px',
             });
@@ -241,7 +241,7 @@ function checkScrollValue() {
             });
         } 
     } else {
-        if (window.innerWidth > 1100) {
+        if (window.innerWidth > 1200) {
             $('#navbar-pre').css({
                 'top': '0',
             });
@@ -301,7 +301,7 @@ function changeCameraControls() {
 // --------------------
 function checkNavbarSettings() {
     if (window.scrollY < 10) {
-        if (window.innerWidth < 1100) {
+        if (window.innerWidth < 1200) {
             $('#navbar-pre').css({
                 'top': '0',
             });

@@ -154,6 +154,9 @@
         color: #161616;
         background-color: rgb(235, 235, 235);
     }
+    #img-enter {
+        display: none;
+    }
     .contact-button-copy:hover {
         box-shadow: none;
         padding: 15px 30px;
@@ -163,10 +166,7 @@
             opacity: 1;
         }
         #img-enter {
-            transition: all 0.4s ease-in-out;
-            opacity: 0;
-            scale: 1;
-            filter: none;
+            display: none;
         }
         #multiple-images::after {
             opacity: 1;

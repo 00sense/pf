@@ -412,7 +412,7 @@ function scrollToElement(element) {
     $('#navbar-mid-mobile-menu-table').delay(700).fadeOut(400);
     document.querySelector(element).scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'center'
     });
 
 }

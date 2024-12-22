@@ -10,6 +10,8 @@
     --background-1: rgba(0, 0, 0, 0.5);
     --border-1: 3px solid #e6ad62;
     --border-2: #ffffff7c solid 1px;
+
+    --changed-color-1: hue-rotate(210deg);
 }
 
 body,
@@ -129,6 +131,7 @@ body,
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, rgba(255,132,15,1), rgba(255,189,127,1), rgba(244,194,75,1), rgba(255,132,15,1));
     border-radius: 5px;
+    filter: var(--changed-color-1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -140,6 +143,7 @@ body,
 }
 
 .preloader-text-line {
+    filter: var(--changed-color-1);
     position: relative;
     transition: all 1s ease;
     padding: 2px 250px;
@@ -203,7 +207,7 @@ body,
     text-align: center;
 }
 
-k, det {
+k, det, ki {
     white-space: wrap;
     text-transform: uppercase;
     font-weight: 400;
@@ -215,17 +219,39 @@ k, det {
     transition: all 0.2s ease-in-out;
 }
 
+ki {
+    position: relative;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 16px;
+    filter: hue-rotate(210deg);
+}
+
+ki::after {
+    left: 0;
+    top: 0;
+    content: '.space';
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255,132,15,1) 0%, rgba(255,189,127,1) 30%, rgba(244,194,75,1) 70%, rgba(255,132,15,1) 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 2s linear infinite;
+    transition: all 0.2s ease-in-out;
+    filter: blur(6px);
+    opacity: 0.4;
+}
+
 det {
     filter: hue-rotate(170deg);
 }
 
 det:hover {
     cursor: pointer;
-    text-shadow: 0 0 15px rgba(255,132,15,0.4);
+    text-shadow: 0 0 10px rgba(255,132,15,0.4);
 }
 
 #settings {
-    background-color: #e6ad62;
     width: 150px;
     height: 150px;
     border-radius: 50%;

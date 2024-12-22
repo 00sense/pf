@@ -222,9 +222,6 @@
     .social-icon__link:hover {
         transform: none;
     }
-    .navbar-left-img:hover {
-        filter: none;
-    }
     #content-card-content-button::before, #content-card-content-button-read-more::before, .contact-button-copy::before, #contact-button-main::before, #swiper-opinion-info-button-2::before, #swiper-opinion-info-button-1::before {
         display: none;
     }
@@ -321,10 +318,17 @@
 }
 
 @media screen and (max-width: 800px) {
+    #navbar-left-text {
+        display: flex;
+        flex-direction: column;
+        font-size: 17px;
+    }
+    #navbar-left-text ki {
+        font-size: 12px;
+    }
     #projects-project-img {  
         height: 150px;
     }
-    
     #projects-project-img img:first-child {
         min-height: 150px;
     }
@@ -624,15 +628,12 @@
     }
     #navbar-left {
         left: 0;
-        padding: 20px;
-    }
-    .navbar-left-img {
-        max-width: 35px;
-        max-height: 35px;
+        padding: 15px 5px 15px 10px;
     }
     #navbar-right {
         align-items: center;
         font-size: 16px;
+        padding: 15px 10px 15px 40px;
     }
     #navbar-right-option-language {
         width: 13px;

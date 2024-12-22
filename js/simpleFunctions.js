@@ -360,11 +360,11 @@ function hideFilmProjectView() {
 // On/Off Animations
 // --------------------
 function manageAnimations() {
-    let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline";
+    let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline, ki";
 
     if ($(animatedElements).css("animation-name") === "animation-off") {
         $(".navbar-left-img").css("animation-name", "logo-rotate-1");
-        $("k, det").css("animation-name", "gradient-animation");
+        $("k, det, ki").css("animation-name", "gradient-animation");
         $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
         $('#settings-icon').css('opacity', '1');
 

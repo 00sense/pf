@@ -86,6 +86,8 @@ let translations = {
         "o-2-content": "Polecam serdecznie każdemu! Najlepsza złota rączka!",
         "o-3-author-desc": "Klient • Prywatne",
         "o-3-content": "Serdecznie polecam! Stworzył dla mnie panele na Twitcha, które przerosły moje oczekiwania. Projekt został wykonany szybko, z dużą dbałością o szczegóły i profesjonalizmem. Widać talent, świetne wyczucie estetyki i umiejętność dopasowania się do potrzeb klienta. Efekt końcowy jest idealny, a współpraca przebiegała bezproblemowo 😊",
+        "o-4-author-desc": "Klient • Prywatne",
+        "o-4-content": "Wszystko legit zajebiste itemki i gui ❤️ Szybko zrealizowane dosłownie 1 dzień oczekiwania polecam",
 
         "1_description-name": '"Japońskie sny" - MARKA',
         "1_description-details": 'W projekcie zawarty został "Waiting Screen" oraz 4 banery na Twitcha, stworzone w stylu japońskim oraz inspirowane estetyką anime, zgodnie z życzeniem klientki',
@@ -201,6 +203,8 @@ let translations = {
         "o-2-content": "I highly recommend him to everyone! The best jack-of-all-trades!",
         "o-3-author-desc": "Client • Private",
         "o-3-content": "I highly recommend him! He created Twitch panels for me that exceeded my expectations. The project was completed quickly, with great attention to detail and professionalism. It’s clear that he has talent, a fantastic sense of aesthetics, and the ability to adapt to the client’s needs. The final result is perfect, and the cooperation was seamless 😊",
+        "o-4-author-desc": "Client • Private",
+        "o-4-content": "Everything legit, awesome items and GUI ❤️ Completed super quickly, literally just 1 day of waiting – highly recommend!",
 
         "1_description-name": '"Japanese Dreams" - BRAND',
         "1_description-details": 'The project included a "Waiting Screen" and 4 Twitch banners, designed in a Japanese style and inspired by anime aesthetics, as per the client\'s request.',

@@ -138,8 +138,22 @@
     align-items: center;
     gap: 5px;
     text-decoration: underline;
-    color: #decaff;
     font-weight: 400;
+}
+
+#feedback-opinion-author p p2 a tabmc {
+    text-decoration: underline;
+    color: #decaff;
+}
+
+#feedback-opinion-author p p2 a darkhc {
+    text-decoration: underline;
+    color: #ffcafc;
+}
+
+#feedback-opinion-author p p2 a primemc {
+    text-decoration: underline;
+    color: #ffecca;
 }
 
 #feedback-opinion-content-decoration {
@@ -159,6 +173,7 @@
 }
 
 #feedback-opinion-author p p2 img {
+    border-radius: 0;
     height: auto;
     width: 35px;
     padding: 5px 0;

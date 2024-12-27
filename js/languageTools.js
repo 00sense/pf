@@ -86,8 +86,10 @@ let translations = {
         "o-2-content": "Polecam serdecznie każdemu! Najlepsza złota rączka!",
         "o-3-author-desc": "Klient • Prywatne",
         "o-3-content": "Serdecznie polecam! Stworzył dla mnie panele na Twitcha, które przerosły moje oczekiwania. Projekt został wykonany szybko, z dużą dbałością o szczegóły i profesjonalizmem. Widać talent, świetne wyczucie estetyki i umiejętność dopasowania się do potrzeb klienta. Efekt końcowy jest idealny, a współpraca przebiegała bezproblemowo 😊",
-        "o-4-author-desc": "Klient • Prywatne",
+        "o-4-author-desc": "Właściciel • ",
         "o-4-content": "Wszystko legit zajebiste itemki i gui ❤️ Szybko zrealizowane dosłownie 1 dzień oczekiwania polecam",
+        "o-5-author-desc": "Właściciel • ",
+        "o-5-content": "x",
 
         "1_description-name": '"Japońskie sny" - MARKA',
         "1_description-details": 'W projekcie zawarty został "Waiting Screen" oraz 4 banery na Twitcha, stworzone w stylu japońskim oraz inspirowane estetyką anime, zgodnie z życzeniem klientki',
@@ -121,6 +123,9 @@ let translations = {
 
         "11_description-name": '"MOCNA REKLAMA" - WSTAWKA',
         "11_description-details": 'W projekcie zawarte zostały dwie wstawki na streamy (Cały serwer oraz GenCash). Wstawka jest schludna i animowana, nie zawiera zbędnych dodatków, zgodnie z wytycznymi klienta',
+
+        "12_description-name": '"MOC PLAKATÓW" - PLAKATY',
+        "12_description-details": 'W projekcie zawarte zostały dwa plakaty na serwer "LOBBY", informujące o trybie na który się wchodzi. Plakaty zawierają rendery wybranych przez klienta skinów wykonane w Blenderze oraz otoczkę graficzną dopasowaną do trybu, zgodnie z wytycznymi klienta',
     },
 
     "en": {
@@ -203,8 +208,10 @@ let translations = {
         "o-2-content": "I highly recommend him to everyone! The best jack-of-all-trades!",
         "o-3-author-desc": "Client • Private",
         "o-3-content": "I highly recommend him! He created Twitch panels for me that exceeded my expectations. The project was completed quickly, with great attention to detail and professionalism. It’s clear that he has talent, a fantastic sense of aesthetics, and the ability to adapt to the client’s needs. The final result is perfect, and the cooperation was seamless 😊",
-        "o-4-author-desc": "Client • Private",
+        "o-4-author-desc": "Owner • ",
         "o-4-content": "Everything legit, awesome items and GUI ❤️ Completed super quickly, literally just 1 day of waiting – highly recommend!",
+        "o-5-author-desc": "Owner • ",
+        "o-5-content": "x",
 
         "1_description-name": '"Japanese Dreams" - BRAND',
         "1_description-details": 'The project included a "Waiting Screen" and 4 Twitch banners, designed in a Japanese style and inspired by anime aesthetics, as per the client\'s request.',
@@ -237,7 +244,10 @@ let translations = {
         "10_description-details": 'The project included many more videos than are visible here. The TikToks aimed to capture the viewer\'s attention (especially in the first 3 seconds) and were prepared according to the client\'s guidelines, featuring a simple editing style and smooth shots.',
     
         "11_description-name": '"STRONG PROMOTION" - STREAM INSERT',
-        "11_description-details": 'The project included two inserts for streams (the entire server and GenCash). The insert is neat and animated, without unnecessary elements, as per the client\'s instructions.'
+        "11_description-details": 'The project included two inserts for streams (the entire server and GenCash). The insert is neat and animated, without unnecessary elements, as per the client\'s instructions.',
+
+        "12_description-name": '"POWER OF POSTERS" - POSTERS',
+        "12_description-details": 'The project includes two posters for the "LOBBY" server, informing about the mode you are entering. The posters contain renders of skins selected by the client made in Blender and a graphical framework adapted to the mode, in accordance with the client\'s guidelines',
     }
 };
 

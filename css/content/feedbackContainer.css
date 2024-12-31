@@ -156,6 +156,11 @@
     color: #ffecca;
 }
 
+#feedback-opinion-author p p2 a gildiaDPD {
+    text-decoration: underline;
+    color: #ffcaca;
+}
+
 #feedback-opinion-content-decoration {
     display: flex;
     justify-content: center;

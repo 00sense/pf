@@ -310,6 +310,13 @@ body #img-enter {
     margin-bottom: 20px;
 }
 
+#description-usage {
+    color: #b4b4b4;
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
 #projects-project-description f k {
     font-weight: 400;
 }

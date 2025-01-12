@@ -161,6 +161,11 @@
     color: #ffcaca;
 }
 
+#feedback-opinion-author p p2 a clancraft {
+    text-decoration: underline;
+    color: #cae5ff;
+}
+
 #feedback-opinion-content-decoration {
     display: flex;
     justify-content: center;

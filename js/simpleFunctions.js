@@ -49,11 +49,34 @@ function open3dProjectLibrary(modelArray) {
 // --------------------
 // Open Film Project Library
 // --------------------
-function openFilmProjectLibrary(filmArray) {
-    const filmFrame = $('#youtube-player');
-    const filmName = filmArray[0];
-    filmFrame.attr('src', `https://www.youtube.com/embed/${filmName}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`);
-    $("#projects-project-view-film").fadeIn(300);
+function openSpecificProjectLibrary(filmArray) {
+    $('.swiper-slide').remove();
+    // const filmFrame = $('#youtube-player');
+    // const filmName = filmArray[0];
+    // filmFrame.attr('src', `https://www.youtube.com/embed/${filmName}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`);
+    // $("#projects-project-view-film").fadeIn(300);
+    // $("body").css("overflow", "hidden");
+    // manageEffectVisibility('hide');
+
+    for (let i = 0; i < filmArray.length; i++) {
+        if (i < 2) {
+            $('.swiper-wrapper').append(`
+                <div class="swiper-slide">
+                    <div id="film-view">
+                        <iframe id="youtube-player" src="https://www.youtube.com/embed/${filmArray[i]}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            `);
+        } else if (i < 4) {
+            $('.swiper-wrapper').append(`
+                <div class="swiper-slide">
+                    <img src="projects_gallery/${filmArray[i]}.webp" alt="Projects Image ${i + 1}">
+                </div>
+            `);
+        }
+    }
+
+    $("#projects-project-view").fadeIn(300);
     $("body").css("overflow", "hidden");
     manageEffectVisibility('hide');
 }
@@ -334,6 +357,7 @@ function checkNavbarSettings() {
 function hideProjectView() {
     $('#projects-project-view').fadeOut(300);
     $("body").css("overflow", "visible");
+    $('.swiper-slide').remove();
     manageEffectVisibility('show');
 }
 
@@ -349,12 +373,12 @@ function hide3dProjectView() {
 // --------------------
 // Hide Film
 // --------------------
-function hideFilmProjectView() {
-    $('#projects-project-view-film').fadeOut(300);
-    $("body").css("overflow", "visible");
-    $('#youtube-player').attr('src', '');
-    manageEffectVisibility('show');
-}
+// function hideFilmProjectView() {
+//     $('#projects-project-view-film').fadeOut(300);
+//     $("body").css("overflow", "visible");
+//     $('#youtube-player').attr('src', '');
+//     manageEffectVisibility('show');
+// }
 
 // --------------------
 // On/Off Animations

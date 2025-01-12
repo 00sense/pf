@@ -25,20 +25,20 @@ $(document).ready(function() {
     // --------------------
     // Hide Film When Click Outside (not move, only click)
     // --------------------
-    $(document).mousedown(function(event) {
-        if ($("#projects-project-view-film").css('display') === 'flex') {
-            if (!$(event.target).closest('#project-view-film-tools, #film-view').length) {
-                hideFilmProjectView();
-            }
-        }
-    });
+    // $(document).mousedown(function(event) {
+    //     if ($("#projects-project-view-film").css('display') === 'flex') {
+    //         if (!$(event.target).closest('#project-view-film-tools, #film-view').length) {
+    //             hideFilmProjectView();
+    //         }
+    //     }
+    // });
 
     // --------------------
     // Hide Swiper/3D/Film When Click On Close Button
     // --------------------
     $("#close-icon").click(hideProjectView);
     $("#close-icon-3D").click(hide3dProjectView);
-    $("#close-icon-film").click(hideFilmProjectView);
+    // $("#close-icon-film").click(hideFilmProjectView);
     
     // --------------------
     // Show/Hide Menu (Mobile)

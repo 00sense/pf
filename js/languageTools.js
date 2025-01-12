@@ -52,8 +52,7 @@ let translations = {
         "carousel-scaling-2-on": "Włączone",
         "carousel-scaling-2-off": "Wyłączone",
         "projects-main-text": "Projekty",
-        "description-usage": "Użyte technologie: ",
-        "description-for": "Stworzone dla: ",
+        "description-usage": "Technologie: ",
         "trust-note-1": "UWAGA! ",
         "trust-note-2": "Nie wszystkie projekty mogą zostać tutaj zaprezentowane. Wynika to z zasad poufności oraz indywidualnych preferencji klientów, którzy cenią sobie dyskrecję i ochronę swoich danych. Szanuję ich zaufanie oraz priorytetowo traktuję kwestie prywatności, dlatego zawsze dostosowuję się do ich wymagań",
         "show-more-projects": "Pokaż więcej projektów",
@@ -90,42 +89,26 @@ let translations = {
         "o-4-content": "Wszystko legit zajebiste itemki i gui ❤️ Szybko zrealizowane dosłownie 1 dzień oczekiwania polecam",
         "o-5-author-desc": "Członek • ",
         "o-5-content": "Polecam, szybko i nawet tanio zrobił ❤️",
+        "o-6-author-desc": "Właściciel • ",
+        "o-6-content": "Zajebista robota, szybko, tanio i kurwa przepięknie 😎",
 
-        "1_description-name": '"Japońskie sny" - MARKA',
-        "1_description-details": 'W projekcie zawarty został "Waiting Screen" oraz 4 banery na Twitcha, stworzone w stylu japońskim oraz inspirowane estetyką anime, zgodnie z życzeniem klientki',
+        "1_description-name": 'GUI MINECRAFT',
+        "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
 
-        "2_description-name": '"Zaklęte piksele" - GUI',
-        "2_description-details": 'W projekcie zostało zawarte o wiele więcej GUI, niż jest tutaj widoczne. Gui zostało stworzone w stylu prostym i zrozumiałym dla graczy, zgodnie z życzeniem klienta',
+        "2_description-name": 'RENDERY 3D SKINÓW MINECRAFT',
+        "2_description-details": 'Rendery skinów Minecraft to po prostu graficzne przedstawienie skórki gracza w 3D. Zamiast patrzeć na skórkę tylko w widoku 2D, rendery pokazują ją z różnych kątów, w pełnej trójwymiarowej formie, co daje lepszy wgląd w detale i wygląd całej postaci w grze',
 
-        "3_description-name": '"Twoi przyjaciele" - KOSMETYKI 3D',
-        "3_description-details": 'W projekcie zostało zawarte o wiele więcej modeli, niż jest tutaj widoczne (więcej modeli wraz z pełną garderobą można zobaczyć w projekcie "PIKSELOWY STYL"). Modele zostały wykonane w stylu przyjaznym dla młodych graczy oraz pełnią fukcję "czapek" w serwerowej garderobie',
-
-        "4_description-name": '"Magia kostek" - RENDERY 3D',
-        "4_description-details": 'W projekcie zostały zawarte 3 rendery skinów Minecraft stworzone w programie Blender. Stworzone modele pozwoliły mi na realizację projektu "PIĘKNO ROBOTÓW". Zgodnie z oczekiwaniami klienta modele posiadają wypukłe punkty np. włosy, które przy dobrej grze światłem robią świetny efekt',
+        "3_description-name": 'MODELE 3D ITEMÓW/KOSMETYKÓW/BLOKÓW MINECRAFT',
+        "3_description-details": 'Modele 3D bloków, przedmiotów i kosmetyków w Minecraft to świetne urozmaicenie podstawowego Minecrafta. Zamiast płaskich tekstur, te modele pokazują je w pełnej trójwymiarowej formie, co pozwala na bardziej szczegółowe i realistyczne przedstawienie elementów w grze',
     
-        "5_description-name": '"Piękno robotów" - BOT DISCORD',
-        "5_description-details": 'W projekcie zostały zawarte 2 banery, jeden do profilowego baneru bota, drugi znalazł zastosowanie w wiadomościach wysyłanych przez bota jako "Embed Image". Zgodnie z wymaganiami klienta banery są animowane i zawierają kluczowe elementy, takie jak logo serwera lub rendery skinów właścicieli',
+        "4_description-name": 'OPRAWA GRAFICZNA DISCORDA',
+        "4_description-details": 'Oprawa graficzna Discorda to wszystkie wizualne elementy, które nadają serwerowi unikalny wygląd. To banery, ikony, grafiki do ogłoszeń, czy inne projekty graficzne, które pomagają wyróżnić serwer i nadają mu charakter. Dzięki odpowiedniej oprawie graficznej, serwer staje się bardziej przyjazny i estetyczny',
     
-        "6_description-name": '"STYL WIEDZY" - INFOGRAFIKA',
-        "6_description-details": 'W projekcie zostało zawarte o wiele więcej grafik, niż jest tutaj widoczne. Grafiki były tworzone w różnych stylach pasujących do treści ogłoszenia lub informacji, zgodnie z oczekiwaniami klienta',
+        "5_description-name": 'MONTAŻ I ANIMACJE',
+        "5_description-details": 'Animacje i montaż to procesy tworzenia ruchomych obrazów i łączenia różnych materiałów wideo, które służą do wzbogacenia doświadczenia wizualnego. Mogą to być np. trailery lub wstawki na live, które przyciągają uwagę widza i dodają dynamiki do wydarzeń online. Dzięki animacjom i montażowi treści stają się bardziej interesujące i profesjonalne',
 
-        "7_description-name": '"ULOTNE WIZJE" - BANERY DISCORD',
-        "7_description-details": 'W projekcie zostało zawarte więcej Banerów, niż jest tutaj widoczne. Grafiki były używane jako "banery" serwera Discord. Były tworzone w różnych wariantach ale trzymając się podobnego stylu, zgodnie z wymaganiami klienta',
-
-        "8_description-name": '"PIKSELOWY STYL" - GARDEROBA',
-        "8_description-details": 'W projekcie zostały zawarte 3 GUI oraz duża ilość kosmetyków do serwerowej garderoby, którą zapewnia plugin CosmeticsCore. Interfejs garderoby z góry jest narzucony przez plugin, aczkolwiek styl grafiki był dowolny. Wszystkie kosmetyki wewnątrz (oprócz domyślnych) wykonałem samodzielnie przy pomocy programu Blockbench i wstępnych pomysłów klienta',
-
-        "9_description-name": '"KWADRATOWY FILM" - TRAILER',
-        "9_description-details": 'W projekcie został pokazany serwer TabMC.pl od najlepszej możliwej strony, zgodnie z wymaganiami klienta zostały tam pokazane wszystkie aktualnie istniejące tryby',
-
-        "10_description-name": '"DAWKA DOPAMINY" - TIKTOK',
-        "10_description-details": 'W projekcie zostało zawarte o wiele więcej filmików niż jest tutaj widoczne. TikToki miały na celu zatrzymanie uwagi widza (szczególnie w pierwszych 3 sekundach) oraz były przygotowane zgodnie z wytycznymi klienta, co pokazuje prosty styl montażu oraz płynne ujęcia',
-
-        "11_description-name": '"MOCNA REKLAMA" - WSTAWKA',
-        "11_description-details": 'W projekcie zawarte zostały dwie wstawki na streamy (Cały serwer oraz GenCash). Wstawka jest schludna i animowana, nie zawiera zbędnych dodatków, zgodnie z wytycznymi klienta',
-
-        "12_description-name": '"MOC PLAKATÓW" - PLAKATY',
-        "12_description-details": 'W projekcie zawarte zostały dwa plakaty na serwer "LOBBY", informujące o trybie na który się wchodzi. Plakaty zawierają rendery wybranych przez klienta skinów wykonane w Blenderze oraz otoczkę graficzną dopasowaną do trybu, zgodnie z wytycznymi klienta',
+        "6_description-name": 'INNE PROJEKTY',
+        "6_description-details": 'Inne projekty to wszelkie dodatkowe prace graficzne, które nie mieszczą się w podstawowych kategoriach, ale są równie ważne. Mogą to być różne grafiki, banery promujące wydarzenia, reklamy, ilustracje na strony internetowe czy media społecznościowe. Te projekty pomagają przyciągnąć uwagę i wzbogacają wizualną stronę różnych platform',
     },
 
     "en": {
@@ -174,8 +157,7 @@ let translations = {
         "carousel-scaling-2-on": "Enabled",
         "carousel-scaling-2-off": "Disabled",
         "projects-main-text": "Projects",
-        "description-usage": "Used technologies: ",
-        "description-for": "Created for: ",
+        "description-usage": "Technologies: ",
         "trust-note-1": "NOTICE! ",
         "trust-note-2": "Not all projects can be showcased here. This is due to confidentiality agreements and the individual preferences of clients who value discretion and the protection of their data. I respect their trust and prioritize privacy, always adapting to their requirements",
         "show-more-projects": "Show more projects",
@@ -212,42 +194,26 @@ let translations = {
         "o-4-content": "Everything legit, awesome items and GUI ❤️ Completed super quickly, literally just 1 day of waiting – highly recommend!",
         "o-5-author-desc": "Member • ",
         "o-5-content": "I recommend it, it was done quickly and even cheaply ❤️",
+        "o-6-author-desc": "Owner • ",
+        "o-6-content": "Awesome job, fast, cheap, and freaking beautiful 😎",
 
-        "1_description-name": '"Japanese Dreams" - BRAND',
-        "1_description-details": 'The project included a "Waiting Screen" and 4 Twitch banners, designed in a Japanese style and inspired by anime aesthetics, as per the client\'s request.',
-    
-        "2_description-name": '"Enchanted Pixels" - GUI',
-        "2_description-details": 'The project contained many more GUI elements than are visible here. The GUI was designed in a simple and user-friendly style for players, as per the client\'s request.',
-    
-        "3_description-name": '"Your Friends" - 3D COSMETICS',
-        "3_description-details": 'The project included many more models than are visible here (additional models and a full wardrobe can be found in the project "PIXEL STYLE"). The models were created in a style friendly for young players and serve as "hats" in the server\'s wardrobe.',
-    
-        "4_description-name": '"Magic Cubes" - 3D RENDERS',
-        "4_description-details": 'The project included 3 Minecraft skin renders created in Blender. These models enabled the realization of the project "THE BEAUTY OF ROBOTS". As per the client\'s expectations, the models feature raised details like hair, which create a stunning effect with proper lighting.',
-    
-        "5_description-name": '"The Beauty of Robots" - DISCORD BOT',
-        "5_description-details": 'The project included 2 banners: one as a profile banner for the bot, and another used in messages sent by the bot as an "Embed Image". As per the client\'s requirements, the banners are animated and include key elements such as the server logo or renders of the owners\' skins.',
-    
-        "6_description-name": '"THE STYLE OF KNOWLEDGE" - INFOGRAPHICS',
-        "6_description-details": 'The project included many more graphics than are visible here. The graphics were created in various styles matching the content of announcements or information, as per the client\'s expectations.',
-    
-        "7_description-name": '"FLEETING VISIONS" - DISCORD BANNERS',
-        "7_description-details": 'The project included more banners than are visible here. The graphics were used as "banners" for a Discord server. They were created in various versions while maintaining a similar style, as per the client\'s requirements.',
-    
-        "8_description-name": '"PIXEL STYLE" - WARDROBE',
-        "8_description-details": 'The project included 3 GUI elements and a large number of cosmetics for the server\'s wardrobe, powered by the CosmeticsCore plugin. The wardrobe interface is predefined by the plugin, but the graphic style was freely designed. All cosmetics inside (except the defaults) were created by me using Blockbench and the client\'s initial ideas.',
-    
-        "9_description-name": '"SQUARE MOVIE" - TRAILER',
-        "9_description-details": 'The project showcased the TabMC.pl server in the best possible way. As per the client\'s requirements, all currently available game modes were presented.',
-    
-        "10_description-name": '"DOSE OF DOPAMINE" - TIKTOK',
-        "10_description-details": 'The project included many more videos than are visible here. The TikToks aimed to capture the viewer\'s attention (especially in the first 3 seconds) and were prepared according to the client\'s guidelines, featuring a simple editing style and smooth shots.',
-    
-        "11_description-name": '"STRONG PROMOTION" - STREAM INSERT',
-        "11_description-details": 'The project included two inserts for streams (the entire server and GenCash). The insert is neat and animated, without unnecessary elements, as per the client\'s instructions.',
+        "1_description-name": "MINECRAFT GUI",
+        "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",
 
-        "12_description-name": '"POWER OF POSTERS" - POSTERS',
-        "12_description-details": 'The project includes two posters for the "LOBBY" server, informing about the mode you are entering. The posters contain renders of skins selected by the client made in Blender and a graphical framework adapted to the mode, in accordance with the client\'s guidelines',
+        "2_description-name": "MINECRAFT SKIN 3D RENDERS",
+        "2_description-details": "Minecraft skin renders are simply 3D graphical representations of the player's skin. Instead of viewing the skin only in 2D, renders show it from different angles in full 3D, giving a better insight into the details and the overall look of the character in the game",
+
+        "3_description-name": "MINECRAFT 3D MODELS OF ITEMS/COSMETICS/BLOCKS",
+        "3_description-details": "3D models of blocks, items, and cosmetics in Minecraft add a great touch to the base game. Instead of flat textures, these models show them in full 3D, allowing for more detailed and realistic representations of in-game elements",
+
+        "4_description-name": "DISCORD GRAPHIC DESIGN",
+        "4_description-details": "Discord graphic design refers to all the visual elements that give a server its unique appearance. This includes banners, icons, graphics for announcements, and other design projects that help distinguish the server and give it character. With the right graphic design, the server becomes more inviting and aesthetically pleasing",
+
+        "5_description-name": "EDITING AND ANIMATIONS",
+        "5_description-details": "Animations and editing are processes of creating moving images and combining various video materials to enhance the visual experience. These can include trailers or live stream inserts that grab the viewer's attention and add dynamism to online events. With animations and editing, the content becomes more engaging and professional",
+
+        "6_description-name": "OTHER PROJECTS",
+        "6_description-details": "Other projects are any additional graphic works that don't fit into the main categories but are equally important. These can include various graphics, banners promoting events, ads, illustrations for websites or social media. These projects help attract attention and enhance the visual aspect of different platforms"
     }
 };
 

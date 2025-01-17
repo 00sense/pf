@@ -304,6 +304,7 @@
         font-size: 18px;
     }
     #feedback-opinion-author p p2 {
+        height: unset;
         font-size: 14px;
     }
     #feedback-opinion-author p p2 img {

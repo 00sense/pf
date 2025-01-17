@@ -125,6 +125,7 @@
 }
 
 #feedback-opinion-author p p2 {
+    height: 45px;
     gap: 5px;
     display: flex;
     align-items: center;

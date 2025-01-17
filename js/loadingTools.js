@@ -15,9 +15,9 @@ $(document).ready(function() {
         var content = [''];
 
         if (currentLanguage === 'en') {
-            var content = ['Loading my hard work...', 'Loading hours of swearing...', 'Loading 3D models...', 'Loading graphics...'];
+            var content = ['Loading 3D models...', 'Loading hours of swearing...', 'Loading my hard work...', 'Loading graphics...'];
         } else {
-            var content = ['Ładowanie mojej ciężkiej pracy...', 'Ładowanie godzin frustracji...', 'Ładowanie modeli 3D...', 'Ładowanie grafik...'];
+            var content = ['Ładowanie modeli 3D...', 'Ładowanie godzin frustracji...', 'Ładowanie mojej ciężkiej pracy...', 'Ładowanie grafik...'];
         }
         text.text(content[index]);
         let intervalId = setInterval(updateContent, 600);
@@ -40,7 +40,7 @@ $(document).ready(function() {
     // --------------------
     let index = 0;
     function updateTitle() {
-        const windowNames = ["Portfolio • Sense ツ", "Graphic Designer ツ", "Editor/Animator ツ", "3D Designer ツ", "Minecraft Modder ツ"];
+        const windowNames = ["Portfolio • Sensee ツ", "Graphic Designer ツ", "Editor/Animator ツ", "3D Designer ツ", "Minecraft Modder ツ"];
 
         document.title = windowNames[index];
         // Czas pierwszego : czas reszty (ms)

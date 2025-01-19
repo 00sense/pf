@@ -319,6 +319,17 @@
 }
 
 @media screen and (max-width: 800px) {
+    #amount-number {
+        position: relative;
+        z-index: 15;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #projects-amount {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+    }
     #navbar-left-text {
         display: flex;
         flex-direction: column;

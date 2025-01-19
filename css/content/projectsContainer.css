@@ -87,6 +87,32 @@
     height: 100%;
 }
 
+#amount-number {
+    position: relative;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+#amount-number::after {
+    content: "+";
+}
+
+#projects-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 50px;
+    width: 60px;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(3px);
+    border: var(--border-1);
+}
+
 #multiple-images::after, #film-image::after {
     border-radius: 18px;
     transition: all 0.3s ease-in-out;

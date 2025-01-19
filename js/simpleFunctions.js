@@ -51,12 +51,6 @@ function open3dProjectLibrary(modelArray) {
 // --------------------
 function openSpecificProjectLibrary(filmArray) {
     $('.swiper-slide').remove();
-    // const filmFrame = $('#youtube-player');
-    // const filmName = filmArray[0];
-    // filmFrame.attr('src', `https://www.youtube.com/embed/${filmName}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1`);
-    // $("#projects-project-view-film").fadeIn(300);
-    // $("body").css("overflow", "hidden");
-    // manageEffectVisibility('hide');
 
     for (let i = 0; i < filmArray.length; i++) {
         if (i < 2) {
@@ -369,16 +363,6 @@ function hide3dProjectView() {
     $("body").css("overflow", "visible");
     manageEffectVisibility('show');
 }
-
-// --------------------
-// Hide Film
-// --------------------
-// function hideFilmProjectView() {
-//     $('#projects-project-view-film').fadeOut(300);
-//     $("body").css("overflow", "visible");
-//     $('#youtube-player').attr('src', '');
-//     manageEffectVisibility('show');
-// }
 
 // --------------------
 // On/Off Animations

@@ -112,6 +112,7 @@
 #feedback-opinion-content {
     height: 100%;
     display: flex;
+    border-bottom: var(--border-2);
 }
 
 #feedback-opinion-content p {
@@ -122,6 +123,24 @@
     font-size: 15px;
     font-weight: 100;
     width: 100%;
+}
+
+#feedback-opinion-screen {
+    cursor: pointer;
+    color: #e7c291;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+#feedback-opinion-screen:hover {
+    font-weight: 300;
+    transform: scale(1.03);
 }
 
 #feedback-opinion-author p p2 {

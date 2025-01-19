@@ -79,6 +79,8 @@ let translations = {
         "swiper-opinion-info-2": "Możesz być jednym z nich, skontaktuj się na",
         "swiper-opinion-info-3": " Discordzie!",
 
+        "feedback-o-screen": "Zrzut ekranu wystawionej opinii",
+
         "o-1-author-desc": "Właściciel & Programista • ",
         "o-1-content": "Współpraca z sense, to była czysta przyjemność. Na palcach jednej ręki mogę policzyć liczbę osób, które tak doskonale rozumiały czego od nich oczekiwałem, czasami nawet bardziej ode mnie. Wiedziałem, że to co Mu zlecę zostanie wykonane najlepiej jak potrafi. Grafiki czy to na discorda czy tekstury na serwer zawsze idealnie trafiały w moje gusta - a w dodatku były ⚡ niesamowicie szybko wykonywane. Z moich ubogich opisów potrafił wyczarować niejedno cudo. Z wielką przyjemnością będę wracał do Sense z kolejnymi zleceniami.",
         "o-2-author-desc": "Właściciel • ",
@@ -95,6 +97,8 @@ let translations = {
         "o-7-content": "Mega fajne modele 3d, polecam. Na pewno będę częstym klientem 🙂",
         "o-8-author-desc": "Klient • Prywatne",
         "o-8-content": "Zajebista robota ❤️ kolega wie co i jak 🙂 Najszybszy czas realizacji mega polecam praca warta swojej ceny",
+        "o-9-author-desc": "Klient • Prywatne",
+        "o-9-content": "Legit, polecam i to bardzo. Bardzo dobre podejście do klienta i szybki czas wykonania",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -188,6 +192,8 @@ let translations = {
         "swiper-opinion-info-2": "You could be one of them, get in touch on",
         "swiper-opinion-info-3": " Discord!",
 
+        "feedback-o-screen": "Screenshot of the posted review",
+
         "o-1-author-desc": "Owner & Developer • ",
         "o-1-content": "Working with Sense was an absolute pleasure. I can count on one hand the number of people who so perfectly understood what I expected from them, sometimes even more than I did. I knew that whatever I assigned to him would be done to the best of his ability. Graphics, whether for Discord or textures for a server, always perfectly matched my tastes - and were ⚡ delivered incredibly quickly. From my vague descriptions, he was able to create true wonders. I will be more than happy to return to Sense with new commissions.",
         "o-2-author-desc": "Owner • ",
@@ -204,6 +210,8 @@ let translations = {
         "o-7-content": "Super cool 3D models, highly recommend. I will definitely be a frequent customer 🙂",
         "o-8-author-desc": "Client • Private",
         "o-8-content": "Awesome job ❤️ The guy knows what's what 🙂 Fastest delivery time, highly recommended, work worth every penny!",
+        "o-9-author-desc": "Client • Private",
+        "o-9-content": "Legit, highly recommend it. Very professional approach to the client and quick turnaround time",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

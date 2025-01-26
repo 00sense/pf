@@ -376,7 +376,7 @@ det:hover {
     transition: all 0.3s ease;
     height: 35px;
     position: absolute;
-    left: 65px;
+    left: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -393,6 +393,7 @@ det:hover {
     font-weight: 300;
     padding: 4px 12px;
     border: var(--border-2);
+    border-left: 0;
     border-radius: 0 15px 15px 0;
     display: flex;
     justify-content: center;

@@ -341,6 +341,17 @@
     #info-bar-status.info::after {
         font-size: 10px;
     }
+    #info-bar-expand {
+        transform: translateY(-5px);
+        height: 40px;
+        left: 58px;
+    }
+    #info-bar-more {
+        width: 120px;
+        /* padding: 2px 7px; */
+        text-wrap: wrap;
+        font-size: 10px;
+    }
     #amount-number {
         font-size: 15px;
     }

@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     $(document).mousedown(function (event) {
-        if (!$(event.target).closest("[id='info-bar-more']").length) {
+        if (!$(event.target).closest("[id='info-bar-item']").length) {
             $("[id='info-bar-more']").css("transform", "scaleX(0)");
         }
     });

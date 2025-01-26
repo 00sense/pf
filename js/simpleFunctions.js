@@ -30,7 +30,8 @@ function openProjectLibrary(fileNames) {
 
     $("#projects-project-view").fadeIn(300);
     $("body").css("overflow", "hidden");
-    manageEffectVisibility('hide');
+    $('#info-bar').fadeOut(300);
+    $('#spotify-info').css('display', 'none');
 }
 
 // --------------------
@@ -43,7 +44,8 @@ function open3dProjectLibrary(modelArray) {
 
     $("#projects-project-view-3D").fadeIn(300);
     $("body").css("overflow", "hidden");
-    manageEffectVisibility('hide');
+    $('#info-bar').fadeOut(300);
+    $('#spotify-info').css('display', 'none');
 }
 
 // --------------------
@@ -72,7 +74,8 @@ function openSpecificProjectLibrary(filmArray) {
 
     $("#projects-project-view").fadeIn(300);
     $("body").css("overflow", "hidden");
-    manageEffectVisibility('hide');
+    $('#info-bar').fadeOut(300);
+    $('#spotify-info').css('display', 'none');
 }
 
 // --------------------
@@ -246,6 +249,12 @@ function manageProjectScaling() {
 function checkScrollValue() {
     if (window.scrollY < 10) {
         if (window.innerWidth > 1200) {
+            document.querySelectorAll('#info-bar').forEach(element => {
+                element.classList.add("onTop");
+            });
+            document.querySelectorAll('#spotify-info').forEach(element => {
+                element.classList.add("onTop");
+            });
             $('#navbar-pre').css({
                 'top': '20px',
             });
@@ -259,6 +268,12 @@ function checkScrollValue() {
         } 
     } else {
         if (window.innerWidth > 1200) {
+            document.querySelectorAll('#info-bar').forEach(element => {
+                element.classList.remove("onTop");
+            });
+            document.querySelectorAll('#spotify-info').forEach(element => {
+                element.classList.remove("onTop");
+            });
             $('#navbar-pre').css({
                 'top': '0',
             });
@@ -319,6 +334,12 @@ function changeCameraControls() {
 function checkNavbarSettings() {
     if (window.scrollY < 10) {
         if (window.innerWidth < 1200) {
+            document.querySelectorAll('#info-bar').forEach(element => {
+                element.classList.remove("onTop");
+            });
+            document.querySelectorAll('#spotify-info').forEach(element => {
+                element.classList.remove("onTop");
+            });
             $('#navbar-pre').css({
                 'top': '0',
             });
@@ -330,6 +351,12 @@ function checkNavbarSettings() {
                 'border-radius': '0',
             });
         } else {
+            document.querySelectorAll('#info-bar').forEach(element => {
+                element.classList.add("onTop");
+            });
+            document.querySelectorAll('#spotify-info').forEach(element => {
+                element.classList.add("onTop");
+            });
             $('#navbar-pre').css({
                 'top': '20px',
             });
@@ -352,7 +379,8 @@ function hideProjectView() {
     $('#projects-project-view').fadeOut(300);
     $("body").css("overflow", "visible");
     $('.swiper-slide').remove();
-    manageEffectVisibility('show');
+    $('#info-bar').fadeIn(300);
+    $('#spotify-info').css('display', 'flex');
 }
 
 // --------------------
@@ -361,7 +389,8 @@ function hideProjectView() {
 function hide3dProjectView() {
     $('#projects-project-view-3D').fadeOut(300);
     $("body").css("overflow", "visible");
-    manageEffectVisibility('show');
+    $('#info-bar').fadeIn(300);
+    $('#spotify-info').css('display', 'flex');
 }
 
 // --------------------
@@ -375,14 +404,22 @@ function manageAnimations() {
         $("k, det, ki").css("animation-name", "gradient-animation");
         $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
         $('#settings-icon').css('opacity', '1');
-
-        showNotification(getTranslationWithoutLang('notification-success'), getTranslationWithoutLang('manage-animations-on-content'), 'success'); 
+        $('#spotify-img').removeClass('offAnim');
+        effectsElement = document.querySelectorAll('[value="2"]');
+        effectsElement.forEach((el) => {
+            el.className = "";
+            el.classList.add("enable");
+        });
     }
     else {
         $(animatedElements).css("animation-name", "animation-off");
         $('#settings-icon').css('opacity', '0.4');
-
-        showNotification(getTranslationWithoutLang('notification-success'), getTranslationWithoutLang('manage-animations-off-content'), 'success');
+        $('#spotify-img').addClass('offAnim');
+        effectsElement = document.querySelectorAll('[value="2"]');
+        effectsElement.forEach((el) => {
+            el.className = "";
+            el.classList.add("disable");
+        });
     }
 }
 
@@ -417,7 +454,8 @@ function openDiscordClient() {
 // Scrool To Choosed Element
 // --------------------
 function scrollToElement(element) {
-    $('#navbar-mid-mobile-menu-table').delay(700).fadeOut(400);
+    $('#navbar-mid-mobile-menu-table').delay(700).fadeOut(300);
+    $('#info-bar').delay(700).fadeIn(500);
     document.querySelector(element).scrollIntoView({
         behavior: 'smooth',
         block: 'center'
@@ -464,4 +502,98 @@ function manageEffectVisibility(action) {
     else if (action == 'hide') {
         element.fadeOut(300);
     }
+}
+
+
+
+function infoBarAction(id) {
+
+    if (id === "1") {
+        const moreElement = document.querySelector(`#info-bar-more[value="${id}"]`);
+
+        if (moreElement) {
+            if (moreElement.style.transform === "scaleX(1)") {
+                copyDiscordId();
+                setTimeout(() => {
+                    moreElement.style.transform = "scaleX(0)";
+                }, 200)
+            } else {
+                moreElement.style.transform = "scaleX(1)";
+            }
+        }
+    }
+
+    if (id === "2") {
+        const moreElement = document.querySelector(`#info-bar-more[value="${id}"]`);
+
+        if (moreElement) {
+            if (moreElement.style.transform === "scaleX(1)") {
+                manageAnimations();
+                setTimeout(() => {
+                    moreElement.style.transform = "scaleX(0)";
+                }, 200)
+            } else {
+                moreElement.style.transform = "scaleX(1)";
+            }
+        }
+    }
+
+    if (id === "3") {
+        const moreElement = document.querySelector(`#info-bar-more[value="${id}"]`);
+
+        if (moreElement) {
+            if (moreElement.style.transform === "scaleX(1)") {
+                setTimeout(() => {
+                    moreElement.style.transform = "scaleX(0)";
+                }, 200)
+            } else {
+                moreElement.style.transform = "scaleX(1)";
+            }
+        }
+    }
+
+    if (id === "4") {
+        const moreElement = document.querySelector(`#info-bar-more[value="${id}"]`);
+
+        if (moreElement) {
+            if (moreElement.style.transform === "scaleX(1)") {
+
+                spotifyVisibility();
+
+                setTimeout(() => {
+                    moreElement.style.transform = "scaleX(0)";
+                }, 200)
+            } else {
+                moreElement.style.transform = "scaleX(1)";
+            }
+        }
+    }
+}
+
+function darkenRgb(r, g, b, percentage) {
+    const darken = (value) => Math.max(0, value - (value * (percentage / 100)));
+  
+    return [
+      Math.round(darken(r)),
+      Math.round(darken(g)),
+      Math.round(darken(b))
+    ];
+}
+
+function spotifyVisibility() {
+    if (document.querySelector('#info-bar-status[value="4"]').classList.contains('enable')) {
+        document.querySelector('#spotify-info').style.display = "none";
+        document.querySelector('#info-bar-status[value="4"]').className= '';
+        document.querySelector('#info-bar-status[value="4"]').classList.add('disable');
+    } else {
+        document.querySelector('#spotify-info').style.display = "flex";
+        document.querySelector('#info-bar-status[value="4"]').className= '';
+        document.querySelector('#info-bar-status[value="4"]').classList.add('enable');
+    }
+}
+
+function formatTime(ms) {
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }

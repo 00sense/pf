@@ -11,6 +11,12 @@ $(document).ready(function() {
         }
     });
 
+    $(document).mousedown(function (event) {
+        if (!$(event.target).closest("[id='info-bar-more']").length) {
+            $("[id='info-bar-more']").css("transform", "scaleX(0)");
+        }
+    });
+
     // --------------------
     // Hide 3D Object When Click Outside (not move, only click)
     // --------------------
@@ -34,9 +40,13 @@ $(document).ready(function() {
     $("#navbar-mid-mobile-menu").click(function() {
         if ($("#navbar-mid-mobile-menu-table").css("display") === "none") {
             $("#navbar-mid-mobile-menu-table").fadeIn(200);
+            $("#info-bar").fadeOut(200);
+            $("#spotify-info").fadeOut(200);
         }
         else {
             $("#navbar-mid-mobile-menu-table").fadeOut(200);
+            $("#info-bar").fadeIn(200);
+            $("#spotify-info").fadeIn(200);
         }
     });
 

@@ -37,12 +37,14 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-vibrant/3.1.6/vibrant.min.js"></script>
     <script src="js/loadingTools.js"></script>
     <script src="js/smoothScroll.js"></script>
     <script src="js/languageTools.js"></script>
     <script src="js/simpleFunctions.js"></script>
     <script src="js/eventActions.js"></script>
-    <script src="js/dev-blocker.js"></script>
+    <script src="js/discordAPI.js"></script>
+    <!-- <script src="js/dev-blocker.js"></script> -->
 </scripts>
 <bg>
     <div id="background">
@@ -232,7 +234,7 @@
 
                     <div id="projects-project" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
                         <div id="projects-project-img">
-                            <div id="multiple-images" value="2" onclick="openProjectLibrary(['render_1', 'render_2', 'render_3', 'render_4', 'render_5', 'render_6', 'render_7', 'render_8', 'render_9', 'render_10', 'render_11'])">
+                            <div id="multiple-images" value="2" onclick="openProjectLibrary(['render_1', 'render_2', 'render_3', 'render_4', 'render_5','render_12', 'render_6', 'render_7', 'render_8', 'render_9', 'render_10', 'render_11'])">
                                 <img src="projects_gallery/render_10.webp" loading="lazy">
                                 <div id="projects-amount" title="Liczba rzeczy wewnątrz">
                                     <div id="amount-number" value="2"></div>
@@ -399,7 +401,7 @@
                                     <div class="swiper-opinion-button-prev"></div>
                                     <div class="swiper-opinion-button-next"></div>
                                 </div>
-                                <div class="swiper-opinion-pagination" style="width: unset;"></div>
+                                <div class="swiper-opinion-pagination" style="width: unset; justify-content: center;"></div>
                             </div>
                         </div>
                         <div class="swiper-opinion-wrapper">
@@ -565,6 +567,25 @@
                                 </div>
                             </div>
 
+                            <div class="swiper-opinion-slide">
+                                <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="800">
+                                    <div id="feedback-opinion-author">
+                                        <img src="assets/wtfprzemek.webp">
+                                        <p>wtfprzemek
+                                            <p2 data-translate="o-10-author-desc"> 
+                                                <img src="icons/webp/person.webp" id="default-author"></p2>
+                                        </p>
+                                    </div>
+                                    <div id="feedback-opinion-content">
+                                        <div id="feedback-opinion-content-decoration">
+                                            <div id="feedback-opinion-content-decoration-shape"></div>
+                                        </div>
+                                        <p data-translate="o-10-content">.</p>
+                                    </div>
+                                    <div id="feedback-opinion-screen" data-translate="feedback-o-screen" onclick="openProjectLibrary(['wtfprzemek_o'])"> </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -629,7 +650,7 @@
 
             <div id="navbar-mid-mobile">
                 <div id="navbar-mid-mobile-menu">Menu</div>
-                <div id="navbar-mid-mobile-menu-table">
+                <div id="navbar-mid-mobile-menu-table" style="display: none;">
                     <div data-translate="home" id="navbar-mid-mobile-menu-table-option" onclick="scrollToElement('#content-container')">.</div>
                     <div data-translate="skills" id="navbar-mid-mobile-menu-table-option" onclick="scrollToElement('#skills-container')">.</div>
                     <div data-translate="projects" id="navbar-mid-mobile-menu-table-option" onclick="scrollToElement('#projects-container')">.</div>
@@ -708,9 +729,54 @@
 </notification>
 
 <settings>
-    <div id="settings" onclick="manageAnimations()">
-        <div id="settings-icon">
+    <div id="info-bar" class="onTop">
+        <div id="info-bar-item" onclick="infoBarAction('1')">
+            <img src="assets/discord-profile.webp">
+            <div id="info-bar-status" class="offline" value="1"></div>
+            <div id="info-bar-expand">
+                <div id="info-bar-more" value="1" data-translate="info-bar-1">.</div>
+            </div>
+        </div>
+        <div id="info-bar-item" onclick="infoBarAction('2')">
             <img src="icons/webp/effect.webp">
+            <div id="info-bar-status" class="enable" value="2"></div>
+            <div id="info-bar-expand">
+                <div id="info-bar-more" value="2" data-translate="info-bar-2">.</div>
+            </div>
+        </div>
+        <div id="info-bar-item" onclick="infoBarAction('4')">
+            <img src="icons/webp/spotify.webp">
+            <div id="info-bar-status" class="enable" value="4"></div>
+            <div id="info-bar-expand">
+                <div id="info-bar-more" value="4" data-translate="info-bar-4">.</div>
+            </div>
+        </div>
+        <div id="info-bar-item" class="last" onclick="infoBarAction('3')">
+            <img src="icons/webp/special_offer.webp">
+            <div id="info-bar-status" class="info" value="3"></div>
+            <div id="info-bar-expand">
+                <div id="info-bar-more" value="3" data-translate="info-bar-3">.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="spotify-info" style="display: flex;">
+        <div id="spotify-img">
+            <img src="" alt="listening-img" id="spotify-real-img"/>
+        </div>
+        <div id="spotify-text">
+            <div id="spotify-text-top">
+                <div id="spotify-title"></div>
+                <div id="spotify-artist">
+                    <span id="spotify-artist-span1"></span>
+                    <span id="spotify-artist-span2"></span>
+                </div>
+            </div>
+            <div id="spotify-timeline">
+                <span class="line"></span>
+                <span class="elapsedTime"></span>
+                <span class="overTime"></span>
+            </div>
         </div>
     </div>
 </settings>

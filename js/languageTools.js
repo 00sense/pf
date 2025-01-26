@@ -17,8 +17,11 @@ let translations = {
         "copy-mail-content-success": "Mój mail został pomyślnie skopiowany do Twojego schowka! Do usłyszenia!",
         "open-client-content-success": "Profil Discord został otwarty, jeśli nie została otwarta aplikacja Discord - skopiuj id i dodaj mnie manualnie!",
         "open-client-content-error": "Profil Discord nie mógł zostać otwarty dlatego, że prawdopodobnie używasz urządzenia mobilnego. Skopiuj id i dodaj mnie manualnie!",
-        "manage-animations-off-content": "Pomyślnie wyłączono animacje! Jeśli jednak chcesz wrócić do widoczności animacji, kliknij tą ikonę jeszcze raz!",
-        "manage-animations-on-content": "Pomyślnie włączono animacje! W razie problemów z wydajnością lub zawieszaniem się strony wyłącz animacje!",
+
+        "info-bar-1": "Jestem aktualnie online, napisz na Discordzie! (Kliknij ponownie)",
+        "info-bar-2": "Wyłącz/Włącz animacje (Kliknij ponownie)",
+        "info-bar-3": "Aktualnie trwa promocja -20%, ważne tylko do 31 stycznia!",
+        "info-bar-4": "Wyłącz/Włącz widoczność informacji o Spotify (Kliknij ponownie)",
 
         "menu": "Menu",
         "home": "Strona główna",
@@ -99,6 +102,8 @@ let translations = {
         "o-8-content": "Zajebista robota ❤️ kolega wie co i jak 🙂 Najszybszy czas realizacji mega polecam praca warta swojej ceny",
         "o-9-author-desc": "Klient • Prywatne",
         "o-9-content": "Legit, polecam i to bardzo. Bardzo dobre podejście do klienta i szybki czas wykonania",
+        "o-10-author-desc": "Klient • Prywatne",
+        "o-10-content": "Szybko ogarniety temat, polecam",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -130,8 +135,11 @@ let translations = {
         "copy-mail-content-success": "My email has been successfully copied to your clipboard! Talk to you soon!",
         "open-client-content-success": "The Discord profile has been opened. If the Discord app didn't launch, copy the ID and add me manually!",
         "open-client-content-error": "The Discord profile could not be opened because you are likely using a mobile device. Please copy the ID and add me manually!",
-        "manage-animations-off-content": "Animations have been successfully turned off! However, if you'd like to return to viewing animations, click this icon again!",
-        "manage-animations-on-content": "Animations have been successfully turned on! If you experience performance issues or page freezes, please disable animations!",
+
+        "info-bar-1": "I'm currently online, feel free to message me on Discord! (Click again)",
+        "info-bar-2": "Enable/Disable animations (Click again)",
+        "info-bar-3": "A 20% discount is currently ongoing - valid only until January 31st!",
+        "info-bar-4": "Enable/Disable visibility of Spotify information (Click again)",
 
         "menu": "Menu",
         "home": "Home",
@@ -212,6 +220,8 @@ let translations = {
         "o-8-content": "Awesome job ❤️ The guy knows what's what 🙂 Fastest delivery time, highly recommended, work worth every penny!",
         "o-9-author-desc": "Client • Private",
         "o-9-content": "Legit, highly recommend it. Very professional approach to the client and quick turnaround time",
+        "o-10-author-desc": "Client • Private",
+        "o-10-content": "The topic was covered quickly, I recommend it",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

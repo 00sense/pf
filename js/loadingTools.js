@@ -1,6 +1,6 @@
-console.warn = function () {};
-console.log = function() {};
-console.error = function () {};
+// console.warn = function () {};
+// console.log = function() {};
+// console.error = function () {};
 
 $(document).ready(function() {
 
@@ -135,7 +135,7 @@ $(document).ready(function() {
             delay: 8000, 
             disableOnInteraction: false, 
           },
-        speed: 600, // Speed (ms)
+        speed: 350, // Speed (ms)
         pagination: {
             el: '.swiper-opinion-pagination',
             clickable: true,
@@ -154,6 +154,20 @@ $(document).ready(function() {
         },
         effect: 'slide',
     });
+
+    // Dominujacy kolor (Spotify)
+    const img = document.getElementById("spotify-real-img");
+    img.crossOrigin = "anonymous";
+    img.src = "https://url-to-your-api.com/image.jpg";
+    img.onload = function () {
+    Vibrant.from(img).getPalette().then((palette) => {
+    const dominantHex = palette.Vibrant.getHex();
+    const dominantRGB = palette.Vibrant.getRgb();
+    dominantRgbDarkened = darkenRgb(dominantRGB[0], dominantRGB[1], dominantRGB[2], 40);
+    $('html').css('--spotify-1-color', dominantHex);
+    $('html').css('--spotify-2-color', dominantRgbDarkened);
+  });
+};
 
     // --------------------
     // Underline On Scroll To Container (Navbar)

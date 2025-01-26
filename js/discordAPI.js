@@ -8,7 +8,7 @@ async function fetchStatus() {
     if (data.success) {
 
         // Ustawianie statusu, wlaczanie/wylaczanie przycisku
-        const status = data.data.discord_statu
+        const status = data.data.discord_status
         if (status == "offline") {
             effectsElement = document.querySelectorAll('#info-bar-status[value="1"]');
             const infoBarItem = document.querySelector('#info-bar-item[onclick="infoBarAction(\'1\')"]');

@@ -729,37 +729,6 @@
 </notification>
 
 <settings>
-    <div id="info-bar">
-        <div id="info-bar-item" onclick="infoBarAction('1')">
-            <img src="assets/discord-profile.webp">
-            <div id="info-bar-status" class="offline" value="1"></div>
-            <div id="info-bar-expand">
-                <div id="info-bar-more" value="1" data-translate="info-bar-1">.</div>
-            </div>
-        </div>
-        <div id="info-bar-item" onclick="infoBarAction('2')">
-            <img src="icons/webp/effect.webp">
-            <div id="info-bar-status" class="enable" value="2"></div>
-            <div id="info-bar-expand">
-                <div id="info-bar-more" value="2" data-translate="info-bar-2">.</div>
-            </div>
-        </div>
-        <div id="info-bar-item" onclick="infoBarAction('4')">
-            <img src="icons/webp/spotify.webp">
-            <div id="info-bar-status" class="enable" value="4"></div>
-            <div id="info-bar-expand">
-                <div id="info-bar-more" value="4" data-translate="info-bar-4">.</div>
-            </div>
-        </div>
-        <div id="info-bar-item" class="last" onclick="infoBarAction('3')">
-            <img src="icons/webp/special_offer.webp">
-            <div id="info-bar-status" class="info" value="3"></div>
-            <div id="info-bar-expand">
-                <div id="info-bar-more" value="3" data-translate="info-bar-3">.</div>
-            </div>
-        </div>
-    </div>
-
     <div id="spotify-info">
         <div id="spotify-img">
             <img src="" alt="listening-img" id="spotify-real-img"/>
@@ -778,6 +747,43 @@
                 <span class="overTime"></span>
             </div>
         </div>
+    </div>
+
+    <div id="info-bar">
+        <div id="items">
+            <div id="info-bar-item" onclick="infoBarAction('1')">
+                <img src="assets/discord-profile.webp">
+                <div id="info-bar-status" class="offline" value="1"></div>
+                <div id="info-bar-expand">
+                    <div id="info-bar-more" value="1" data-translate="info-bar-1">.</div>
+                </div>
+            </div>
+            <div id="info-bar-item" onclick="infoBarAction('2')">
+                <img src="icons/webp/effect.webp">
+                <div id="info-bar-status" class="enable" value="2"></div>
+                <div id="info-bar-expand">
+                    <div id="info-bar-more" value="2" data-translate="info-bar-2">.</div>
+                </div>
+            </div>
+            <div id="info-bar-item" onclick="infoBarAction('4')">
+                <img src="icons/webp/spotify.webp">
+                <div id="info-bar-status" class="enable" value="4"></div>
+                <div id="info-bar-expand">
+                    <div id="info-bar-more" value="4" data-translate="info-bar-4">.</div>
+                </div>
+            </div>
+            <div id="info-bar-item" class="last" onclick="infoBarAction('3')">
+                <img src="icons/webp/special_offer.webp">
+                <div id="info-bar-status" class="info" value="3"></div>
+                <div id="info-bar-expand">
+                    <div id="info-bar-more" value="3" data-translate="info-bar-3">.</div>
+                </div>
+            </div>
+        </div>
+        <div id="collapse-arrow" onclick="manageInfoBar()" class="rotated" title="Zwiń pasek informacyjny">
+            <img src="/icons//webp/swiper-btn.webp">
+        </div>
+
     </div>
 </settings>
 

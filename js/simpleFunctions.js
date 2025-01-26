@@ -255,6 +255,10 @@ function checkScrollValue() {
             document.querySelectorAll('#spotify-info').forEach(element => {
                 element.classList.add("onTop");
             });
+            $("#collapse-arrow").css({
+                'display': 'none',
+            })
+
             $('#navbar-pre').css({
                 'top': '20px',
             });
@@ -274,6 +278,9 @@ function checkScrollValue() {
             document.querySelectorAll('#spotify-info').forEach(element => {
                 element.classList.remove("onTop");
             });
+            $("#collapse-arrow").css({
+                'display': 'block',
+            })
             $('#navbar-pre').css({
                 'top': '0',
             });
@@ -285,6 +292,9 @@ function checkScrollValue() {
                 'border-radius': '0',
             });
         } else {
+            $("#collapse-arrow").css({
+                'display': 'block',
+            })
             $('#navbar-pre').css({
                 'top': '0',
             });
@@ -583,4 +593,26 @@ function formatTime(ms) {
     const minutes = Math.floor(ms / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+function manageInfoBar() {
+    infoBar = document.querySelector('#info-bar');
+
+    if (window.innerWidth > 1200) {
+        if (infoBar.style.left !== '-60px') {
+            $(infoBar).css('left', '-60px');
+            $('#collapse-arrow').removeClass('rotated')
+        } else {
+            $(infoBar).css('left', '');
+            $('#collapse-arrow').addClass('rotated')
+        }
+    } else {
+        if (infoBar.style.left !== '-50px') {
+            $(infoBar).css('left', '-50px');
+            $('#collapse-arrow').removeClass('rotated')
+        } else {
+            $(infoBar).css('left', '');
+            $('#collapse-arrow').addClass('rotated')
+        }
+    }
 }

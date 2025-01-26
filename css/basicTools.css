@@ -541,3 +541,33 @@ det:hover {
 body #spotify-timeline span.overTime {
     right: 0;
 }
+
+#collapse-arrow {
+    display: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 20px;
+    height: 30%;
+    right: calc(0px - 22px);
+    border-right: var(--border-2); 
+    border-top: var(--border-2);
+    border-bottom: var(--border-2);
+    border-radius: 0 15px 15px 0;
+    backdrop-filter: blur(var(--backdrop-filter-1));
+    background: var(--background-1);
+    object-fit: contain;
+}
+
+#collapse-arrow img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#collapse-arrow.rotated img {
+    transform: translateY(-50%) scaleX(-1);
+}

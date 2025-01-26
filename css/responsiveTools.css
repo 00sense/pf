@@ -294,6 +294,9 @@
 }
 
 @media screen and (max-width: 800px) {
+    #collapse-arrow {
+        display: block;
+    }
     #spotify-info {
         gap: 13px;
         padding: 12px;

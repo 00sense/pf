@@ -493,19 +493,6 @@ function openMail() {
     })
 }
 
-function manageEffectVisibility(action) {
-    element = $('#settings');
-
-    if (action == 'show') {
-        element.fadeIn(300);
-    } 
-    else if (action == 'hide') {
-        element.fadeOut(300);
-    }
-}
-
-
-
 function infoBarAction(id) {
 
     if (id === "1") {

@@ -26,3 +26,22 @@
         rotate: 720deg;
     }
 }
+
+@keyframes spinSpotify {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+    
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(calc(-100% - 50px));
+    }
+}

@@ -67,31 +67,6 @@
     #skills-skill a {
         font-size: 21px;
     }
-    #settings {
-        border-right: 0; border-top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 0 0 15px;
-        top: 80px;
-        transform: none;
-        right: 0;
-        width: 45px;
-        height: 45px;
-    }
-    #settings-icon {
-        padding: 10px;
-        top: unset;
-        left: unset;
-        width: 50%;
-        height: 50%;
-    }
-    #settings:hover {
-        background: var(--background-1);
-        width: 45px;
-        height: 45px;
-        padding: 0;
-    }
     #swiper-opinion-info {
         flex-direction: column;
         align-items: start;
@@ -319,6 +294,50 @@
 }
 
 @media screen and (max-width: 800px) {
+    #spotify-info {
+        gap: 13px;
+        padding: 12px;
+    }
+    #spotify-img {
+        width: 50px;
+        height: 50px;
+    }
+    #spotify-img::after, #spotify-img::before {
+        width: 50px;
+        height: 50px;
+        transform: scale(1.15);
+        left: 12px;
+    }
+    #spotify-text {
+        gap: 20px;
+        max-width: 150px;
+        min-width: 100px;
+    }
+    #spotify-title {
+        font-size: 14px;
+    }
+    #spotify-artist {
+        font-size: 10px;
+    }
+    #spotify-timeline span.line {
+        height: 2px;
+    }
+    #spotify-timeline span.elapsedTime, #spotify-timeline span.overTime {
+        font-size: 10px;
+        top: -14px;
+    }
+    #info-bar-item {
+        width: 27px;
+        height: 27px;
+    }
+    #info-bar-status {
+        top: 18px;
+        height: 10px;
+        width: 10px;
+    }
+    #info-bar-status.info::after {
+        font-size: 10px;
+    }
     #amount-number {
         font-size: 15px;
     }

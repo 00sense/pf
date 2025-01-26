@@ -245,39 +245,299 @@ det:hover {
     cursor: pointer;
     text-shadow: 0 0 10px rgba(255,132,15,0.4);
 }
-
-#settings {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+#info-bar {
+    transition: all 0.7s ease;
+    backdrop-filter: blur(var(--backdrop-filter-1));
     position: fixed;
-    border: var(--border-2);
-    backdrop-filter: blur(20px);
-    background:  var(--background-1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    transform: translateX(50%) translateY(50%);
-    right: 0;
-    bottom: 0;
+    left: 0;
+    top: 80px;
+    background: var(--background-1);
+    border-bottom: var(--border-2); border-right: var(--border-2);
+    border-radius: 0 0 15px 0;
     display: flex;
-    transition: all 0.2s ease-in-out;
+    flex-direction: column;
+}
+
+#info-bar.onTop {
+    left: calc(5% - 41px);
+    top: 100px;
+    border-left: var(--border-2);
+    border-radius: 0 0 15px 15px;
+}
+
+#info-bar-item {
     cursor: pointer;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    padding: 15px;
 }
 
-#settings-icon {
-    transition: all 0.2s ease-in-out;
+#info-bar-item img {
+    padding-bottom: 15px;
+    border-bottom: var(--border-2);
     position: relative;
-    top: 15%;
-    left: 15%;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: fit-content;
 }
 
-#settings-icon img {
+#info-bar-status {
+    transition: all 0.3s ease;
+    position: relative;
+    border: #fff solid 2px;
+    background-color: var(--background-1);
+    border-radius: 50px;
+    width: 14px;
+    height: 14px;
+    aspect-ratio: 1;
+    top: 21px;
+    right: 8px;
+}
+
+#info-bar-status.enable {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 9px rgb(84, 255, 92, 0.5);
+}
+
+#info-bar-status.enable::after {
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    transform: scale(0.8);
+    background-color: #54ff5c;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+#info-bar-status.disable {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 9px rgb(255, 84, 84, 0.5);
+}
+
+#info-bar-status.disable::after {
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    transform: scale(0.8);
+    background-color: #ff5454;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+#info-bar-status.offline {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 9px rgb(156, 156, 156, 0.5);
+}
+
+#info-bar-status.offline::after {
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    transform: scale(0.8);
+    background-color: #9c9c9c;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+#info-bar-status.info {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 9px rgb(84, 172, 255, 0.7);
+    background-color: #54acff;
+}
+
+#info-bar-status.info::after {
+    font-size: 12px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+    content: 'i';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+#info-bar-expand {
+    cursor: default;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    height: 35px;
+    position: absolute;
+    left: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-bar-more {
+    cursor: default;
+    pointer-events: none;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(var(--backdrop-filter-1));
+    font-size: 13px;
+    font-weight: 300;
+    padding: 4px 12px;
+    border: var(--border-2);
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+    align-items: center;
+    background-color: var(--background-1);
+    height: 80%;
+    width: fit-content;
+}
+
+#info-bar-item.last img {
+    border-bottom: 0;
+}
+
+#spotify-info {
+    transition: all 0.7s ease;
+    gap: 20px;
+    padding: 20px;
+    background: var(--background-1);
+    backdrop-filter: blur(var(--backdrop-filter-1));
+    border-bottom: var(--border-2); border-left: var(--border-2);
+    position: fixed;
+    right: 0;
+    top: 80px;
+    border-radius: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+#spotify-info.onTop {
+    right: calc(5% - 41px);
+    top: 100px;
+    border-left: var(--border-2);
+    border-right: var(--border-2);
+    border-radius: 0 0 15px 15px;
+}
+
+#spotify-img {
+    width: 80px;
+    height: 80px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --spotify-1-color: unset;
+    --spotify-2-color: unset;
+}
+
+#spotify-img::after, #spotify-img::before {
+    z-index: -1;
+    transform: scale(1.1);
+    content: '';
+    background-image: conic-gradient(from var(--angle), rgb(var(--spotify-2-color), 0.3), var(--spotify-1-color), rgb(var(--spotify-2-color), 0.3), var(--spotify-1-color), rgb(var(--spotify-2-color), 0.3));
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 20px;
+    border-radius: 16px;
+    animation: 4s spinSpotify linear infinite;
+}
+
+#spotify-img.offAnim::after, #spotify-img.offAnim::before {
+    animation-name: animation-off;
+}
+
+#spotify-img::before {
+    filter: blur(7px);
+    opacity: 1;
+}
+
+#spotify-img img {
+    border-radius: 15px;
     width: 100%;
     height: 100%;
 }
 
-#settings:hover {
-    background-color: rgb(27, 27, 27, 0.5);
-    padding: 5px;
+#spotify-text-top {
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+#spotify-text {
+    gap: 25px;
+    max-width: 200px;
+    min-width: 120px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+
+#spotify-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#spotify-artist {
+    min-width: 120px;
+    gap: 50px;
+    display: flex;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-wrap: nowrap;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#spotify-artist span.active {
+    animation: marquee 6s linear infinite;
+}
+
+#spotify-timeline {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #424242;
+}
+
+#spotify-timeline span.line {
+    transition: all 0.2s ease;
+    border-radius: 50px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    background-color: #ececec;
+}
+
+#spotify-timeline span.elapsedTime, #spotify-timeline span.overTime {
+    top: -17px;
+    position: absolute;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+body #spotify-timeline span.overTime {
+    right: 0;
 }

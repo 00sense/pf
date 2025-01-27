@@ -104,6 +104,8 @@ let translations = {
         "o-9-content": "Legit, polecam i to bardzo. Bardzo dobre podejście do klienta i szybki czas wykonania",
         "o-10-author-desc": "Klient • Prywatne",
         "o-10-content": "Szybko ogarniety temat, polecam",
+        "o-11-author-desc": "Klient • Prywatne",
+        "o-11-content": "Legit. Ładna tekstura polecam",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -222,6 +224,8 @@ let translations = {
         "o-9-content": "Legit, highly recommend it. Very professional approach to the client and quick turnaround time",
         "o-10-author-desc": "Client • Private",
         "o-10-content": "The topic was covered quickly, I recommend it",
+        "o-11-author-desc": "Client • Private",
+        "o-11-content": "Legit. Nice texture, highly recommend",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

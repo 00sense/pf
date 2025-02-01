@@ -1,5 +1,28 @@
 const userId = "744981493159559308";
 
+async function getDiscordUser(userId) {
+    const apiUrl = `https://discordlookup.mesavirep.xyz/v1/user/${userId}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`Błąd HTTP: ${response.status}`);
+
+        const data = await response.json();
+        console.log("Dane użytkownika:", data);
+
+        // Pobranie nicku i avatara
+        document.getElementById("username").textContent = data.global_name;
+        document.getElementById("avatar").src = data.avatar 
+            ? `https://cdn.discordapp.com/avatars/${userId}/${data.avatar}.png?size=1024`
+            : `https://cdn.discordapp.com/embed/avatars/${userId % 5}.png`;
+
+    } catch (error) {
+        console.error("Błąd pobierania:", error);
+    }
+}
+
+getDiscordUser("744981493159559308"); // Testowe ID
+
 async function fetchStatus() {
     try {
     const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);

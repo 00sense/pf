@@ -20,7 +20,7 @@ let translations = {
 
         "info-bar-1": "Jestem aktualnie online, napisz na Discordzie! (Kliknij ponownie)",
         "info-bar-2": "Wyłącz/Włącz animacje (Kliknij ponownie)",
-        "info-bar-3": "Aktualnie trwa promocja -20%, ważne tylko do 31 stycznia!",
+        "info-bar-3": "Ptaszki ćwierkały, że niedługo mocna promocja!",
         "info-bar-4": "Wyłącz/Włącz widoczność informacji o Spotify (Kliknij ponownie)",
 
         "menu": "Menu",
@@ -142,7 +142,7 @@ let translations = {
 
         "info-bar-1": "I'm currently online, feel free to message me on Discord! (Click again)",
         "info-bar-2": "Enable/Disable animations (Click again)",
-        "info-bar-3": "A 20% discount is currently ongoing - valid only until January 31st!",
+        "info-bar-3": "The birds were chirping that a huge sale is coming soon!",
         "info-bar-4": "Enable/Disable visibility of Spotify information (Click again)",
 
         "menu": "Menu",

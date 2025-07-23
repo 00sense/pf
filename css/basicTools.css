@@ -281,6 +281,10 @@ det:hover {
     height: fit-content;
 }
 
+html .profilowe img {
+    scale: 1.1;
+}
+
 #info-bar-status {
     transition: all 0.3s ease;
     position: relative;
@@ -451,7 +455,7 @@ det:hover {
     z-index: -1;
     transform: scale(1.1);
     content: '';
-    background-image: conic-gradient(from var(--angle), rgb(var(--spotify-2-color), 0.3), var(--spotify-1-color), rgb(var(--spotify-2-color), 0.3), var(--spotify-1-color), rgb(var(--spotify-2-color), 0.3));
+    background-image: conic-gradient(from var(--angle), rgb(var(--spotify-2-color), 0.3), rgb(var(--spotify-1-color)), rgb(var(--spotify-2-color), 0.3), rgb(var(--spotify-1-color)), rgb(var(--spotify-2-color), 0.3));
     width: 80px;
     height: 80px;
     position: absolute;

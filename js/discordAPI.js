@@ -1,4 +1,5 @@
 const userId = "744981493159559308";
+let lastAvatarHash = null;
 
 async function fetchStatus() {
     try {
@@ -6,6 +7,25 @@ async function fetchStatus() {
     const data = await response.json();
     
     if (data.success) {
+            const user = data.data.discord_user;
+            const avatarHash = user.avatar;
+            const ext = avatarHash.startsWith("a_") ? "gif" : "png";
+            const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${avatarHash}.${ext}?size=1024`;
+
+            const img = document.querySelector("#content-card-image img");
+            const img2 = document.querySelector("#text-content-main img");
+            const img3 = document.querySelector(".profilowe img");
+            if (img) {
+                img.src = avatarUrl;
+            }
+            if (img2) {
+                img2.src = avatarUrl;
+            }
+
+            if (img3) {
+                updateCircularAvatar(img3, avatarUrl, avatarHash);
+            }
+
 
         // Ustawianie statusu, wlaczanie/wylaczanie przycisku
         const status = data.data.discord_status;
@@ -81,17 +101,28 @@ async function fetchStatus() {
             document.querySelector("#spotify-title").innerHTML = song;
             spanElement1.innerHTML = artist;
 
-            if (artist.length > 20) {
-                spanElement2.innerHTML = artist;
-                spanElement1.classList.add('active');
-                spanElement2.classList.add('active');
-                spanElement2.style.display = "block";
-            } else {
-                spanElement2.innerHTML = "";
-                spanElement2.style.display = "none";
-                spanElement1.classList.remove('active');
-                spanElement2.classList.remove('active');
+            function isWindowReallyActive() {
+                return !document.hidden && document.hasFocus() && window.outerHeight > 0 && window.screenY > -10000;
             }
+
+            function updateArtistDisplay() {
+                if (isWindowReallyActive() && artist.length > 21) {
+                    spanElement2.innerHTML = artist;
+                    spanElement1.classList.add('active');
+                    spanElement2.classList.add('active');
+                    spanElement2.style.display = "block";
+                } else {
+                    spanElement1.classList.remove('active');
+                    spanElement2.classList.remove('active');
+                    spanElement2.style.display = "none";
+                }
+            }
+
+            // Wywołaj na start
+            updateArtistDisplay();
+
+            // Aktualizuj przy focusie i blur okna
+            $(window).on("focus blur", updateArtistDisplay);
 
             // Timeline
             const currentTime = Date.now();

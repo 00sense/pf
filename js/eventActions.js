@@ -90,3 +90,40 @@ window.addEventListener('resize', () => {
     debounce(checkNavbarSettings, 100)();
     debounce(checkProjectVisibility, 100)();
 });
+
+$(function () {
+    let isActive = true;
+
+    function isWindowReallyActive() {
+        return !document.hidden && document.hasFocus() && window.outerHeight > 0 && window.screenY > -10000;
+    }
+
+    function startRotation() {
+        isActive = true;
+        turnOnAnimations();
+    }
+
+    function stopRotation() {
+        turnOffAnimations();
+        isActive = false;
+    }
+
+    setInterval(() => {
+        if (isWindowReallyActive()) {
+            if (!isActive) startRotation();
+        } else {
+            if (isActive) stopRotation();
+        }
+    }, 1000);
+
+    $(window).on("focus", turnOnAnimations);
+    $(window).on("blur", turnOffAnimations);
+
+    $(document).on("visibilitychange", function () {
+        if (!document.hidden) {
+            startRotation();
+        } else {
+            stopRotation();
+        }
+    });
+});

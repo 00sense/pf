@@ -48,6 +48,37 @@ function open3dProjectLibrary(modelArray) {
     $('#spotify-info').css('display', 'none');
 }
 
+function updateCircularAvatar(imgElement, avatarUrl, avatarHash) {
+    if (avatarHash === lastAvatarHash) {
+        return;
+    }
+    lastAvatarHash = avatarHash;
+
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = avatarUrl;
+
+    img.onload = () => {
+        const size = Math.min(img.width, img.height);
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+
+        const sx = (img.width - size) / 2;
+        const sy = (img.height - size) / 2;
+
+        ctx.drawImage(img, sx, sy, size, size, 0, 0, size, size);
+
+        imgElement.src = canvas.toDataURL();
+    };
+}
+
 // --------------------
 // Open Film Project Library
 // --------------------
@@ -167,10 +198,12 @@ const blockbenchPercentage = 95;
 const blenderPercentage = 55;
 const photoshopPercentage = 100;
 const illustratorPercentage = 100;
+const indesignPercentage = 80;
 const premierePercentage = 80;
 const afterPercentage = 75;
 const htmlCSSPercentage = 80;
 const jsPercentage = 50;
+const soon = "??";
 
 function setSkillPercentage(skillClassName, percentage) {
     if (percentage < 0) percentage = 0;
@@ -182,6 +215,12 @@ function setSkillPercentage(skillClassName, percentage) {
     }
     else if (skillClassName == "adobe-illustrator") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe Illustrator");
+    }
+    else if (skillClassName == "adobe-indesign") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe InDesign");
+    }
+    else if (skillClassName == "soon") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Soon...");
     }
     else if (skillClassName == "adobe-premiere-pro") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe Premiere Pro");
@@ -199,12 +238,13 @@ function setSkillPercentage(skillClassName, percentage) {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text(skillClassName);
     }
 
-    $(`.${skillClassName} #skills-skill-option-knowledge span`).css("width", percentageText);
-    $(`.${skillClassName} #skills-skill-option-knowledge-percentage`).text(percentageText);
-
-    if (percentage >= 99) {
-        $(`.${skillClassName} #skills-skill-option-knowledge span`).css("width", "100%");
+    if (skillClassName == "soon") {
+        $(`.${skillClassName} #skills-skill-option-knowledge span`).css("animation-name", "soon-anim");
+    } else {
+        $(`.${skillClassName} #skills-skill-option-knowledge span`).css("width", percentageText);
     }
+
+    $(`.${skillClassName} #skills-skill-option-knowledge-percentage`).text(percentageText);
 }
 
 // --------------------
@@ -406,30 +446,46 @@ function hide3dProjectView() {
 // --------------------
 // On/Off Animations
 // --------------------
-function manageAnimations() {
-    let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline, ki";
+let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline, ki";
 
+function turnOnAnimations() {
+    effectsElement = document.querySelector('[value="2"]');
+
+    if (effectsElement.classList.contains("disable")) {
+        return;
+    }
+
+    $(".navbar-left-img").css("animation-name", "logo-rotate-1");
+    $("k, det, ki").css("animation-name", "gradient-animation");
+    $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
+    $('#settings-icon').css('opacity', '1');
+    $('#spotify-img').removeClass('offAnim');
+    $('.soon span').css('animation-name', 'soon-anim');
+}
+
+function turnOffAnimations() {
+    $(animatedElements).css("animation-name", "animation-off");
+    $('#settings-icon').css('opacity', '0.4');
+    $('#spotify-img').addClass('offAnim');
+    $('.soon span').css('animation-name', 'offAnim');
+}
+
+function manageAnimations() {
     if ($(animatedElements).css("animation-name") === "animation-off") {
-        $(".navbar-left-img").css("animation-name", "logo-rotate-1");
-        $("k, det, ki").css("animation-name", "gradient-animation");
-        $(".navbar-mid-option-underline, #active").css("animation-name", "RGB-animation-1");
-        $('#settings-icon').css('opacity', '1');
-        $('#spotify-img').removeClass('offAnim');
         effectsElement = document.querySelectorAll('[value="2"]');
         effectsElement.forEach((el) => {
             el.className = "";
             el.classList.add("enable");
         });
+        turnOnAnimations();
     }
     else {
-        $(animatedElements).css("animation-name", "animation-off");
-        $('#settings-icon').css('opacity', '0.4');
-        $('#spotify-img').addClass('offAnim');
         effectsElement = document.querySelectorAll('[value="2"]');
         effectsElement.forEach((el) => {
             el.className = "";
             el.classList.add("disable");
         });
+        turnOffAnimations();
     }
 }
 
@@ -574,6 +630,16 @@ function darkenRgb(r, g, b, percentage) {
       Math.round(darken(r)),
       Math.round(darken(g)),
       Math.round(darken(b))
+    ];
+}
+
+function lightenRgb(r, g, b, percentage) {
+    const lighten = (value) => Math.min(255, value + (255 - value) * (percentage / 100));
+
+    return [
+      Math.round(lighten(r)),
+      Math.round(lighten(g)),
+      Math.round(lighten(b))
     ];
 }
 

@@ -35,26 +35,85 @@ $(document).ready(function() {
     }
     textChangeAnimation();
 
-    // --------------------
-    // Window Title Animation
-    // --------------------
+$(function () {
+    let pre = "Sensee • ";
     let index = 0;
+    const windowNames = [
+        "Portfolio • Sensee ツ",
+        pre + "Graphic Designer ツ",
+        pre + "Animator ツ",
+        pre + "3D Designer ツ",
+        pre + "Minecraft Modder ツ"
+    ];
+    let titleInterval;
+    let isActive = true;
+
+    function isWindowReallyActive() {
+        return !document.hidden && document.hasFocus() && window.outerHeight > 0 && window.screenY > -10000;
+    }
+
     function updateTitle() {
-        const windowNames = ["Portfolio • Sensee ツ", "Graphic Designer ツ", "Editor/Animator ツ", "3D Designer ツ", "Minecraft Modder ツ"];
+        effectsElement = document.querySelector('[value="2"]');
+
+        if (effectsElement.classList.contains("disable")) {
+            stopRotation();
+            return;
+        }
+        if (!isWindowReallyActive()) return;
 
         document.title = windowNames[index];
-        // Czas pierwszego : czas reszty (ms)
-        let delay = (index === 0) ? 4000 : 1000;
+        const delay = (index === 0) ? 4000 : 1000;
         index = (index + 1) % windowNames.length;
-        setTimeout(updateTitle, delay);
+
+        titleInterval = setTimeout(updateTitle, delay);
     }
+
+    function startRotation() {
+        effectsElement = document.querySelector('[value="2"]');
+
+        if (effectsElement.classList.contains("disable")) {
+            return;
+        }
+        clearTimeout(titleInterval);
+        isActive = true;
+        updateTitle();
+    }
+
+    function stopRotation() {
+        document.title = windowNames[0];
+        clearTimeout(titleInterval);
+        isActive = false;
+    }
+
+    setInterval(() => {
+        if (isWindowReallyActive()) {
+            if (!isActive) startRotation();
+        } else {
+            if (isActive) stopRotation();
+        }
+    }, 1000);
+
+    $(window).on("focus", startRotation);
+    $(window).on("blur", stopRotation);
+
+    $(document).on("visibilitychange", function () {
+        if (!document.hidden) {
+            startRotation();
+        } else {
+            stopRotation();
+        }
+    });
+
     updateTitle();
+});
 
     // --------------------
     // Loading Skills Value
     // --------------------
     setSkillPercentage("adobe-photoshop", photoshopPercentage);
     setSkillPercentage("adobe-illustrator", illustratorPercentage);
+    setSkillPercentage("adobe-indesign", indesignPercentage);
+    setSkillPercentage("soon", soon);
     setSkillPercentage("adobe-premiere-pro", premierePercentage);
     setSkillPercentage("adobe-after-effects", afterPercentage);
     setSkillPercentage("blockbench", blockbenchPercentage);
@@ -155,18 +214,48 @@ $(document).ready(function() {
         effect: 'slide',
     });
 
-    // Dominujacy kolor (Spotify)
-    const img = document.getElementById("spotify-real-img");
-    img.crossOrigin = "anonymous";
-    img.src = "https://url-to-your-api.com/image.jpg";
-    img.onload = function () {
-    Vibrant.from(img).getPalette().then((palette) => {
-    const dominantHex = palette.Vibrant.getHex();
-    const dominantRGB = palette.Vibrant.getRgb();
-    dominantRgbDarkened = darkenRgb(dominantRGB[0], dominantRGB[1], dominantRGB[2], 40);
-    $('html').css('--spotify-1-color', dominantHex);
-    $('html').css('--spotify-2-color', dominantRgbDarkened);
-  });
+// Dominujacy kolor (Spotify)
+const img = document.getElementById("spotify-real-img");
+
+img.crossOrigin = "anonymous";
+
+img.onload = function () {
+    let ct = new ColorThief();
+    let [r, g, b] = ct.getColor(img);
+
+    function generateVariants([r, g, b], lightenPercent = 25, darkenPercent = 25) {
+        const lighten = (value) => Math.min(255, value + (255 - value) * (lightenPercent / 100));
+        const darken = (value) => Math.max(0, value - value * (darkenPercent / 100));
+
+        const light = [
+            Math.round(lighten(r)),
+            Math.round(lighten(g)),
+            Math.round(lighten(b))
+        ];
+
+        let dark = [
+            Math.round(darken(r)),
+            Math.round(darken(g)),
+            Math.round(darken(b))
+        ];
+
+        if (Math.max(...dark) < 60) {
+            const i = dark.indexOf(Math.max(...dark));
+            dark[i] = 60;
+        }
+
+        const toRgbString = ([r, g, b]) => `${r}, ${g}, ${b}`;
+
+        return {
+            light: toRgbString(light),
+            dark: toRgbString(dark)
+        };
+    }
+
+    const {light, dark} = generateVariants([r, g, b]);
+
+    $('html').css('--spotify-1-color', light);
+    $('html').css('--spotify-2-color', dark);
 };
 
     // --------------------
@@ -233,6 +322,11 @@ $(window).on('load', function() {
             next2();
             });        
     $('#bg').delay(100).fadeOut('slow');
+
+    setTimeout(function() {
+        $('loader').remove();
+        $('scripts').remove();
+    }, 10000);
 });
 
 $(document).ready(function () {
@@ -242,7 +336,7 @@ $(document).ready(function () {
             const projectValue = $(this).attr('value');
             const onclickValue = $(this).attr('onclick');
             
-            if (onclickValue) {
+            if (onclickValue) { 
                 const match = onclickValue.match(/openProjectLibrary\((\[[^\]]*\])\)/);
 
                 if (match) {

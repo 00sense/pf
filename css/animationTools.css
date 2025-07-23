@@ -45,3 +45,18 @@
       transform: translateX(calc(-100% - 50px));
     }
 }
+
+@keyframes soon-anim {
+    from {
+        filter: blur(25px);
+        opacity: 0.6;
+        width: 50%;
+        left: -150%;
+    }
+    to {
+        filter: blur(25px);
+        opacity: 0.6;
+        width: 50%;
+        left: 150%;
+    }
+}

@@ -30,6 +30,7 @@
 }
 
 #skills-skill-option {
+    text-wrap: nowrap;
     align-items: center;
     gap: 10px;
     display: flex;
@@ -64,6 +65,7 @@
     position: absolute;
     height: 100%;
     background: #644f2e;
+    animation: NOANIMATION 2.5s linear infinite;
 }
 
 #skills-skill-option-knowledge-percentage {

@@ -95,8 +95,164 @@
     align-items: center;
     display: flex;
     width: 100%;
-    padding-bottom: 10px;
 }
+
+#feedback-opinion-author-img {
+    aspect-ratio: 1;
+    margin-top: 5px;
+    width: 65px;
+    height: 65px;
+}
+
+
+
+
+
+
+
+@property --angleX {
+    syntax: "<angleX>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --o1-1-color: 255, 255, 255;
+    --o1-2-color: 1, 1, 1;
+
+    --o2-1-color: 255, 255, 255;
+    --o2-2-color: 1, 1, 1;
+
+    --o3-1-color: 255, 255, 255;
+    --o3-2-color: 1, 1, 1;
+
+    --o4-1-color: 255, 255, 255;
+    --o4-2-color: 1, 1, 1;
+
+    --o5-1-color: 255, 255, 255;
+    --o5-2-color: 1, 1, 1;
+
+    --o6-1-color: 255, 255, 255;
+    --o6-2-color: 1, 1, 1;
+
+    --o7-1-color: 255, 255, 255;
+    --o7-2-color: 1, 1, 1;
+
+    --o8-1-color: 255, 255, 255;
+    --o8-2-color: 1, 1, 1;
+
+    --o9-1-color: 255, 255, 255;
+    --o9-2-color: 1, 1, 1;
+
+    --o10-1-color: 255, 255, 255;
+    --o10-2-color: 1, 1, 1;
+
+    --o11-1-color: 255, 255, 255;
+    --o11-2-color: 1, 1, 1;
+
+    --o12-1-color: 255, 255, 255;
+    --o12-2-color: 1, 1, 1;
+
+    --o13-1-color: 255, 255, 255;
+    --o13-2-color: 1, 1, 1;
+}
+
+#feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
+    opacity: 1;
+    transform: scale(1.15);
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    content: '';
+    z-index: -1;
+    border-radius: 50px;
+    animation: 4s spinSpotify linear infinite;
+}
+
+#feedback-opinion-author-img::before {
+    filter: blur(7px);
+    opacity: 1;
+}
+
+#feedback-opinion-author-img.o1::before, #feedback-opinion-author-img.o1::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o1-2-color), 0.3), rgb(var(--o1-1-color)), rgb(var(--o1-2-color), 0.3), rgb(var(--o1-1-color)), rgb(var(--o1-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o2::before, #feedback-opinion-author-img.o2::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o2-2-color), 0.3), rgb(var(--o2-1-color)), rgb(var(--o2-2-color), 0.3), rgb(var(--o2-1-color)), rgb(var(--o2-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o3::before, #feedback-opinion-author-img.o3::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o3-2-color), 0.3), rgb(var(--o3-1-color)), rgb(var(--o3-2-color), 0.3), rgb(var(--o3-1-color)), rgb(var(--o3-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o4::before, #feedback-opinion-author-img.o4::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o4-2-color), 0.3), rgb(var(--o4-1-color)), rgb(var(--o4-2-color), 0.3), rgb(var(--o4-1-color)), rgb(var(--o4-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o5::before, #feedback-opinion-author-img.o5::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o5-2-color), 0.3), rgb(var(--o5-1-color)), rgb(var(--o5-2-color), 0.3), rgb(var(--o5-1-color)), rgb(var(--o5-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o6::before, #feedback-opinion-author-img.o6::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o6-2-color), 0.3), rgb(var(--o6-1-color)), rgb(var(--o6-2-color), 0.3), rgb(var(--o6-1-color)), rgb(var(--o6-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o7::before, #feedback-opinion-author-img.o7::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o7-2-color), 0.3), rgb(var(--o7-1-color)), rgb(var(--o7-2-color), 0.3), rgb(var(--o7-1-color)), rgb(var(--o7-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o8::before, #feedback-opinion-author-img.o8::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o8-2-color), 0.3), rgb(var(--o8-1-color)), rgb(var(--o8-2-color), 0.3), rgb(var(--o8-1-color)), rgb(var(--o8-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o9::before, #feedback-opinion-author-img.o9::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o9-2-color), 0.3), rgb(var(--o9-1-color)), rgb(var(--o9-2-color), 0.3), rgb(var(--o9-1-color)), rgb(var(--o9-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o10::before, #feedback-opinion-author-img.o10::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o10-2-color), 0.3), rgb(var(--o10-1-color)), rgb(var(--o10-2-color), 0.3), rgb(var(--o10-1-color)), rgb(var(--o10-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o11::before, #feedback-opinion-author-img.o11::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o11-2-color), 0.3), rgb(var(--o11-1-color)), rgb(var(--o11-2-color), 0.3), rgb(var(--o11-1-color)), rgb(var(--o11-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o12::before, #feedback-opinion-author-img.o12::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o12-2-color), 0.3), rgb(var(--o12-1-color)), rgb(var(--o12-2-color), 0.3), rgb(var(--o12-1-color)), rgb(var(--o12-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o13::before, #feedback-opinion-author-img.o13::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o13-2-color), 0.3), rgb(var(--o13-1-color)), rgb(var(--o13-2-color), 0.3), rgb(var(--o13-1-color)), rgb(var(--o13-2-color), 0.3));
+}
+
+
+
+
+
+
+
+
+
+
+#feedback-opinion-author img {
+    aspect-ratio: 1;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
 
 #feedback-opinion-author p {
     border-bottom: var(--border-2);
@@ -190,14 +346,15 @@
     display: flex;
     justify-content: center;
     flex-shrink: 0;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 6px;
     width: 55px;
     height: 100%;
 }
 
 #feedback-opinion-content-decoration-shape {
     width: 5px;
-    height: 90%;
+    height: 75%;
     background-color: #e6ad62;
     border-radius: 50px;
 }
@@ -207,11 +364,6 @@
     height: auto;
     width: 35px;
     padding: 5px 0;
-}
-
-#feedback-opinion-author img {
-    height: 55px;
-    border-radius: 50%;
 }
 
 #swiper-opinion-navigation {

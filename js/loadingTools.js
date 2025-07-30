@@ -2,9 +2,49 @@ console.warn = function () {};
 console.log = function() {};
 console.error = function () {};
 
+let liczbaOpini = 13;
+
 $(document).ready(function() {
 
     AOS.init();
+
+    function ustawAvataryDiscorda() {
+        const idUzytkownikow = [
+            "307503795192070144", // o1
+            "865654945683734587", // o2
+            "616308905928294422", // o3
+            "1313411082601369605", // o4
+            "723832148297121792", // o5
+            "417353906809733125", // o6
+            "1313941413955899437", // o7
+            "322099049840771072", // o8
+            "1296215137258049680", // o9
+            "547796325421416448", // o10
+            "1141663111863083019", // o11
+            "418444890020773889",  // o12
+            "211083431101071361", // o13
+        ];
+
+        idUzytkownikow.forEach((id, index) => {
+            const numer = index + 1;
+            const selektor = `.o${numer} img`;
+
+            fetch("https://discordlookup.mesalytic.moe/v1/user/" + id)
+                .then(r => r.json())
+                .then(data => {
+                    if (data?.avatar?.link) {
+                        $(selektor).attr("src", data.avatar.link);
+                    } else {
+                        console.warn(`Brak avatara dla .o${numer} (${id})`);
+                    }
+                })
+                .catch(err => {
+                    console.error(`Błąd przy pobieraniu danych dla .o${numer} (${id}):`, err);
+                });
+        });
+    }
+
+    ustawAvataryDiscorda();
     
     // --------------------
     // Loading Text Animation
@@ -184,6 +224,9 @@ $(function () {
             1500: {
                 slidesPerView: 2, 
             },
+            1600: {
+                slidesPerView: 3,
+            },
             2400: {
                 slidesPerView: 3,
             },
@@ -191,10 +234,10 @@ $(function () {
         spaceBetween: 30,
         loop: true,
         autoplay: {
-            delay: 8000, 
-            disableOnInteraction: false, 
+            delay: 4000, 
+            disableOnInteraction: true, 
           },
-        speed: 350, // Speed (ms)
+        speed: 250, // Speed (ms)
         pagination: {
             el: '.swiper-opinion-pagination',
             clickable: true,
@@ -405,4 +448,73 @@ $(document).ready(function () {
         });
     }
     updateAmountNumbers();
+
+function createColorVariants([r, g, b], lightenRatio = 25, darkenRatio = 35, gainMultiplier = 1.8) {
+    const applyGain = ([r, g, b]) => {
+        const max = Math.max(r, g, b);
+        return [
+            Math.min(255, Math.round(r + (r === max ? gainMultiplier * 10 : 0))),
+            Math.min(255, Math.round(g + (g === max ? gainMultiplier * 10 : 0))),
+            Math.min(255, Math.round(b + (b === max ? gainMultiplier * 10 : 0)))
+        ];
+    };
+
+    const lightenVal = (val) => Math.min(255, val + (255 - val) * (lightenRatio / 100));
+    const darkenVal = (val) => Math.max(0, val - val * (darkenRatio / 100));
+
+    const rawLight = [lightenVal(r), lightenVal(g), lightenVal(b)];
+    const rawDark = [darkenVal(r), darkenVal(g), darkenVal(b)];
+
+    const lightColor = applyGain(rawLight);
+    let darkColor = applyGain(rawDark);
+
+    if (Math.max(...darkColor) < 60) {
+        const maxIndex = darkColor.indexOf(Math.max(...darkColor));
+        darkColor[maxIndex] = 60;
+    }
+
+    const rgbToString = ([r, g, b]) => `${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)}`;
+
+    return {
+        light: rgbToString(lightColor),
+        dark: rgbToString(darkColor)
+    };
+}
+
+function applyColorsFromImages() {
+    const colorExtractor = new ColorThief();
+
+    for (let index = 1; index <= liczbaOpini; index++) {
+        const imgSelector = `.o${index} img`;
+        const imageElement = document.querySelector(imgSelector);
+
+        if (!imageElement) {
+            console.warn(`No image found for selector: ${imgSelector}`);
+            continue;
+        }
+
+        imageElement.crossOrigin = "anonymous";
+
+        imageElement.onload = () => {
+            try {
+                const [r, g, b] = colorExtractor.getColor(imageElement);
+                const { light, dark } = createColorVariants([r, g, b]);
+
+                // Zmienne CSS zgodne z formatem z obrazka:
+                document.documentElement.style.setProperty(`--o${index}-1-color`, light);
+                document.documentElement.style.setProperty(`--o${index}-2-color`, dark);
+
+                console.log(`Image ${index} colors set. Light: ${light}, Dark: ${dark}`);
+            } catch (error) {
+                console.error(`Error extracting color from image .o${index} img:`, error);
+            }
+        };
+
+        if (imageElement.complete && imageElement.naturalHeight !== 0) {
+            imageElement.onload();
+        }
+    }
+}
+
+applyColorsFromImages();
 });

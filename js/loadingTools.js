@@ -432,7 +432,7 @@ $(document).ready(function () {
             const onclickValue = $(this).attr('onclick');
             
             if (onclickValue) {
-                const match = onclickValue.match(/openProjectLibrary\((\[[^\]]*\])\)/);
+                const match = onclickValue.match(/open3dProjectLibrary\((\[[^\]]*\])\)/);
 
                 if (match) {
                     try {
@@ -445,31 +445,7 @@ $(document).ready(function () {
                             amountNumberElement.text(itemCount);
                         }
                     } catch (error) {
-                        console.error('Błąd podczas parsowania tablicy w openProjectLibrary:', error);
-                    }
-                }
-            }
-        });
-
-        $('[id="film-image"]').each(function () {
-            const projectValue = $(this).attr('value');
-            const onclickValue = $(this).attr('onclick');
-            
-            if (onclickValue) {
-                const match = onclickValue.match(/openProjectLibrary\((\[[^\]]*\])\)/);
-
-                if (match) {
-                    try {
-                        const jsonString = match[1].replace(/'/g, '"');
-                        const itemsArray = JSON.parse(jsonString);
-                        const itemCount = itemsArray.length;
-
-                        const amountNumberElement = $(`[id="amount-number"][value="${projectValue}"]`);
-                        if (amountNumberElement.length) {
-                            amountNumberElement.text(itemCount);
-                        }
-                    } catch (error) {
-                        console.error('Błąd podczas parsowania tablicy w openProjectLibrary:', error);
+                        console.error('Błąd podczas parsowania tablicy w open3dProjectLibrary:', error);
                     }
                 }
             }

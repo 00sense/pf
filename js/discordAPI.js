@@ -7,6 +7,7 @@ async function fetchStatus() {
     
     if (data.success) {
 
+        console.log(data);
         // Ustawianie statusu, wlaczanie/wylaczanie przycisku
         const status = data.data.discord_status;
         if (status == "offline") {
@@ -63,6 +64,8 @@ async function fetchStatus() {
             // Pobranie danych
             const song = data.data.spotify.song;
             let artist = data.data.spotify.artist;
+            let trackID = data.data.spotify.track_id;
+      
             const albumArtUrl = data.data.spotify.album_art_url;
             const startTimestamp = data.data.spotify.timestamps.start;
             const endTimestamp = data.data.spotify.timestamps.end;
@@ -76,6 +79,7 @@ async function fetchStatus() {
             artist = artist.replace(/;/g, ',');
 
             document.querySelector("#spotify-title").innerHTML = song;
+            $('#spotify-track-link').attr("href", "spotify:track:" + trackID);
             spanElement1.innerHTML = artist;
 
             function isWindowReallyActive() {

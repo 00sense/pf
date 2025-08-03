@@ -81,6 +81,7 @@ let translations = {
         "swiper-opinion-info-1": `Poznaj odczucia ${liczbaOpini} klientów!`,
         "swiper-opinion-info-2": "Możesz być jednym z nich, skontaktuj się na",
         "swiper-opinion-info-3": " Discordzie!",
+        "spotify-track": "Odtwórz na spotify",
 
         "feedback-o-screen": "Zrzut ekranu wystawionej opinii",
 
@@ -211,6 +212,7 @@ let translations = {
         "swiper-opinion-info-1": `Discover ${liczbaOpini} clients' feedback!`,
         "swiper-opinion-info-2": "You could be one of them, get in touch on",
         "swiper-opinion-info-3": " Discord!",
+        "spotify-track": "Listen on spotify",
 
         "feedback-o-screen": "Screenshot of the posted review",
 

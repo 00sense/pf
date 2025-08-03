@@ -104,12 +104,6 @@
     height: 65px;
 }
 
-
-
-
-
-
-
 @property --angleX {
     syntax: "<angleX>";
     initial-value: 0deg;
@@ -155,6 +149,12 @@
 
     --o13-1-color: 255, 255, 255;
     --o13-2-color: 1, 1, 1;
+
+    --o14-1-color: 255, 255, 255;
+    --o14-2-color: 1, 1, 1;
+
+    --o15-1-color: 255, 255, 255;
+    --o15-2-color: 1, 1, 1;
 }
 
 #feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
@@ -228,14 +228,13 @@
     background-image: conic-gradient(from var(--angle), rgb(var(--o13-2-color), 0.3), rgb(var(--o13-1-color)), rgb(var(--o13-2-color), 0.3), rgb(var(--o13-1-color)), rgb(var(--o13-2-color), 0.3));
 }
 
+#feedback-opinion-author-img.o14::before, #feedback-opinion-author-img.o14::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o14-2-color), 0.3), rgb(var(--o14-1-color)), rgb(var(--o14-2-color), 0.3), rgb(var(--o14-1-color)), rgb(var(--o14-2-color), 0.3));
+}
 
-
-
-
-
-
-
-
+#feedback-opinion-author-img.o15::before, #feedback-opinion-author-img.o15::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o15-2-color), 0.3), rgb(var(--o15-1-color)), rgb(var(--o15-2-color), 0.3), rgb(var(--o15-1-color)), rgb(var(--o15-2-color), 0.3));
+}
 
 #feedback-opinion-author img {
     aspect-ratio: 1;
@@ -243,16 +242,6 @@
     width: 55px;
     border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
-
 
 #feedback-opinion-author p {
     border-bottom: var(--border-2);

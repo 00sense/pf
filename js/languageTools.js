@@ -78,7 +78,7 @@ let translations = {
         "verified-opinion-2": "Opinie poniżej są autentyczne i zweryfikowane. W razie wątpliwości zapraszam do kontaktu na Discordzie. Przypominam, że publikowanie fałszywych opinii zgodnie z art. 286 §1 Kodeksu karnego jest nielegalne",
         "3D-model-view-description-1": "UWAGA! ",
         "3D-model-view-description-2": "Aby wyłączyć automatyczne obracanie modelu, kliknij ikonę obok",
-        "swiper-opinion-info-1": "Poznaj odczucia klientów!",
+        "swiper-opinion-info-1": `Poznaj odczucia ${liczbaOpini} klientów!`,
         "swiper-opinion-info-2": "Możesz być jednym z nich, skontaktuj się na",
         "swiper-opinion-info-3": " Discordzie!",
 
@@ -110,6 +110,12 @@ let translations = {
         "o-12-content": "Polecam szybko i piekne",
         "o-13-author-desc": "Klient • Prywatne",
         "o-13-content": "Ekspresowy kontakt, super wykonanie i pełne zrozumienie wizji oraz profesjonalizm. Wszystko poszło sprawnie i bezproblemowo. Zdecydowanie bardzo polecam! 🔥🔥",
+        "o-14-author-desc": "Klient • Prywatne",
+        "o-14-content": "10/10, Mega",
+        "o-15-author-desc": "Klient • Prywatne",
+        "o-15-content": "Legit Custom Texturki do itemków, szybko, ładnie i z pomocą ❤️",
+        "o-16-author-desc": "Klient • Prywatne",
+        "o-16-content": "",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -202,7 +208,7 @@ let translations = {
         "verified-opinion-2": "The opinions below are authentic and verified. If you have any doubts, feel free to contact me on Discord. Please note that posting fake reviews is illegal under Article 286 §1 of the Penal Code.",
         "3D-model-view-description-1": "NOTICE! ",
         "3D-model-view-description-2": "To disable automatic model rotation, click the icon next to it",
-        "swiper-opinion-info-1": "Discover clients' feedback!",
+        "swiper-opinion-info-1": `Discover ${liczbaOpini} clients' feedback!`,
         "swiper-opinion-info-2": "You could be one of them, get in touch on",
         "swiper-opinion-info-3": " Discord!",
 
@@ -234,6 +240,12 @@ let translations = {
         "o-12-content": "I recommend, fast and very nice",
         "o-13-author-desc": "Client • Private",
         "o-13-content": "Express contact, great execution and full understanding of the vision and professionalism. Everything went smoothly and without problems. I definitely recommend! 🔥🔥",
+        "o-14-author-desc": "Client • Private",
+        "o-14-content": "10/10, Mega",
+        "o-15-author-desc": "Client • Private",
+        "o-15-content": "Legit Custom Textures for items, fast, nice and helpful ❤️",
+        "o-16-author-desc": "Client • Private",
+        "o-16-content": "",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

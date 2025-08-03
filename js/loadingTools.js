@@ -2,7 +2,7 @@ console.warn = function () {};
 console.log = function() {};
 console.error = function () {};
 
-let liczbaOpini = 13;
+let liczbaOpini = 15;
 
 $(document).ready(function() {
 
@@ -23,6 +23,9 @@ $(document).ready(function() {
             "1141663111863083019", // o11
             "418444890020773889",  // o12
             "211083431101071361", // o13
+            "770999192734007298", // o14
+            "1400872047705591869", // o15
+            "1148378265132728371", // o16
         ];
 
         idUzytkownikow.forEach((id, index) => {

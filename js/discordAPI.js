@@ -7,7 +7,6 @@ async function fetchStatus() {
     
     if (data.success) {
 
-        console.log(data);
         // Ustawianie statusu, wlaczanie/wylaczanie przycisku
         const status = data.data.discord_status;
         if (status == "offline") {

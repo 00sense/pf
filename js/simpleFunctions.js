@@ -34,73 +34,25 @@ function openProjectLibrary(fileNames) {
     $('#spotify-info').css('display', 'none');
 }
 
-// --------------------
-// Open 3D Project Library
-// --------------------
 function open3dProjectLibrary(modelArray) {
-        const modelViewer = $('#model-viewer-view');
-        const modelName = modelArray[0];
-        modelViewer.attr('src', `3d/${modelName}.gltf`);
-
-    $("#projects-project-view-3D").fadeIn(300);
-    $("body").css("overflow", "hidden");
-    $('#info-bar').fadeOut(300);
-    $('#spotify-info').css('display', 'none');
-}
-
-function updateCircularAvatar(imgElement, avatarUrl, avatarHash) {
-    if (avatarHash === lastAvatarHash) {
-        return;
-    }
-    lastAvatarHash = avatarHash;
-
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.src = avatarUrl;
-
-    img.onload = () => {
-        const size = Math.min(img.width, img.height);
-        const canvas = document.createElement("canvas");
-        canvas.width = size;
-        canvas.height = size;
-        const ctx = canvas.getContext("2d");
-
-        ctx.beginPath();
-        ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.clip();
-
-        const sx = (img.width - size) / 2;
-        const sy = (img.height - size) / 2;
-
-        ctx.drawImage(img, sx, sy, size, size, 0, 0, size, size);
-
-        imgElement.src = canvas.toDataURL();
-    };
-}
-
-// --------------------
-// Open Film Project Library
-// --------------------
-function openSpecificProjectLibrary(filmArray) {
     $('.swiper-slide').remove();
 
-    for (let i = 0; i < filmArray.length; i++) {
-        if (i < 2) {
-            $('.swiper-wrapper').append(`
-                <div class="swiper-slide">
-                    <div id="film-view">
-                        <iframe id="youtube-player" src="https://www.youtube.com/embed/${filmArray[i]}?enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            `);
-        } else if (i < 4) {
-            $('.swiper-wrapper').append(`
-                <div class="swiper-slide">
-                    <img src="projects_gallery/${filmArray[i]}.webp" alt="Projects Image ${i + 1}">
-                </div>
-            `);
-        }
+    const scaleOff = $('#scaling-info').hasClass('scale-off');
+
+    for (let i = 0; i < modelArray.length; i++) {
+        const modelName = modelArray[i];
+        const src = `3d/${modelName}.gltf`;
+
+        $('.swiper-wrapper').append(`
+            <div class="swiper-slide">
+                <model-viewer
+                    src="${src}"
+                    camera-controls
+                    auto-rotate
+                     style="width: 100%; height: 100%;"
+                ></model-viewer>
+            </div>
+        `);
     }
 
     $("#projects-project-view").fadeIn(300);
@@ -108,6 +60,8 @@ function openSpecificProjectLibrary(filmArray) {
     $('#info-bar').fadeOut(300);
     $('#spotify-info').css('display', 'none');
 }
+
+
 
 // --------------------
 // Show Notification
@@ -434,16 +388,6 @@ function hideProjectView() {
 }
 
 // --------------------
-// Hide 3D
-// --------------------
-function hide3dProjectView() {
-    $('#projects-project-view-3D').fadeOut(300);
-    $("body").css("overflow", "visible");
-    $('#info-bar').fadeIn(300);
-    $('#spotify-info').css('display', 'flex');
-}
-
-// --------------------
 // On/Off Animations
 // --------------------
 let animatedElements = "k, det, .navbar-left-img, .navbar-mid-option-underline, ki";
@@ -542,21 +486,6 @@ function checkScrollBeyondFeedback() {
             $('.navbar-mid-option-underline').removeAttr('id');
         }
     }
-}
-
-// --------------------
-// Open Mail:to
-// --------------------
-function openMail() {
-    window.location.href = 'mailto:sensee.kontakt@gmail.com';
-
-    navigator.clipboard.writeText(mail)
-    .then(function() {
-        showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("copy-mail-content-success"), "success");
-    })
-    .catch(function(err) {
-        showNotification(getTranslationWithoutLang("notification-error"), getTranslationWithoutLang("copy-mail-content-error") + err, "fail");
-    })
 }
 
 function infoBarAction(id) {

@@ -2,9 +2,32 @@ console.warn = function () {};
 console.log = function() {};
 console.error = function () {};
 
-let liczbaOpini = 15;
+let liczbaOpini = 16;
 
 $(document).ready(function() {
+
+    function myAvatar() {
+        const img = document.querySelector("#content-card-image img");
+        const img2 = document.querySelector("#text-content-main img");
+        const img3 = document.querySelector(".profilowe img");
+
+        fetch("https://discordlookup.mesalytic.moe/v1/user/744981493159559308")
+            .then(r => r.json())
+            .then(data => {
+                if (data?.avatar?.link) {
+                    $(img).attr("src", data.avatar.link);
+                    $(img2).attr("src", data.avatar.link);
+                    $(img3).attr("src", data.avatar.link);
+                } else {
+                    console.warn(`Brak avatara dla 744981493159559308`);
+                }
+            })
+            .catch(err => {
+                console.error(`Błąd przy pobieraniu danych dla 744981493159559308`, err);
+            });
+    }
+
+    myAvatar();
 
     AOS.init();
 
@@ -39,6 +62,7 @@ $(document).ready(function() {
                         $(selektor).attr("src", data.avatar.link);
                     } else {
                         console.warn(`Brak avatara dla .o${numer} (${id})`);
+                        $(selektor).attr("src", `assets/discordblue.webp`);
                     }
                 })
                 .catch(err => {
@@ -193,6 +217,7 @@ $(function () {
     // Loading Swipers Settings
     // --------------------
     const swiper = new Swiper('.swiper-container', {
+        allowTouchMove: false,
         spaceBetween: 30,
         loop: false,
         speed: 600, // Speed (ms)
@@ -227,7 +252,7 @@ $(function () {
             1500: {
                 slidesPerView: 2, 
             },
-            1600: {
+            1910: {
                 slidesPerView: 3,
             },
             2400: {
@@ -407,7 +432,7 @@ $(document).ready(function () {
             const onclickValue = $(this).attr('onclick');
             
             if (onclickValue) {
-                const match = onclickValue.match(/open3dProjectLibrary\((\[[^\]]*\])\)/);
+                const match = onclickValue.match(/openProjectLibrary\((\[[^\]]*\])\)/);
 
                 if (match) {
                     try {
@@ -431,7 +456,7 @@ $(document).ready(function () {
             const onclickValue = $(this).attr('onclick');
             
             if (onclickValue) {
-                const match = onclickValue.match(/openSpecificProjectLibrary\((\[[^\]]*\])\)/);
+                const match = onclickValue.match(/openProjectLibrary\((\[[^\]]*\])\)/);
 
                 if (match) {
                     try {
@@ -503,7 +528,6 @@ function applyColorsFromImages() {
                 const [r, g, b] = colorExtractor.getColor(imageElement);
                 const { light, dark } = createColorVariants([r, g, b]);
 
-                // Zmienne CSS zgodne z formatem z obrazka:
                 document.documentElement.style.setProperty(`--o${index}-1-color`, light);
                 document.documentElement.style.setProperty(`--o${index}-2-color`, dark);
 

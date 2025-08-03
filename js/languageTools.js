@@ -51,7 +51,7 @@ let translations = {
         "skills-card-footer-3": "co oznacza, że wszystkie powyższe umiejętności nauczyłem się samodzielnie z doświadczenia, kursów i ciężkiej pracy",
         "carousel-description-1": "UWAGA! ",
         "carousel-description-2": "Niektóre grafiki zostały przygotowane pod konkretne wymiary podane przez klienta! Obrazy mogą mieć słabszą rozdzielczość poprzez dopasowanie do Twojego ekranu!",
-        "carousel-scaling-1": "Powiększanie: ",
+        "carousel-scaling-1": "Powiększanie (przy modelu 3D nieaktywne): ",
         "carousel-scaling-2-on": "Włączone",
         "carousel-scaling-2-off": "Wyłączone",
         "projects-main-text": "Projekty",
@@ -90,11 +90,11 @@ let translations = {
         "o-2-content": "Polecam serdecznie każdemu! Najlepsza złota rączka!",
         "o-3-author-desc": "Klient • Prywatne",
         "o-3-content": "Serdecznie polecam! Stworzył dla mnie panele na Twitcha, które przerosły moje oczekiwania. Projekt został wykonany szybko, z dużą dbałością o szczegóły i profesjonalizmem. Widać talent, świetne wyczucie estetyki i umiejętność dopasowania się do potrzeb klienta. Efekt końcowy jest idealny, a współpraca przebiegała bezproblemowo 😊",
-        "o-4-author-desc": "Właściciel • ",
+        "o-4-author-desc": "Klient • Prywatne",
         "o-4-content": "Wszystko legit zajebiste itemki i gui ❤️ Szybko zrealizowane dosłownie 1 dzień oczekiwania polecam",
-        "o-5-author-desc": "Członek • ",
+        "o-5-author-desc": "Klient • Prywatne",
         "o-5-content": "Polecam, szybko i nawet tanio zrobił ❤️",
-        "o-6-author-desc": "Właściciel • ",
+        "o-6-author-desc": "Klient • Prywatne",
         "o-6-content": "Zajebista robota, szybko, tanio i kurwa przepięknie 😎",
         "o-7-author-desc": "Klient • Prywatne",
         "o-7-content": "Mega fajne modele 3d, polecam. Na pewno będę częstym klientem 🙂",
@@ -115,7 +115,7 @@ let translations = {
         "o-15-author-desc": "Klient • Prywatne",
         "o-15-content": "Legit Custom Texturki do itemków, szybko, ładnie i z pomocą ❤️",
         "o-16-author-desc": "Klient • Prywatne",
-        "o-16-content": "",
+        "o-16-content": "Polecam serdecznie każdemu! Szybko, tanio i bardzo dokładna robota daje mu 5 gwiazdek! 😊",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -123,17 +123,17 @@ let translations = {
         "2_description-name": 'RENDERY 3D SKINÓW MINECRAFT',
         "2_description-details": 'Rendery skinów Minecraft to po prostu graficzne przedstawienie skórki gracza w 3D. Zamiast patrzeć na skórkę tylko w widoku 2D, rendery pokazują ją z różnych kątów, w pełnej trójwymiarowej formie, co daje lepszy wgląd w detale i wygląd całej postaci w grze',
 
-        "3_description-name": 'MODELE 3D ITEMÓW/KOSMETYKÓW/BLOKÓW MINECRAFT',
+        "3_description-name": 'MODELE 3D MINECRAFT',
         "3_description-details": 'Modele 3D bloków, przedmiotów i kosmetyków w Minecraft to świetne urozmaicenie podstawowego Minecrafta. Zamiast płaskich tekstur, te modele pokazują je w pełnej trójwymiarowej formie, co pozwala na bardziej szczegółowe i realistyczne przedstawienie elementów w grze',
     
         "4_description-name": 'OPRAWA GRAFICZNA DISCORDA',
         "4_description-details": 'Oprawa graficzna Discorda to wszystkie wizualne elementy, które nadają serwerowi unikalny wygląd. To banery, ikony, grafiki do ogłoszeń, czy inne projekty graficzne, które pomagają wyróżnić serwer i nadają mu charakter. Dzięki odpowiedniej oprawie graficznej, serwer staje się bardziej przyjazny i estetyczny',
     
-        "5_description-name": 'MONTAŻ I ANIMACJE',
-        "5_description-details": 'Animacje i montaż to procesy tworzenia ruchomych obrazów i łączenia różnych materiałów wideo, które służą do wzbogacenia doświadczenia wizualnego. Mogą to być np. trailery lub wstawki na live, które przyciągają uwagę widza i dodają dynamiki do wydarzeń online. Dzięki animacjom i montażowi treści stają się bardziej interesujące i profesjonalne',
+        "5_description-name": 'DODATKI MINECRAFT',
+        "5_description-details": 'Dodatki minecraft to nic innego jak wzbogacenia serwerów Minecraft w customowe dzieła. Ikony do rang, customowe itemy, i wiele wiele więcej. Minecraft nie ma ograniczeń jeśli chodzi o grafiki zawarte jako tekst (Font-Images), a to wszystko powstaje dzięki pluginowi ItemsAdder, w którym się specjalizuje',
 
         "6_description-name": 'INNE PROJEKTY',
-        "6_description-details": 'Inne projekty to wszelkie dodatkowe prace graficzne, które nie mieszczą się w podstawowych kategoriach, ale są równie ważne. Mogą to być różne grafiki, banery promujące wydarzenia, reklamy, ilustracje na strony internetowe czy media społecznościowe. Te projekty pomagają przyciągnąć uwagę i wzbogacają wizualną stronę różnych platform',
+        "6_description-details": 'Inne projekty to wszelkie dodatkowe prace graficzne, animacje i inne rzeczy, które nie mieszczą się w podstawowych kategoriach, ale są równie ważne. Mogą to być różne grafiki, banery promujące wydarzenia, reklamy, ilustracje na strony internetowe czy media społecznościowe',
     },
 
     "en": {
@@ -181,7 +181,7 @@ let translations = {
         "skills-card-footer-3": "which means I acquired all the skills mentioned above through self-study, experience, and hard work",
         "carousel-description-1": "NOTE!",
         "carousel-description-2": " Some graphics have been prepared to specific dimensions provided by the customer! Images may have lower resolution due to adjustment to your screen!",
-        "carousel-scaling-1": "Enlargement: ",
+        "carousel-scaling-1": "Zooming (inactive for 3D models): ",
         "carousel-scaling-2-on": "Enabled",
         "carousel-scaling-2-off": "Disabled",
         "projects-main-text": "Projects",
@@ -220,11 +220,11 @@ let translations = {
         "o-2-content": "I highly recommend him to everyone! The best jack-of-all-trades!",
         "o-3-author-desc": "Client • Private",
         "o-3-content": "I highly recommend him! He created Twitch panels for me that exceeded my expectations. The project was completed quickly, with great attention to detail and professionalism. It’s clear that he has talent, a fantastic sense of aesthetics, and the ability to adapt to the client’s needs. The final result is perfect, and the cooperation was seamless 😊",
-        "o-4-author-desc": "Owner • ",
+        "o-4-author-desc": "Client • Private",
         "o-4-content": "Everything legit, awesome items and GUI ❤️ Completed super quickly, literally just 1 day of waiting – highly recommend!",
-        "o-5-author-desc": "Member • ",
+        "o-5-author-desc": "Client • Private",
         "o-5-content": "I recommend it, it was done quickly and even cheaply ❤️",
-        "o-6-author-desc": "Owner • ",
+        "o-6-author-desc": "Client • Private",
         "o-6-content": "Awesome job, fast, cheap, and freaking beautiful 😎",
         "o-7-author-desc": "Client • Private",
         "o-7-content": "Super cool 3D models, highly recommend. I will definitely be a frequent customer 🙂",
@@ -245,7 +245,7 @@ let translations = {
         "o-15-author-desc": "Client • Private",
         "o-15-content": "Legit Custom Textures for items, fast, nice and helpful ❤️",
         "o-16-author-desc": "Client • Private",
-        "o-16-content": "",
+        "o-16-content": "I highly recommend him to everyone! Fast, affordable, and very thorough. 5 stars! 😊",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",
@@ -253,17 +253,17 @@ let translations = {
         "2_description-name": "MINECRAFT SKIN 3D RENDERS",
         "2_description-details": "Minecraft skin renders are simply 3D graphical representations of the player's skin. Instead of viewing the skin only in 2D, renders show it from different angles in full 3D, giving a better insight into the details and the overall look of the character in the game",
 
-        "3_description-name": "MINECRAFT 3D MODELS OF ITEMS/COSMETICS/BLOCKS",
+        "3_description-name": "MINECRAFT 3D MODELS",
         "3_description-details": "3D models of blocks, items, and cosmetics in Minecraft add a great touch to the base game. Instead of flat textures, these models show them in full 3D, allowing for more detailed and realistic representations of in-game elements",
 
         "4_description-name": "DISCORD GRAPHIC DESIGN",
         "4_description-details": "Discord graphic design refers to all the visual elements that give a server its unique appearance. This includes banners, icons, graphics for announcements, and other design projects that help distinguish the server and give it character. With the right graphic design, the server becomes more inviting and aesthetically pleasing",
 
-        "5_description-name": "EDITING AND ANIMATIONS",
-        "5_description-details": "Animations and editing are processes of creating moving images and combining various video materials to enhance the visual experience. These can include trailers or live stream inserts that grab the viewer's attention and add dynamism to online events. With animations and editing, the content becomes more engaging and professional",
+        "5_description-name": "MINECRAFT ADDONS",
+        "5_description-details": "Minecraft add-ons are nothing more than custom content for Minecraft servers. Icons for ranks, custom items, and much more. Minecraft has no limits when it comes to graphics included as text (Font-Images), and all of this is created thanks to the ItemsAdder plugin, which specializes in",
 
         "6_description-name": "OTHER PROJECTS",
-        "6_description-details": "Other projects are any additional graphic works that don't fit into the main categories but are equally important. These can include various graphics, banners promoting events, ads, illustrations for websites or social media. These projects help attract attention and enhance the visual aspect of different platforms"
+        "6_description-details": "Other projects include any additional graphic design work, animations, and other items that don't fit into the core categories but are equally important. These can include various graphics, event banners, advertisements, and illustrations for websites or social media",
     }
 };
 

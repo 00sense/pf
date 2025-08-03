@@ -1,5 +1,4 @@
 const userId = "744981493159559308";
-let lastAvatarHash = null;
 
 async function fetchStatus() {
     try {
@@ -7,25 +6,6 @@ async function fetchStatus() {
     const data = await response.json();
     
     if (data.success) {
-            const user = data.data.discord_user;
-            const avatarHash = user.avatar;
-            const ext = avatarHash.startsWith("a_") ? "gif" : "png";
-            const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${avatarHash}.${ext}?size=1024`;
-
-            const img = document.querySelector("#content-card-image img");
-            const img2 = document.querySelector("#text-content-main img");
-            const img3 = document.querySelector(".profilowe img");
-            if (img) {
-                img.src = avatarUrl;
-            }
-            if (img2) {
-                img2.src = avatarUrl;
-            }
-
-            if (img3) {
-                updateCircularAvatar(img3, avatarUrl, avatarHash);
-            }
-
 
         // Ustawianie statusu, wlaczanie/wylaczanie przycisku
         const status = data.data.discord_status;
@@ -62,9 +42,6 @@ async function fetchStatus() {
 
             // Sprawdzanie czy moze sie wyswietlic
             if (document.querySelector('#info-bar-status[value="4"]').classList.contains('disable')) {
-                return;
-            }
-            if (document.querySelector('#projects-project-view-3D').style.display !== "none") {
                 return;
             }
             if (document.querySelector('#projects-project-view').style.display !== "none") {

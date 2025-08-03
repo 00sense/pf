@@ -163,13 +163,13 @@
         }
     }
 
-    #close-icon, #close-icon-film, #close-icon-3D {
+    #close-icon {
         border: #ff8d8d7c solid 1px;
         transform: rotate(-45deg);
         background-color: #1f000056;
         box-shadow: 0 0 30px #6d00005e;
     }
-    #close-icon span, #close-icon-film span, #close-icon-3D span {
+    #close-icon span {
         background: #ff9d9d;
     }
     #show-more:hover {
@@ -569,12 +569,12 @@
         border-radius: 0;
         border-left: 0; border-right: 0;
     }
-    #close-icon, #close-icon-3D {
+    #close-icon {
         height: 45px;
         min-width: 45px;
         margin-right: 20px;
     }
-    #close-icon span, #close-icon-3D span {
+    #close-icon span {
         height: 5px;
     }
     #scaling::after, #colorgrading::after {

@@ -18,21 +18,9 @@ $(document).ready(function() {
     });
 
     // --------------------
-    // Hide 3D Object When Click Outside (not move, only click)
-    // --------------------
-    $(document).mousedown(function(event) {
-        if ($("#projects-project-view-3D").css('display') === 'flex') {
-            if (!$(event.target).closest('#project-view-3D-tools, #model-viewer-view').length) {
-                hide3dProjectView();
-            }
-        }
-    });
-
-    // --------------------
-    // Hide Swiper/3D/Film When Click On Close Button
+    // Hide Swiper When Click On Close Button
     // --------------------
     $("#close-icon").click(hideProjectView);
-    $("#close-icon-3D").click(hide3dProjectView);
     
     // --------------------
     // Show/Hide Menu (Mobile)

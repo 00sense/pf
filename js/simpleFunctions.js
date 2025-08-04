@@ -155,8 +155,8 @@ const illustratorPercentage = 100;
 const indesignPercentage = 80;
 const premierePercentage = 80;
 const afterPercentage = 75;
-const htmlCSSPercentage = 80;
-const jsPercentage = 50;
+const itemsadderPercentage = 85;
+const cosmeticscorePercentage = 70;
 const soon = "??";
 
 function setSkillPercentage(skillClassName, percentage) {
@@ -182,11 +182,11 @@ function setSkillPercentage(skillClassName, percentage) {
     else if (skillClassName == "adobe-after-effects") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe After Effects");
     }
-    else if (skillClassName == "html-css") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("HTML/CSS");
+    else if (skillClassName == "itemsadder") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("ItemsAdder v3 & v4");
     }
-    else if (skillClassName == "javascript") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Javascript (jQuery)");
+    else if (skillClassName == "cosmeticscore") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("CosmeticsCore");
     }
     else {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text(skillClassName);

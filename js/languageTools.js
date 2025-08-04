@@ -45,7 +45,7 @@ let translations = {
         "skills-skill-category-1": "Projektowanie 3D",
         "skills-skill-category-2": "Projektowanie 2D",
         "skills-skill-category-3": "Animacje",
-        "skills-skill-category-4": "Programowanie",
+        "skills-skill-category-4": "MINECRAFT TXT",
         "skills-card-footer-1": "Jestem",
         "skills-card-footer-2": ' "samoukiem"',
         "skills-card-footer-3": "co oznacza, że wszystkie powyższe umiejętności nauczyłem się samodzielnie z doświadczenia, kursów i ciężkiej pracy",

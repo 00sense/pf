@@ -185,8 +185,8 @@ $(function () {
     setSkillPercentage("adobe-after-effects", afterPercentage);
     setSkillPercentage("blockbench", blockbenchPercentage);
     setSkillPercentage("blender", blenderPercentage);
-    setSkillPercentage("html-css", htmlCSSPercentage);
-    setSkillPercentage("javascript", jsPercentage);
+    setSkillPercentage("itemsadder", itemsadderPercentage);
+    setSkillPercentage("cosmeticscore", cosmeticscorePercentage);
 
     // --------------------
     // Set Default Options Of Translations

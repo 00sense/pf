@@ -158,6 +158,9 @@
 
     --o16-1-color: 255, 255, 255;
     --o16-2-color: 1, 1, 1;
+
+    --o17-1-color: 255, 255, 255;
+    --o17-2-color: 1, 1, 1;
 }
 
 #feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
@@ -243,6 +246,10 @@
     background-image: conic-gradient(from var(--angle), rgb(var(--o16-2-color), 0.3), rgb(var(--o16-1-color)), rgb(var(--o16-2-color), 0.3), rgb(var(--o16-1-color)), rgb(var(--o16-2-color), 0.3));
 }
 
+#feedback-opinion-author-img.o17::before, #feedback-opinion-author-img.o17::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o17-2-color), 0.3), rgb(var(--o17-1-color)), rgb(var(--o17-2-color), 0.3), rgb(var(--o17-1-color)), rgb(var(--o17-2-color), 0.3));
+}
+
 #feedback-opinion-author img {
     aspect-ratio: 1;
     height: 55px;
@@ -316,26 +323,6 @@
 #feedback-opinion-author p p2 a tabmc {
     text-decoration: underline;
     color: #decaff;
-}
-
-#feedback-opinion-author p p2 a darkhc {
-    text-decoration: underline;
-    color: #ffcafc;
-}
-
-#feedback-opinion-author p p2 a primemc {
-    text-decoration: underline;
-    color: #ffecca;
-}
-
-#feedback-opinion-author p p2 a gildiaDPD {
-    text-decoration: underline;
-    color: #ffcaca;
-}
-
-#feedback-opinion-author p p2 a clancraft {
-    text-decoration: underline;
-    color: #cae5ff;
 }
 
 #feedback-opinion-content-decoration {

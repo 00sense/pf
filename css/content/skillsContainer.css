@@ -42,6 +42,10 @@
     height: 55%;
 }
 
+#minecraft-logo {
+    aspect-ratio: 1;
+}
+
 #skills-skill-option-knowledge {
     overflow: hidden;
     border-radius: 500px;

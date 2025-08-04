@@ -117,6 +117,8 @@ let translations = {
         "o-15-content": "Legit Custom Texturki do itemków, szybko, ładnie i z pomocą ❤️",
         "o-16-author-desc": "Klient • Prywatne",
         "o-16-content": "Polecam serdecznie każdemu! Szybko, tanio i bardzo dokładna robota daje mu 5 gwiazdek! 😊",
+        "o-17-author-desc": "Klient • Prywatne",
+        "o-17-content": "",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -176,7 +178,7 @@ let translations = {
         "skills-skill-category-1": "3D Design",
         "skills-skill-category-2": "2D Design",
         "skills-skill-category-3": "Animating",
-        "skills-skill-category-4": "Programming",
+        "skills-skill-category-4": "Minecraft TXT",
         "skills-card-footer-1": "I'm",
         "skills-card-footer-2": ' "self-taught"',
         "skills-card-footer-3": "which means I acquired all the skills mentioned above through self-study, experience, and hard work",
@@ -248,6 +250,8 @@ let translations = {
         "o-15-content": "Legit Custom Textures for items, fast, nice and helpful ❤️",
         "o-16-author-desc": "Client • Private",
         "o-16-content": "I highly recommend him to everyone! Fast, affordable, and very thorough. 5 stars! 😊",
+        "o-17-author-desc": "Client • Private",
+        "o-17-content": "",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

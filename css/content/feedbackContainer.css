@@ -161,6 +161,9 @@
 
     --o17-1-color: 255, 255, 255;
     --o17-2-color: 1, 1, 1;
+    
+    --o18-1-color: 255, 255, 255;
+    --o18-2-color: 1, 1, 1;
 }
 
 #feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
@@ -248,6 +251,10 @@
 
 #feedback-opinion-author-img.o17::before, #feedback-opinion-author-img.o17::after {
     background-image: conic-gradient(from var(--angle), rgb(var(--o17-2-color), 0.3), rgb(var(--o17-1-color)), rgb(var(--o17-2-color), 0.3), rgb(var(--o17-1-color)), rgb(var(--o17-2-color), 0.3));
+}
+
+#feedback-opinion-author-img.o18::before, #feedback-opinion-author-img.o18::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o18-2-color), 0.3), rgb(var(--o18-1-color)), rgb(var(--o18-2-color), 0.3), rgb(var(--o18-1-color)), rgb(var(--o18-2-color), 0.3));
 }
 
 #feedback-opinion-author img {

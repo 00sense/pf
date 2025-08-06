@@ -271,8 +271,13 @@
     body #projects-trust-note k, body #feedback-trust-note k {
         font-weight: 500;
     }
+    #feedback-opinion-author-img, #feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
+        width: 45px;
+        height: 45px;
+    }
     #feedback-opinion-author img {
-        height: 40px;
+        width: 45px;
+        height: 45px;
     }
     #feedback-opinion-author p {
         padding: 5px 0;
@@ -286,9 +291,14 @@
         display: none;
     }
     #feedback-opinion-content-decoration {
-        width: 40px;
+        width: 45px;
+        margin-right: 10px;
+    }
+    #feedback-opinion-content-decoration-shape {
+        margin-top: 10px;
     }
     #feedback-opinion-content p {
+        margin-top: 10px;
         font-size: 13px;
     } 
 }
@@ -553,7 +563,7 @@
     }
     #feedback-opinion {
         height: 90%;
-        padding: 12px;
+        /* padding: 12px; */
     }
     #feedback-opinion-content p {
         margin-bottom: 0;

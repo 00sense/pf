@@ -1,69 +1,4 @@
 // --------------------
-// Open Images Project Library
-// --------------------
-function openProjectLibrary(fileNames) {
-    $('.swiper-slide').remove();
-
-    if ($('#scaling-info').hasClass('scale-off')) {
-        for (let i = 0; i < fileNames.length; i++) {
-            $('.swiper-wrapper').append(`
-                <div class="swiper-slide">
-                    <img src="projects_gallery/${fileNames[i]}.webp" alt="Projects Image ${i + 1}">
-                </div>
-            `);
-        }
-    } else {
-        for (let i = 0; i < fileNames.length; i++) {
-            $('.swiper-wrapper').append(`
-                <div class="swiper-slide">
-                    <img src="projects_gallery/${fileNames[i]}.webp" style="width: 100%; height: 100%;" alt="Projects Image ${i + 1}">
-                </div>
-            `);
-        }
-    }
-
-    $('.swiper-slide').each(function(index) {
-        if (fileNames[index]) {
-            $(this).find('img').attr('src', `projects_gallery/${fileNames[index]}.webp`);
-        }
-    });
-
-    $("#projects-project-view").fadeIn(300);
-    $("body").css("overflow", "hidden");
-    $('#info-bar').fadeOut(300);
-    $('#spotify-info').css('display', 'none');
-}
-
-function open3dProjectLibrary(modelArray) {
-    $('.swiper-slide').remove();
-
-    const scaleOff = $('#scaling-info').hasClass('scale-off');
-
-    for (let i = 0; i < modelArray.length; i++) {
-        const modelName = modelArray[i];
-        const src = `3d/${modelName}.gltf`;
-
-        $('.swiper-wrapper').append(`
-            <div class="swiper-slide">
-                <model-viewer
-                    src="${src}"
-                    camera-controls
-                    auto-rotate
-                     style="width: 100%; height: 100%;"
-                ></model-viewer>
-            </div>
-        `);
-    }
-
-    $("#projects-project-view").fadeIn(300);
-    $("body").css("overflow", "hidden");
-    $('#info-bar').fadeOut(300);
-    $('#spotify-info').css('display', 'none');
-}
-
-
-
-// --------------------
 // Show Notification
 // --------------------
 let notificationTimer;
@@ -146,62 +81,6 @@ function showNotification(title, content, result) {
 }
 
 // --------------------
-// Skills Value
-// --------------------
-const blockbenchPercentage = 95;
-const blenderPercentage = 55;
-const photoshopPercentage = 100;
-const illustratorPercentage = 100;
-const indesignPercentage = 80;
-const premierePercentage = 80;
-const afterPercentage = 75;
-const itemsadderPercentage = 85;
-const cosmeticscorePercentage = 70;
-const soon = "??";
-
-function setSkillPercentage(skillClassName, percentage) {
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
-    const percentageText = `${percentage}%`;
-
-    if (skillClassName == "adobe-photoshop") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe Photoshop");
-    }
-    else if (skillClassName == "adobe-illustrator") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe Illustrator");
-    }
-    else if (skillClassName == "adobe-indesign") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe InDesign");
-    }
-    else if (skillClassName == "soon") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Soon...");
-    }
-    else if (skillClassName == "adobe-premiere-pro") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe Premiere Pro");
-    }
-    else if (skillClassName == "adobe-after-effects") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Adobe After Effects");
-    }
-    else if (skillClassName == "itemsadder") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("ItemsAdder v3 & v4");
-    }
-    else if (skillClassName == "cosmeticscore") {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("CosmeticsCore");
-    }
-    else {
-      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text(skillClassName);
-    }
-
-    if (skillClassName == "soon") {
-        $(`.${skillClassName} #skills-skill-option-knowledge span`).css("animation-name", "soon-anim");
-    } else {
-        $(`.${skillClassName} #skills-skill-option-knowledge span`).css("width", percentageText);
-    }
-
-    $(`.${skillClassName} #skills-skill-option-knowledge-percentage`).text(percentageText);
-}
-
-// --------------------
 // Addon For Performance
 // --------------------
 function debounce(func, wait) {
@@ -212,29 +91,10 @@ function debounce(func, wait) {
     };
 }
 
-// --------------------
-// Manage Scaling Image In Project Library
-// --------------------
-function manageProjectScaling() {
-    let element = $('#scaling-info');
-
-    if ($(element).hasClass('scale-off')) {
-        $(element).removeClass('scale-off').addClass('scale-on');
-        $(element).text(getTranslationWithoutLang('carousel-scaling-2-on'));
-        $('#scale-on-description').fadeIn(0);
-        $('.swiper-slide img').css({
-            'width': '100%',
-            'height': '100%'
-        })
-    } else {
-        $(element).removeClass('scale-on').addClass('scale-off');
-        $(element).text(getTranslationWithoutLang('carousel-scaling-2-off'));
-        $('#scale-on-description').fadeOut(0);
-        $('.swiper-slide img').css({
-            'width': 'unset',
-            'height': 'unset'
-        })
-    }
+function formatTime(ms) {
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
 // --------------------
@@ -320,19 +180,6 @@ function checkProjectVisibility() {
 }
 
 // --------------------
-// Change Camera Controls
-// --------------------
-function changeCameraControls() {
-    const modelViewer = document.querySelector('model-viewer#model-viewer-view');
-
-    if (modelViewer.hasAttribute('auto-rotate')) {
-        modelViewer.removeAttribute('auto-rotate');
-    } else {
-        modelViewer.setAttribute('auto-rotate', '');
-    }
-}
-
-// --------------------
 // Set Navbar Style (on resize)
 // --------------------
 function checkNavbarSettings() {
@@ -374,17 +221,6 @@ function checkNavbarSettings() {
             });
         }
     }
-}
-
-// --------------------
-// Hide Swiper
-// --------------------
-function hideProjectView() {
-    $('#projects-project-view').fadeOut(300);
-    $("body").css("overflow", "visible");
-    $('.swiper-slide').remove();
-    $('#info-bar').fadeIn(300);
-    $('#spotify-info').css('display', 'flex');
 }
 
 // --------------------
@@ -458,19 +294,6 @@ function openDiscordClient() {
         window.open('discord:/users/744981493159559308', '_blank')
         showNotification(getTranslationWithoutLang("notification-success"), getTranslationWithoutLang("open-client-content-success"), "success");
     }
-}
-
-// --------------------
-// Scrool To Choosed Element
-// --------------------
-function scrollToElement(element) {
-    $('#navbar-mid-mobile-menu-table').delay(700).fadeOut(300);
-    $('#info-bar').delay(700).fadeIn(500);
-    document.querySelector(element).scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
-
 }
 
 // --------------------
@@ -585,12 +408,6 @@ function spotifyVisibility() {
         document.querySelector('#info-bar-status[value="4"]').className= '';
         document.querySelector('#info-bar-status[value="4"]').classList.add('enable');
     }
-}
-
-function formatTime(ms) {
-    const minutes = Math.floor(ms / 60000);
-    const seconds = Math.floor((ms % 60000) / 1000);
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
 function manageInfoBar() {

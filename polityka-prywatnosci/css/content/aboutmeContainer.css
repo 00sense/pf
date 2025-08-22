@@ -1,0 +1,233 @@
+#aboutme-card-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+#text-content {
+    width: 95%;
+    gap: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#text-content-main img {
+    height: 250px;
+    float: right;
+    margin: 0 0 20px 30px;
+    border-radius: 50%;
+    border: var(--border-1);
+    shape-outside: circle(50%); 
+}
+
+#header {
+    padding-bottom: 15px;
+    border-bottom: var(--border-2);
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#header main {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+}
+
+#header main::after {
+    font-weight: 100;
+    content: ' •';
+}
+
+#header main-desc {
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#header k {
+    font-weight: 300;
+}
+
+#text-content-main {
+    width: 100%;
+    height: 100%;
+}
+
+#text-content-main p {
+    color: #d8d8d8;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 200;
+    font-size: 16px;
+    
+}
+
+body #last-p {
+    margin-bottom: 15px;
+}
+
+#contact-me-content p {
+    margin: 0;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+#contact-me-content p y {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#contact-me-content det {
+    font-weight: 500;
+}
+
+#text-contact-me {
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(-135deg, rgb(17, 17, 17, 0.0), rgba(28, 33, 41, 0.8));
+    padding: 20px;
+    border: var(--border-2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#text-contact-me-view {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+#contact-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-button-copy {
+    white-space: nowrap;
+    border-radius: 20px;
+    color: #d8d8d8;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 15px 30px;
+    transition: all 0.2s ease-in-out;
+    border: var(--border-2);
+    border-width: 1.5px;
+    background: linear-gradient(-135deg, rgb(17, 17, 17, 0.0), rgba(58, 54, 50, 0.8));
+}
+
+.contact-button-copy:hover {
+    padding: 15px 30px 15px 52px;
+    box-shadow: 0px 5px 20px rgba(58, 54, 50, 0.5);
+}
+
+.contact-button-copy::before{
+    transform: scale(0) translateX(-5px);
+    position: absolute;
+    left: 20px;
+    transition: all 0.3s ease-in-out;
+    color: transparent;
+    content: 'ss';
+    opacity: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://i.postimg.cc/bvGSxCjQ/copy.webp);
+}
+
+.contact-button-copy:hover::before{
+    opacity: 0.85;
+    transform: scale(1.2) translateX(0px);
+}
+
+#contact-button-main {
+    align-content: center;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 20px;
+    color: #161616;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(235, 235, 235);
+}
+
+#contact-button-main:hover {
+    padding: 15px 30px 15px 53px;
+    background-color: #2384c4;
+    box-shadow: 0px 5px 20px rgba(46, 141, 229, 0.4);
+    color: #fff;
+}
+
+#contact-button-main::before{
+    transform: scale(0) translateX(-5px);
+    position: absolute;
+    left: 21px;
+    transition: all 0.3s ease-in-out;
+    color: transparent;
+    content: 'ss';
+    opacity: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://i.postimg.cc/3xfDDMz8/discord.webp);
+}
+
+#contact-button-main:hover::before{
+    opacity: 1;
+    transform: scale(1.1) translateX(0px);
+}
+
+rtr, rtt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+rtt {
+    margin-bottom: 20px;
+}
+
+body rds {
+    text-align: center;
+}
+
+rdsb {
+    font-weight: 500;
+}
+
+rdsw {
+    display: inline-block;
+    text-align: start;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+rdsw.first {
+    margin-top: 10px;
+}
+
+rtr.first {
+    margin-top: 0px;
+}
+rtr {
+    margin-top: 30px;
+}

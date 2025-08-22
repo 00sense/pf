@@ -257,6 +257,10 @@
     background-image: conic-gradient(from var(--angle), rgb(var(--o18-2-color), 0.3), rgb(var(--o18-1-color)), rgb(var(--o18-2-color), 0.3), rgb(var(--o18-1-color)), rgb(var(--o18-2-color), 0.3));
 }
 
+#feedback-opinion-author-img.o19::before, #feedback-opinion-author-img.o19::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o19-2-color), 0.3), rgb(var(--o19-1-color)), rgb(var(--o19-2-color), 0.3), rgb(var(--o19-1-color)), rgb(var(--o19-2-color), 0.3));
+}
+
 #feedback-opinion-author img {
     aspect-ratio: 1;
     height: 55px;

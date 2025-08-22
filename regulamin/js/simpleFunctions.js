@@ -81,6 +81,12 @@ function showNotification(title, content, result) {
     }
 }
 
+function formatTime(ms) {
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
 // --------------------
 // Addon For Performance
 // --------------------
@@ -343,6 +349,9 @@ function infoBarAction(id) {
 
         if (moreElement) {
             if (moreElement.style.transform === "scaleX(1)") {
+
+                location.href = "https://sensee.space/sklep"
+
                 setTimeout(() => {
                     moreElement.style.transform = "scaleX(0)";
                 }, 200)

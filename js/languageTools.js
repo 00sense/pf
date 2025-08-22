@@ -20,11 +20,14 @@ let translations = {
 
         "info-bar-1": "Jestem aktualnie online, napisz na Discordzie! (Kliknij ponownie)",
         "info-bar-2": "Wyłącz/Włącz animacje (Kliknij ponownie)",
-        "info-bar-3": "Ptaszki ćwierkały, że niedługo mocna promocja!",
+        "info-bar-3": "Przejdź na sklep (Kliknij ponownie)",
         "info-bar-4": "Wyłącz/Włącz widoczność informacji o Spotify (Kliknij ponownie)",
 
         "menu": "Menu",
         "home": "Strona główna",
+        "shop": "Sklep",
+        "regulamin": "Regulamin",
+        "polityka-prywatnosci": "Polityka prywatności",
         "skills": "Umiejętności",
         "projects": "Projekty",
         "about-me": "O mnie",
@@ -120,7 +123,9 @@ let translations = {
         "o-17-author-desc": "Klient • Prywatne",
         "o-17-content": "Bardzo fajne modele, dzięki Deksiak1 Poleca. I sigma z ciebie człowiek",
         "o-18-author-desc": "Klient • Prywatne",
-        "o-18-content": "",
+        "o-18-content": "Polecam, ekspresowe wykonanie i dokładnie takie gui i ikony co chciałem",
+        "o-19-author-desc": "Klient • Prywatne",
+        "o-19-content": "Polecam, legit",
 
         "1_description-name": 'GUI MINECRAFT',
         "1_description-details": 'GUI w Minecraft to po prostu wszystkie graficzne elementy, które pozwalają Ci łatwo korzystać z różnych funkcji gry. To ekwipunek, menu, crafting czy nawet okno handlu z wieśniakami – wszystko, co sprawia, że gra staje się wygodniejsza i bardziej intuicyjna',
@@ -155,11 +160,14 @@ let translations = {
 
         "info-bar-1": "I'm currently online, feel free to message me on Discord! (Click again)",
         "info-bar-2": "Enable/Disable animations (Click again)",
-        "info-bar-3": "The birds were chirping that a huge sale is coming soon!",
+        "info-bar-3": "Go to shop! (Click again)",
         "info-bar-4": "Enable/Disable visibility of Spotify information (Click again)",
 
         "menu": "Menu",
         "home": "Home",
+        "shop": "Shop",
+        "regulamin": "Terms of service",
+        "polityka-prywatnosci": "Privacy Policy",
         "skills": "Skills",
         "projects": "Projects",
         "about-me": "About me",
@@ -255,7 +263,9 @@ let translations = {
         "o-17-author-desc": "Client • Private",
         "o-17-content": "Very cool models, thanks Deksiak1 Recommends. And you're a real Sigma man",
         "o-18-author-desc": "Client • Private",
-        "o-18-content": "",
+        "o-18-content": "Recommended, super fast execution and exactly the GUI and icons I wanted",
+        "o-19-author-desc": "Client • Private",
+        "o-19-content": "Recommended, legit",
 
         "1_description-name": "MINECRAFT GUI",
         "1_description-details": "Minecraft GUI is simply all the graphical elements that allow you to easily interact with various game features. It includes the inventory, menu, crafting, or even the trading window with villagers – everything that makes the game more convenient and intuitive",

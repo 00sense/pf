@@ -32,7 +32,7 @@ let translations = {
         "created-by-1": "Strona w całości stworzona i zaprojektowana przez",
         "created-by-2": " sensee",
         "copyright": " • © 2025 Sensee - Wszelkie prawa zastrzeżone",
-        "aboutme-main-text": "Regulamin",
+        "aboutme-main-text": "Polityka prywatności",
         "aboutme-contact-1": "Dziękuję za Twoją uwagę!",
         "aboutme-contact-2": "Zachęcam Cię do kontaktu na ",
         "aboutme-contact-3": "DISCORDZIE, ",
@@ -68,7 +68,7 @@ let translations = {
         "created-by-1": "A website entirely created and designed by",
         "created-by-2": " sensee",
         "copyright": " • © 2025 Sensee - All rights reserved",
-        "aboutme-main-text": "Terms of service",
+        "aboutme-main-text": "Privacy Policy",
         "aboutme-contact-1": "Thank you for your attention!",
         "aboutme-contact-2": "I encourage you to reach out on ",
         "aboutme-contact-3": "DISCORD, ",
@@ -87,7 +87,7 @@ $(document).ready(function() {
         $("svg[data-lang]").on("click", function () {
             const selectedLanguage = $(this).data("lang");
             if (selectedLanguage === "en") {
-                alert ("Brak tłumaczenia regulaminu dla tego języka!")
+                alert ("Brak tłumaczenia polityki prywatności dla tego języka!")
             }
     
             if (currentLanguage === selectedLanguage) {

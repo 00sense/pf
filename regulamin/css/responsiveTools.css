@@ -1,0 +1,277 @@
+@media screen and (max-width: 1500px) {
+    body #preloader-text-other {
+        white-space: wrap;
+        text-align: center;
+        font-size: 25px;
+    }
+    body #preloader-text-line {
+        padding: 2px 60%;
+    }
+    #text-content-main img {
+        height: 200px;
+    }
+    #header {
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+    #header main::after{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #contact-me-content p h {
+        font-size: 14px;
+    }
+    #contact-button-main:hover {
+        box-shadow: none;
+        padding: 15px 30px;
+        color: #161616;
+        background-color: rgb(235, 235, 235);
+    }
+    .contact-button-copy:hover {
+        box-shadow: none;
+        padding: 15px 30px;
+    }
+
+    .menu__link:hover {
+        opacity: 0.75;
+    }
+    .social-icon__link:hover {
+        transform: none;
+    }
+    .contact-button-copy::before, #contact-button-main::before {
+        display: none;
+    }
+    .menu__link {
+        font-size: 18px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+    #contact-button-main, .contact-button-copy {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    #text-content-main p {
+        font-size: 14px;
+    }
+    #header {
+        border-bottom-left-radius: 20px;
+    }
+    #header main {
+        font-size: 50px;
+    }
+    #header main-desc {
+        font-size: 22px;
+    }
+    #aboutme-container {
+        width: 75%;
+    }
+    
+    #navbar-mid {
+        display: none;
+    }
+    #navbar-mid-mobile {
+        display: flex;
+    }
+    #container-title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #collapse-arrow {
+        display: block;
+    }
+    #spotify-info {
+        gap: 13px;
+        padding: 12px;
+    }
+    #spotify-img {
+        width: 50px;
+        height: 50px;
+    }
+    #spotify-img::after, #spotify-img::before {
+        width: 50px;
+        height: 50px;
+        transform: scale(1.15);
+        left: 12px;
+    }
+    #spotify-text {
+        gap: 20px;
+        max-width: 150px;
+        min-width: 100px;
+    }
+    #spotify-title {
+        font-size: 14px;
+    }
+    #spotify-artist {
+        font-size: 10px;
+    }
+    #spotify-timeline span.line {
+        height: 2px;
+    }
+    #spotify-timeline span.elapsedTime, #spotify-timeline span.overTime {
+        font-size: 10px;
+        top: -14px;
+    }
+    #info-bar-item {
+        width: 27px;
+        height: 27px;
+    }
+    #info-bar-status {
+        top: 18px;
+        height: 10px;
+        width: 10px;
+    }
+    #info-bar-status.info::after {
+        font-size: 10px;
+    }
+    #info-bar-expand {
+        transform: translateY(-5px);
+        height: 40px;
+        left: 58px;
+    }
+    #info-bar-more {
+        width: 120px;
+        /* padding: 2px 7px; */
+        text-wrap: wrap;
+        font-size: 10px;
+    }
+    #navbar-left-text {
+        display: flex;
+        flex-direction: column;
+        font-size: 17px;
+    }
+    #navbar-left-text ki {
+        font-size: 12px;
+    }
+    #text-content {
+        gap: 15px;
+        padding: 15px 30px;
+    }
+    #header {
+        padding-bottom: 12px;
+    }
+    #text-content-main p {
+        margin-top: 0;
+        font-size: 11px;
+    }
+    #text-content-main img {
+        top: 15px;
+        height: 120px;
+        margin: 0 0 13px 13px;
+    }
+    #header main {
+        font-size: 32px;
+        padding-bottom: 0;
+    }
+    #header main-desc {
+        font-size: 15px;
+    }
+    #contact-me-content p y {
+        font-size: 21px;
+    }
+    #contact-me-content p h {
+        font-weight: 200;
+        font-size: 12px;
+    }
+    #contact-button-main, .contact-button-copy{
+        font-size: 12px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .contact-button-copy:hover, #contact-button-main:hover {
+        padding: 10px 20px;
+    }
+    .social-icon__link {
+        font-size: 25px;
+    }
+    .social-icon, .menu {
+        margin-top: 0;
+    }
+    .footer p {
+        font-size: 12px;
+        padding: 0;
+        margin-top: 5px;
+    }
+    #navbar-mid-mobile-menu-table-option {
+        font-size: 12px;
+        padding: 10px 0;
+        font-weight: 300;
+    }
+    #notification {
+        bottom: unset;
+        top: 20px;
+        width: 85%;
+    }
+    #notification-title {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #notification-content {
+        font-size: 11px;
+        font-weight: 200;
+    }
+    #notification-icon img {
+        width: 20px;
+    }
+    section {
+        top: 95px;
+        gap: 50px;
+    }
+    #containers {
+        gap: 90px;
+    }
+    #navbar-left {
+        left: 0;
+        padding: 15px 5px 15px 10px;
+    }
+    #navbar-right {
+        align-items: center;
+        font-size: 16px;
+        padding: 15px 10px 15px 10px;
+    }
+    #navbar-right-option-language {
+        width: 13px;
+    }
+    .lg-en {
+        width: 14px !important;
+    }
+    #navbar-mid-mobile-menu {
+        font-size: 20px;
+    }
+    #navbar-mid-mobile-menu::before, #navbar-mid-mobile-menu::after {
+        width: 15px;
+        height: 15px;
+    }
+    #navbar {
+        padding: 0 10px;
+    }
+    #container-title {
+        padding: 10px 0;
+        font-size: 35px;
+    }
+    #text-contact-me {
+        align-items: center;
+    }
+    #contact-me-content {
+        text-align: center;
+    }
+    #contact-bottom {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    .menu {
+        width: 70%;
+    }
+    .menu__link {
+        font-size: 13px;
+    }
+    body #status {
+        width: 80px;
+        height: 80px;
+    }
+}

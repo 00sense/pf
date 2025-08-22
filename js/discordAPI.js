@@ -44,9 +44,6 @@ async function fetchStatus() {
             if (document.querySelector('#info-bar-status[value="4"]').classList.contains('disable')) {
                 return;
             }
-            if (document.querySelector('#projects-project-view').style.display !== "none") {
-                return;
-            }
             if (document.querySelector('#navbar-mid-mobile-menu-table').style.display !== "none") {
                 return;
             }

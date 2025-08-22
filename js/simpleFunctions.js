@@ -473,6 +473,11 @@ function scrollToElement(element) {
 
 }
 
+function hideChooseMenu() {
+    $('choose-menu').fadeOut(300);
+    $("html, body").css('overflow', 'visible'); 
+}
+
 // --------------------
 // Hide Navbar Underlines When Scroll To Much
 // --------------------

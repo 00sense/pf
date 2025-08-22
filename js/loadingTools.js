@@ -388,13 +388,7 @@ $(window).on('load', function() {
             $(this).css('padding', '2px 0px'); 
             $(this).css('opacity', '0.4'); 
             next();
-            });
-    $('body')
-        .delay(0)
-        .queue(function (next2) {
-            $("html, body").css('overflow', 'visible'); 
-            next2();
-            });        
+            });     
     $('#bg').delay(100).fadeOut('slow');
 
     setTimeout(function() {

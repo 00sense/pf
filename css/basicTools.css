@@ -50,7 +50,11 @@ body,
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+
+
 #loader {
+    z-index: 9999999999;
     gap: 15px;
     position: fixed;
     top: 50%;
@@ -112,6 +116,7 @@ body,
 }
 
 #bg {
+    z-index: 999999999;
     top: 0;
     position: fixed;
     width: 100%;

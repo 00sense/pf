@@ -304,6 +304,9 @@
 }
 
 @media screen and (max-width: 800px) {
+    #choose-menu-top {
+        font-size: 25px;
+    }
     #collapse-arrow {
         display: block;
     }

@@ -23,6 +23,7 @@
     
     <link rel="stylesheet" href="css/animationTools.css">
     <link rel="stylesheet" href="css/basicTools.css">
+    <link rel="stylesheet" href="css/content/chooseMenu.css">
     <link rel="stylesheet" href="css/content/navbar.css">
     <link rel="stylesheet" href="css/content/containerSettings.css">
     <link rel="stylesheet" href="css/content/startContainer.css">
@@ -45,7 +46,7 @@
     <script src="js/simpleFunctions.js"></script>
     <script src="js/eventActions.js"></script>
     <script src="js/discordAPI.js"></script>
-    <script src="js/dev-blocker.js"></script>
+    <!-- <script src="js/dev-blocker.js"></script> -->
 </scripts>
 <bg>
     <div id="background">
@@ -53,6 +54,31 @@
         <div id="background-effects"></div>
     </div>
 </bg>
+
+
+<choose-menu>
+    <div id="choose-menu-background">
+        <div id="choose-menu-top">
+            Gdzie chcesz wejść?
+        </div>
+        <div id="choose-menu-bottom">
+            <div id="choose-menu-button" onclick="hideChooseMenu()">
+                <div id="choose-menu-button-icon">
+                    <img src="icons/webp/hello.webp">
+                </div>
+                <div id="choose-menu-title">Portfolio</div>
+                <div id="choose-menu-description">Sprawdź moje prace!</div>
+            </div>
+            <div id="choose-menu-button" onclick="location.href = 'https://sensee.space/sklep'">
+                <div id="choose-menu-button-icon">
+                    <img src="icons/webp/shop.webp">
+                </div>
+                <div id="choose-menu-title">Sklep</div>
+                <div id="choose-menu-description">Kup gotowy produkt!</div>
+            </div>
+        </div>
+    </div>
+</choose-menu>
 
 <fix>
     <div id="scroll-fix"></div>
@@ -1013,8 +1039,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </settings>
 

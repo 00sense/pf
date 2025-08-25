@@ -47,6 +47,9 @@ async function fetchStatus() {
             if (document.querySelector('#navbar-mid-mobile-menu-table').style.display !== "none") {
                 return;
             }
+            if (document.querySelector('#projects-project-view').style.display !== "none") {
+                return;
+            }
 
             // Wlaczenie przycisku
             effectsElement = document.querySelectorAll('#info-bar-status[value="4"]');

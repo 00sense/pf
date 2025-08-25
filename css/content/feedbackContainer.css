@@ -261,6 +261,10 @@
     background-image: conic-gradient(from var(--angle), rgb(var(--o19-2-color), 0.3), rgb(var(--o19-1-color)), rgb(var(--o19-2-color), 0.3), rgb(var(--o19-1-color)), rgb(var(--o19-2-color), 0.3));
 }
 
+#feedback-opinion-author-img.o20::before, #feedback-opinion-author-img.o20::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o20-2-color), 0.3), rgb(var(--o20-1-color)), rgb(var(--o20-2-color), 0.3), rgb(var(--o20-1-color)), rgb(var(--o20-2-color), 0.3));
+}
+
 #feedback-opinion-author img {
     aspect-ratio: 1;
     height: 55px;
@@ -334,6 +338,26 @@
 #feedback-opinion-author p p2 a tabmc {
     text-decoration: underline;
     color: #decaff;
+}
+
+#feedback-opinion-author p p2 a nitromc {
+    text-decoration: underline;
+    color: #ffb2b2;
+}
+
+#feedback-opinion-author p p2 a krabmc {
+    text-decoration: underline;
+    color: #ffbeb2;
+}
+
+#feedback-opinion-author p p2 a mcgry {
+    text-decoration: underline;
+    color: #ffcdca;
+}
+
+#feedback-opinion-author p p2 a dreamhc {
+    text-decoration: underline;
+    color: #beffb5;
 }
 
 #feedback-opinion-content-decoration {

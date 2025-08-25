@@ -2,7 +2,30 @@ console.warn = function () {};
 console.log = function() {};
 console.error = function () {};
 
-let liczbaOpini = 19;
+        const idUzytkownikow = [
+            "307503795192070144", // o1
+            "865654945683734587", // o2
+            "616308905928294422", // o3
+            "1313411082601369605", // o4
+            "723832148297121792", // o5
+            "417353906809733125", // o6
+            "1313941413955899437", // o7
+            "322099049840771072", // o8
+            "1296215137258049680", // o9
+            "547796325421416448", // o10
+            "1141663111863083019", // o11
+            "418444890020773889",  // o12
+            "211083431101071361", // o13
+            "770999192734007298", // o14
+            "1400872047705591869", // o15
+            "1148378265132728371", // o16
+            "1352766279945162874", // o17
+            "675397823960973343", // o18
+            "466554122091626498", // o19
+            "954382165355941909", // o20
+        ];
+
+let liczbaOpini = idUzytkownikow.length;
 
 $(document).ready(function() {
 
@@ -32,27 +55,6 @@ $(document).ready(function() {
     AOS.init();
 
     function ustawAvataryDiscorda() {
-        const idUzytkownikow = [
-            "307503795192070144", // o1
-            "865654945683734587", // o2
-            "616308905928294422", // o3
-            "1313411082601369605", // o4
-            "723832148297121792", // o5
-            "417353906809733125", // o6
-            "1313941413955899437", // o7
-            "322099049840771072", // o8
-            "1296215137258049680", // o9
-            "547796325421416448", // o10
-            "1141663111863083019", // o11
-            "418444890020773889",  // o12
-            "211083431101071361", // o13
-            "770999192734007298", // o14
-            "1400872047705591869", // o15
-            "1148378265132728371", // o16
-            "1352766279945162874", // o17
-            "675397823960973343", // o18
-            "466554122091626498", // o19
-        ];
 
         idUzytkownikow.forEach((id, index) => {
             const numer = index + 1;
@@ -189,6 +191,7 @@ $(function () {
     setSkillPercentage("blockbench", blockbenchPercentage);
     setSkillPercentage("blender", blenderPercentage);
     setSkillPercentage("itemsadder", itemsadderPercentage);
+    setSkillPercentage("nexo", nexoPercentage);
     setSkillPercentage("cosmeticscore", cosmeticscorePercentage);
 
     // --------------------

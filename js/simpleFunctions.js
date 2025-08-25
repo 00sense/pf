@@ -156,6 +156,7 @@ const indesignPercentage = 80;
 const premierePercentage = 80;
 const afterPercentage = 75;
 const itemsadderPercentage = 85;
+const nexoPercentage = 60;
 const cosmeticscorePercentage = 70;
 const soon = "??";
 
@@ -184,6 +185,9 @@ function setSkillPercentage(skillClassName, percentage) {
     }
     else if (skillClassName == "itemsadder") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("ItemsAdder v3 & v4");
+    }
+    else if (skillClassName == "nexo") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Nexo");
     }
     else if (skillClassName == "cosmeticscore") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("CosmeticsCore");

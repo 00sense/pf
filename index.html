@@ -46,7 +46,7 @@
     <script src="js/simpleFunctions.js"></script>
     <script src="js/eventActions.js"></script>
     <script src="js/discordAPI.js"></script>
-    <script src="js/dev-blocker.js"></script>
+    <!-- <script src="js/dev-blocker.js"></script> -->
 </scripts>
 <bg>
     <div id="background">
@@ -74,7 +74,7 @@
                     <img src="icons/webp/shop.webp">
                 </div>
                 <div id="choose-menu-title">Sklep</div>
-                <div id="choose-menu-description">Kup gotowy produkt!</div>
+                <div id="choose-menu-description">Kup gotowy produkt! (Kod na -30% "START30" do końca Sierpnia!)</div>
             </div>
         </div>
     </div>
@@ -180,8 +180,8 @@
                             </div>
                             <div id="skills-skill-option-knowledge-percentage"> </div>
                         </div>
-                        <div id="skills-skill-option" class="soon">
-                            <img src="icons/webp/soon.webp" alt="skills-image"/>
+                        <div id="skills-skill-option" class="nexo">
+                            <img src="icons/webp/nexo.webp" alt="skills-image"/>
                             <div id="skills-skill-option-knowledge"><div class="skill-name"></div>
                                 <span data-aos="zoom-in-right" data-aos-easing="ease-out-sine" data-aos-duration="600"></span>
                             </div>
@@ -468,7 +468,11 @@
                                             <img src="assets/k0dziak.webp">
                                         </div>
                                         <p>K0dziaK
-                                            <p2 data-translate="o-1-author-desc"> <a href="https://tabmc.pl/" target="_blank"><tabmc>TabMC.pl</tabmc><img src="assets/tabmc.webp"></a></p2>
+                                            <p2 data-translate="o-1-author-desc"> 
+                                                <a href="https://tabmc.pl/" target="_blank"><tabmc>TabMC.pl</tabmc>
+                                                    <img src="assets/tabmc.webp">
+                                                </a>
+                                            </p2>
                                         </p>
                                     </div>
                                     <div id="feedback-opinion-content">
@@ -507,7 +511,10 @@
                                         </div>
                                         <p>vDragon_
                                             <p2 data-translate="o-19-author-desc"> 
-                                                <img src="icons/webp/person.webp" id="default-author"></p2>
+                                                <a><mcgry>NitroMC.pl</mcgry>
+                                                    <img src="assets/nitromc.webp">
+                                                </a>
+                                            </p2>
                                         </p>
                                     </div>
                                     <div id="feedback-opinion-content">
@@ -527,7 +534,10 @@
                                         </div>
                                         <p>AndCze
                                             <p2 data-translate="o-18-author-desc"> 
-                                                <img src="icons/webp/person.webp" id="default-author"></p2>
+                                                <a><mcgry>McGry.pl</mcgry>
+                                                    <img src="assets/mcgry.webp">
+                                                </a>
+                                            </p2>
                                         </p>
                                     </div>
                                     <div id="feedback-opinion-content">
@@ -539,6 +549,55 @@
                                     <div id="feedback-opinion-screen" data-translate="feedback-o-screen" onclick="openProjectLibrary(['andcze_o'])"> </div>
                                 </div>
                             </div>
+
+                            <div class="swiper-opinion-slide">
+                                <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="600">
+                                    <div id="feedback-opinion-author">
+                                        <div class="o16" id="feedback-opinion-author-img">
+                                            <img src="icons/webp/person.webp">
+                                        </div>
+                                        <p>fejzu
+                                            <p2 data-translate="o-16-author-desc"> 
+                                                <a><krabmc>KrabMC.pl</krabmc>
+                                                    <img src="assets/krabmc.webp">
+                                                </a>
+                                            </p2>
+                                        </p>
+                                    </div>
+                                    <div id="feedback-opinion-content">
+                                        <div id="feedback-opinion-content-decoration">
+                                            <div id="feedback-opinion-content-decoration-shape"></div>
+                                        </div>
+                                        <p data-translate="o-16-content">.</p>
+                                    </div>
+                                    <div id="feedback-opinion-screen" data-translate="feedback-o-screen" onclick="openProjectLibrary(['fejzu_o'])"> </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-opinion-slide">
+                                <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="600">
+                                    <div id="feedback-opinion-author">
+                                        <div class="o20" id="feedback-opinion-author-img">
+                                            <img src="icons/webp/person.webp">
+                                        </div>
+                                        <p>Ebner11
+                                            <p2 data-translate="o-20-author-desc"> 
+                                                <a><dreamhc>DreamHC.pl</dreamhc>
+                                                    <img src="assets/dreamhc.webp">
+                                                </a>
+                                            </p2>
+                                        </p>
+                                    </div>
+                                    <div id="feedback-opinion-content">
+                                        <div id="feedback-opinion-content-decoration">
+                                            <div id="feedback-opinion-content-decoration-shape"></div>
+                                        </div>
+                                        <p data-translate="o-20-content">.</p>
+                                    </div>
+                                    <div id="feedback-opinion-screen" data-translate="feedback-o-screen" onclick="openProjectLibrary(['ebner11_o'])"> </div>
+                                </div>
+                            </div>
+
                             <div class="swiper-opinion-slide">
                                 <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="600">
                                     <div id="feedback-opinion-author">
@@ -810,27 +869,6 @@
                             <div class="swiper-opinion-slide">
                                 <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="600">
                                     <div id="feedback-opinion-author">
-                                        <div class="o16" id="feedback-opinion-author-img">
-                                            <img src="icons/webp/person.webp">
-                                        </div>
-                                        <p>fejzu
-                                            <p2 data-translate="o-16-author-desc"> 
-                                                <img src="icons/webp/person.webp" id="default-author"></p2>
-                                        </p>
-                                    </div>
-                                    <div id="feedback-opinion-content">
-                                        <div id="feedback-opinion-content-decoration">
-                                            <div id="feedback-opinion-content-decoration-shape"></div>
-                                        </div>
-                                        <p data-translate="o-16-content">.</p>
-                                    </div>
-                                    <div id="feedback-opinion-screen" data-translate="feedback-o-screen" onclick="openProjectLibrary(['fejzu_o'])"> </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-opinion-slide">
-                                <div id="feedback-opinion" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="600">
-                                    <div id="feedback-opinion-author">
                                         <div class="o17" id="feedback-opinion-author-img">
                                             <img src="icons/webp/person.webp">
                                         </div>
@@ -849,7 +887,7 @@
                                 </div>
                             </div>
 
-                            <!-- nastepna o20 -->
+                            <!-- nastepna o21 -->
 
                         </div>
                     </div>

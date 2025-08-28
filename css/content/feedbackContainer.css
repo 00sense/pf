@@ -110,62 +110,6 @@
     inherits: false;
 }
 
-:root {
-    --o1-1-color: 255, 255, 255;
-    --o1-2-color: 1, 1, 1;
-
-    --o2-1-color: 255, 255, 255;
-    --o2-2-color: 1, 1, 1;
-
-    --o3-1-color: 255, 255, 255;
-    --o3-2-color: 1, 1, 1;
-
-    --o4-1-color: 255, 255, 255;
-    --o4-2-color: 1, 1, 1;
-
-    --o5-1-color: 255, 255, 255;
-    --o5-2-color: 1, 1, 1;
-
-    --o6-1-color: 255, 255, 255;
-    --o6-2-color: 1, 1, 1;
-
-    --o7-1-color: 255, 255, 255;
-    --o7-2-color: 1, 1, 1;
-
-    --o8-1-color: 255, 255, 255;
-    --o8-2-color: 1, 1, 1;
-
-    --o9-1-color: 255, 255, 255;
-    --o9-2-color: 1, 1, 1;
-
-    --o10-1-color: 255, 255, 255;
-    --o10-2-color: 1, 1, 1;
-
-    --o11-1-color: 255, 255, 255;
-    --o11-2-color: 1, 1, 1;
-
-    --o12-1-color: 255, 255, 255;
-    --o12-2-color: 1, 1, 1;
-
-    --o13-1-color: 255, 255, 255;
-    --o13-2-color: 1, 1, 1;
-
-    --o14-1-color: 255, 255, 255;
-    --o14-2-color: 1, 1, 1;
-
-    --o15-1-color: 255, 255, 255;
-    --o15-2-color: 1, 1, 1;
-
-    --o16-1-color: 255, 255, 255;
-    --o16-2-color: 1, 1, 1;
-
-    --o17-1-color: 255, 255, 255;
-    --o17-2-color: 1, 1, 1;
-    
-    --o18-1-color: 255, 255, 255;
-    --o18-2-color: 1, 1, 1;
-}
-
 #feedback-opinion-author-img::before, #feedback-opinion-author-img::after {
     opacity: 1;
     transform: scale(1.15);
@@ -265,6 +209,11 @@
     background-image: conic-gradient(from var(--angle), rgb(var(--o20-2-color), 0.3), rgb(var(--o20-1-color)), rgb(var(--o20-2-color), 0.3), rgb(var(--o20-1-color)), rgb(var(--o20-2-color), 0.3));
 }
 
+#feedback-opinion-author-img.o21::before, #feedback-opinion-author-img.o21::after {
+    background-image: conic-gradient(from var(--angle), rgb(var(--o21-2-color), 0.3), rgb(var(--o21-1-color)), rgb(var(--o21-2-color), 0.3), rgb(var(--o21-1-color)), rgb(var(--o21-2-color), 0.3));
+}
+
+
 #feedback-opinion-author img {
     aspect-ratio: 1;
     height: 55px;
@@ -358,6 +307,11 @@
 #feedback-opinion-author p p2 a dreamhc {
     text-decoration: underline;
     color: #beffb5;
+}
+
+#feedback-opinion-author p p2 a craftcube {
+    text-decoration: underline;
+    color: #ffca85;
 }
 
 #feedback-opinion-content-decoration {

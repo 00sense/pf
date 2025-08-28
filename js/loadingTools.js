@@ -23,6 +23,7 @@ console.error = function () {};
             "675397823960973343", // o18
             "466554122091626498", // o19
             "954382165355941909", // o20
+            "1055036371389132813", // o21
         ];
 
 let liczbaOpini = idUzytkownikow.length;
@@ -266,11 +267,7 @@ $(function () {
             },
         },
         spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 4000, 
-            disableOnInteraction: true, 
-          },
+        loop: false,
         speed: 250, // Speed (ms)
         pagination: {
             el: '.swiper-opinion-pagination',
@@ -453,7 +450,7 @@ $(document).ready(function () {
     }
     updateAmountNumbers();
 
-function createColorVariants([r, g, b], lightenRatio = 25, darkenRatio = 35, gainMultiplier = 1.8) {
+function createColorVariants([r, g, b], lightenRatio = 35, darkenRatio = 15, gainMultiplier = 2.3) {
     const applyGain = ([r, g, b]) => {
         const max = Math.max(r, g, b);
         return [

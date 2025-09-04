@@ -35,7 +35,7 @@ let translations = {
         "language": "Język",
         "created-by-1": "Strona w całości stworzona i zaprojektowana przez",
         "created-by-2": " sensee",
-        "copyright": " • © 2024 Sensee - Wszelkie prawa zastrzeżone",
+        "copyright": " • © 2025 Sensee - Wszelkie prawa zastrzeżone",
         "read-more": "Dowiedz się więcej",
         "contact-me": "Skontaktuj się!",
         "content-main-text": "Hejka! To ja! ツ",
@@ -144,7 +144,7 @@ let translations = {
         "4_description-details": 'Oprawa graficzna Discorda to wszystkie wizualne elementy, które nadają serwerowi unikalny wygląd. To banery, ikony, grafiki do ogłoszeń, czy inne projekty graficzne, które pomagają wyróżnić serwer i nadają mu charakter. Dzięki odpowiedniej oprawie graficznej, serwer staje się bardziej przyjazny i estetyczny',
     
         "5_description-name": 'DODATKI MINECRAFT',
-        "5_description-details": 'Dodatki minecraft to nic innego jak wzbogacenia serwerów Minecraft w customowe dzieła. Ikony do rang, customowe itemy, i wiele wiele więcej. Minecraft nie ma ograniczeń jeśli chodzi o grafiki zawarte jako tekst (Font-Images), a to wszystko powstaje dzięki pluginowi ItemsAdder, w którym się specjalizuje',
+        "5_description-details": 'Dodatki minecraft to nic innego jak wzbogacenia serwerów Minecraft w customowe dzieła. Ikony do rang, customowe itemy, i wiele wiele więcej. Minecraft nie ma ograniczeń jeśli chodzi o grafiki zawarte jako tekst (Font-Images), a to wszystko powstaje dzięki serwerowemu Resourcepackowi, w którego tworzeniu się specjalizuje',
 
         "6_description-name": 'INNE PROJEKTY',
         "6_description-details": 'Inne projekty to wszelkie dodatkowe prace graficzne, animacje i inne rzeczy, które nie mieszczą się w podstawowych kategoriach, ale są równie ważne. Mogą to być różne grafiki, banery promujące wydarzenia, reklamy, ilustracje na strony internetowe czy media społecznościowe',
@@ -179,7 +179,7 @@ let translations = {
         "language": "Language",
         "created-by-1": "A website entirely created and designed by",
         "created-by-2": " sensee",
-        "copyright": " • © 2024 Sensee - All rights reserved",
+        "copyright": " • © 2025 Sensee - All rights reserved",
         "read-more": "Read more",
         "contact-me": "Get in touch!",
         "content-main-text": "Hi! It's me! ツ",
@@ -300,7 +300,7 @@ $(document).ready(function() {
         const startDate = new Date("2023-09"); // Projektowanie 3D
         const startDate2 = new Date("2019-02"); // Projektowanie 2D
         const startDate3 = new Date("2022-06"); // Montaż/Animacje
-        const startDate4 = new Date("2023-01"); // Programowanie
+        const startDate4 = new Date("2024-09"); // Programowanie
         const endDate = new Date(); 
     
         const diffInMs = endDate - startDate;
@@ -420,8 +420,8 @@ function updateDateTranslations() {
     translations["pl"]["skills-skill-since-3"] = "Od 2022 roku (" + resultDate3PL + ")";
     translations["en"]["skills-skill-since-3"] = "Since 2022 (" + resultDate3EN + ")";
 
-    translations["pl"]["skills-skill-since-4"] = "Od 2023 roku (" + resultDate4PL + ")";
-    translations["en"]["skills-skill-since-4"] = "Since 2023 (" + resultDate4EN + ")";
+    translations["pl"]["skills-skill-since-4"] = "Od 2024 roku (" + resultDate4PL + ")";
+    translations["en"]["skills-skill-since-4"] = "Since 2024 (" + resultDate4EN + ")";
 }
 
 function getTranslationWithoutLang(key) {

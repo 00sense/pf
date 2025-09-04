@@ -193,6 +193,7 @@ $(function () {
     setSkillPercentage("blender", blenderPercentage);
     setSkillPercentage("itemsadder", itemsadderPercentage);
     setSkillPercentage("nexo", nexoPercentage);
+    setSkillPercentage("modelengine", megPercentage);
     setSkillPercentage("cosmeticscore", cosmeticscorePercentage);
 
     // --------------------

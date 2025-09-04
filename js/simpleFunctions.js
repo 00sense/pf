@@ -148,16 +148,17 @@ function showNotification(title, content, result) {
 // --------------------
 // Skills Value
 // --------------------
-const blockbenchPercentage = 95;
-const blenderPercentage = 55;
+const blockbenchPercentage = 100;
+const blenderPercentage = 75;
 const photoshopPercentage = 100;
 const illustratorPercentage = 100;
 const indesignPercentage = 80;
 const premierePercentage = 80;
 const afterPercentage = 75;
 const itemsadderPercentage = 85;
-const nexoPercentage = 60;
-const cosmeticscorePercentage = 70;
+const nexoPercentage = 70;
+const megPercentage = 60;
+const cosmeticscorePercentage = 85;
 const soon = "??";
 
 function setSkillPercentage(skillClassName, percentage) {
@@ -188,6 +189,9 @@ function setSkillPercentage(skillClassName, percentage) {
     }
     else if (skillClassName == "nexo") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("Nexo");
+    }
+    else if (skillClassName == "modelengine") {
+      $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("ModelEngine v4");
     }
     else if (skillClassName == "cosmeticscore") {
       $(`.${skillClassName} #skills-skill-option-knowledge .skill-name`).text("CosmeticsCore");

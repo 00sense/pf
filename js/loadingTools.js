@@ -24,6 +24,7 @@ console.error = function () {};
             "466554122091626498", // o19
             "954382165355941909", // o20
             "1055036371389132813", // o21
+            "794299659534336021", // o22
         ];
 
 let liczbaOpini = idUzytkownikow.length;
